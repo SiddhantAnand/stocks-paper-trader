@@ -9,7 +9,7 @@ on:
       job:
         description: "Which run"
         type: choice
-        options: [eod, entry]
+        options: [eod, entry, email-test]
         default: eod
 
 permissions:
@@ -45,6 +45,7 @@ jobs:
           restore-keys: mkt-
 
       - name: Paper trade (${{ env.JOB }})
+        if: env.JOB != 'email-test'
         run: python papertrade.py job "$JOB"
 
       - name: Save market data
@@ -74,4 +75,4 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
-        run: python notify.py
+        run: python notify.py $([ "$JOB" = email-test ] && echo --test)
