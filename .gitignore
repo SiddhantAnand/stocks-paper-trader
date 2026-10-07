@@ -13,3 +13,5 @@ data/launchd.*.log
 data/alert_state.json
 data/alerts.log
 .cache/
+site/
+.preview/

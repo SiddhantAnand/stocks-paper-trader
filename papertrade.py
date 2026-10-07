@@ -25,6 +25,7 @@ import yfinance as yf
 from sklearn.neighbors import NearestNeighbors
 
 import model as M
+import reporting as R
 
 IST = ZoneInfo("Asia/Kolkata")
 PAPER = os.path.join(M.DATA, "paper")
@@ -407,7 +408,7 @@ def phase_eod(st):
     append_csv("equity.csv", rows)
     st.setdefault("learning", []).append(dict(date=f"{now():%Y-%m-%d}", train_rows=int(ev.y_h1.notna().sum()),
                                               thr=st["thr"], risk_mult=risk, **acc))
-    headline = write_report(st, last)
+    headline = write_report(st, last, report_ctx(st, hist, len(syms), int(ev.y_h1.notna().sum()), acc))
     queue_mail(os.path.join(REPORTS, f"{now():%Y-%m-%d}.md"), f"[Paper trade] Daily {now():%d %b}: {headline}")
     if week_ends_today(st):
         path = write_weekly(st, last)
@@ -441,53 +442,49 @@ def stats(df):
                 pnl=round(df.pnl.sum()))
 
 
-def write_report(st, last):
+def report_ctx(st, hist=None, universe=None, train_rows=None, acc=None):
+    day = f"{now():%Y-%m-%d}"
+    ctx = {"day": day, "universe": universe, "train_rows": train_rows or 0, "acc": acc or {}}
+    if hist is not None and "^NSEI" in hist:
+        n = hist["^NSEI"]["Close"]
+        ctx.update(nifty_close=float(n.iloc[-1]), nifty_chg=float((n.iloc[-1] / n.iloc[-2] - 1) * 100),
+                   vix=float(hist["^INDIAVIX"]["Close"].iloc[-1]) if "^INDIAVIX" in hist else None)
+    pr = read_csv("predictions.csv")
+    if len(pr):
+        pr = pr[pr.date.astype(str).str.startswith(day)]
+    if len(pr):
+        thr = st.get("thr", 1.0)
+        bought = {b: {p["sym"] for p in st["books"][b]["positions"] if p["entry_date"] == day} for b in st["books"]}
+        held = {p["sym"] for b in st["books"] for p in st["books"][b]["positions"] if p["entry_date"] != day}
+
+        def decision(r):
+            if r.sym in bought.get("main", ()):
+                return "**Bought**"
+            if r.sym in bought.get("lookalike", ()):
+                return "Bought in look-alike experiment"
+            if r.pred <= r.thr:
+                return "Skipped - score below the bar"
+            if r.sym in held:
+                return "Skipped - already holding"
+            return "Skipped - all slots full"
+        top = pr.sort_values("pred", ascending=False).head(8).copy()
+        top["decision"] = top.apply(decision, axis=1)
+        ctx.update(movers=len(pr), above_bar=int((pr.pred > pr.thr).sum()), top=top)
+    return ctx
+
+
+def write_report(st, last, ctx=None):
     os.makedirs(REPORTS, exist_ok=True)
     tr, eq = read_csv("trades.csv"), read_csv("equity.csv")
     today = f"{now():%Y-%m-%d}"
     cfg = load_json(CFG, {})
-    md = [f"# Paper trading report - {today}", "",
-          f"Model: buy at ~15:20 on 3%+ movers scored > threshold, sell next session (target +{cfg.get('tp')}% / "
-          f"stop -{cfg.get('sl')}%), Rs {START_CAPITAL:,.0f} per book, max {cfg.get('slots')} positions, "
-          f"costs {M.COST}% round trip. Run {st['start']} -> {st['end']}.", "",
-          "## Books", "| book | equity | P&L | return | open | trades | win% | avg net % | profit factor |",
-          "|---|---|---|---|---|---|---|---|---|"]
-    headline = []
-    for b in st["books"]:
-        e = equity(st["books"][b], last)
-        s = stats(tr[tr.book == b] if len(tr) else None)
-        md.append(f"| {b} | {e:,.0f} | {e - START_CAPITAL:+,.0f} | {(e / START_CAPITAL - 1) * 100:+.2f}% | "
-                  f"{len(st['books'][b]['positions'])} | {s['trades']} | {s.get('win', '-')} | {s.get('avg', '-')} | {s.get('pf', '-')} |")
-        headline.append(f"{b} {(e / START_CAPITAL - 1) * 100:+.2f}%")
-    r = cfg.get("research", {})
-    md += ["", f"Research expectation (out-of-sample 2025-26): avg {r.get('avg_net')}% / trade, win {r.get('win')}%, "
-               f"profit factor {r.get('pf')}, 8-week median {r.get('wk8_median')}%.", ""]
-    if len(tr):
-        td = tr[tr.exit_date == today]
-        if len(td):
-            md += ["## Closed today", td[["book", "sym", "entry_date", "entry_px", "exit_px", "reason", "ret_net", "pnl",
-                                         "lesson"]].to_markdown(index=False), ""]
-    for b in st["books"]:
-        ps = st["books"][b]["positions"]
-        if ps:
-            md += [f"## Open - {b}", pd.DataFrame([{**{k: p[k] for k in ("sym", "entry_date", "entry_px", "qty", "stop", "target",
-                                                                          "pred", "analog_avg", "size_mult", "series", "note")},
-                                                   "last": last.get(p["sym"]), "day%": p["feat"]["r1"], "rsi": p["feat"]["rsi"],
-                                                   "vol_x": p["feat"]["vr"], "PE": p["fund"].get("pe"),
-                                                   "mcap_cr": p["fund"].get("mcap_cr")} for p in ps]).to_markdown(index=False), ""]
-    if st.get("learning"):
-        md += ["## Learning log", pd.DataFrame(st["learning"]).tail(10).to_markdown(index=False), ""]
-    if len(tr):
-        lessons = tr[tr.book == "main"].tail(10)[["exit_date", "sym", "ret_net", "lesson"]]
-        md += ["## Recent lessons (main)", lessons.to_markdown(index=False), ""]
-    if len(eq):
-        md += ["## Equity curve", eq.pivot_table(index="date", columns="book", values="equity").to_markdown(), ""]
-    md.append("_Paper trades only. Fills assume the ~15:20 price; real fills can differ._")
-    text = "\n".join(md)
+    text = R.daily_md(st, cfg, tr, eq, last, ctx or report_ctx(st), START_CAPITAL, M.COST)
     for name in (f"{today}.md", "latest.md"):
         with open(os.path.join(REPORTS, name), "w") as f:
             f.write(text)
-    return ", ".join(headline)
+    main = st["books"]["main"]
+    e = main["cash"] + sum(p["qty"] * last.get(p["sym"], p["entry_px"]) for p in main["positions"])
+    return f"{R.inr(e)} ({R.pct((e / START_CAPITAL - 1) * 100)} total)"
 
 
 def write_weekly(st, last):

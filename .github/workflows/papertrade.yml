@@ -9,7 +9,7 @@ on:
       job:
         description: "Which run"
         type: choice
-        options: [eod, entry, email-test]
+        options: [eod, entry, email-test, site]
         default: eod
 
 permissions:
@@ -25,6 +25,8 @@ jobs:
     timeout-minutes: 75
     env:
       JOB: ${{ github.event_name == 'workflow_dispatch' && inputs.job || (github.event.schedule == '15 9 * * 1-5' && 'entry' || 'eod') }}
+      SITE_REPO: ${{ github.repository_owner }}/paper-trading-dashboard
+      SITE_URL: https://${{ github.repository_owner }}.github.io/paper-trading-dashboard/
     steps:
       - uses: actions/checkout@v4
 
@@ -45,7 +47,7 @@ jobs:
           restore-keys: mkt-
 
       - name: Paper trade (${{ env.JOB }})
-        if: env.JOB != 'email-test'
+        if: env.JOB != 'email-test' && env.JOB != 'site'
         run: python papertrade.py job "$JOB"
 
       - name: Save market data
@@ -68,6 +70,21 @@ jobs:
             git pull --rebase
             git push
           fi
+
+      - name: Publish dashboard (results only, no code)
+        if: always() && env.JOB != 'email-test'
+        env:
+          SITE_DEPLOY_KEY: ${{ secrets.SITE_DEPLOY_KEY }}
+        run: |
+          if [ -z "$SITE_DEPLOY_KEY" ]; then echo "SITE_DEPLOY_KEY not set - skipping"; exit 0; fi
+          python dashboard.py
+          mkdir -p ~/.ssh && echo "$SITE_DEPLOY_KEY" > ~/.ssh/site_key && chmod 600 ~/.ssh/site_key
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/site_key -o StrictHostKeyChecking=accept-new"
+          cd site && git init -q -b main && git add -A
+          git -c user.name="paper-trader-bot" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "dashboard $(TZ=Asia/Kolkata date '+%F %H:%M')"
+          git push -q -f "git@github.com:${SITE_REPO}.git" main
+          echo "published to $SITE_URL"
 
       - name: Email reports
         if: always()

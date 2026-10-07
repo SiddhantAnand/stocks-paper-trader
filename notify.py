@@ -10,7 +10,7 @@ import ssl
 import sys
 from email.message import EmailMessage
 
-import markdown
+import reporting as R
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUTBOX = os.path.join(ROOT, "data", "paper", "outbox.json")
@@ -42,14 +42,11 @@ def main():
             with open(path) as f:
                 text = f.read()
             link = f"{repo}/blob/{branch}/{item['path']}"
+            site = os.environ.get("SITE_URL") or None
             msg = EmailMessage()
             msg["Subject"], msg["From"], msg["To"] = item["subject"], user, to
-            msg.set_content(f"View on GitHub: {link}\n\n{text}")
-            body = markdown.markdown(text, extensions=["tables"])
-            msg.add_alternative(
-                f'<p><a href="{html.escape(link)}">View on GitHub</a></p>'
-                f'<style>table{{border-collapse:collapse}}td,th{{border:1px solid #ccc;padding:3px 6px}}</style>{body}',
-                subtype="html")
+            msg.set_content(f"Dashboard: {site or '-'}\nGitHub: {link}\n\n{text}")
+            msg.add_alternative(R.email_html(text, html.escape(link), site and html.escape(site)), subtype="html")
             s.send_message(msg)
             print("sent:", item["subject"])
     if os.path.exists(OUTBOX):

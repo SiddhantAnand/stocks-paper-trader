@@ -22,7 +22,7 @@
  "incidents": [
   {
    "date": "2026-10-07",
-   "what": "entry scores not reproducible; 6 trades voided; added self-check, canary, audit log, local yfinance cache"
+   "what": "At 3:16 pm the system bought 6 stocks, but a check afterwards found the model scores used could not be reproduced (they were about 1.3 points too high). To keep the results honest, all 6 trades were cancelled at their purchase price (no profit or loss), and new safety checks were added that block trading if this ever happens again."
   }
  ],
  "thr": 1.0,
