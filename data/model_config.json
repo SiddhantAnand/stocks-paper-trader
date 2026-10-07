@@ -1,0 +1,29 @@
+{
+ "policy": "h1",
+ "hold": 1,
+ "tp": 4.0,
+ "sl": 3.0,
+ "thr": 1.0,
+ "slots": 3,
+ "trained_on": 53074,
+ "trained_to": "2026-10-07",
+ "research": {
+  "oos": "2025-06..2026-10",
+  "trades": 250,
+  "avg_net": 0.85,
+  "win": 55.6,
+  "pf": 1.73,
+  "wk8_median": 6.1,
+  "wk8_worst": -7.7,
+  "maxdd": -10.4
+ },
+ "version": 1,
+ "changelog": [
+  {
+   "version": 1,
+   "date": "2026-10-07",
+   "change": "initial h1 model (buy ~15:20, sell next session, tp 4 / sl 3, thr 1.0)",
+   "evidence": "walk-forward OOS 2025-06..2026-10: 250 trades, +0.85% avg net, PF 1.73"
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+name: paper-trade
+
+on:
+  schedule:
+    - cron: "15 9 * * 1-5"   # 14:45 IST: starts early (cron can run late), waits for the 15:15 entry
+    - cron: "30 10 * * 1-5"  # 16:00 IST: post-close stop/target check, retrain, reports, email
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Which run"
+        type: choice
+        options: [eod, entry]
+        default: eod
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-trade
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    env:
+      JOB: ${{ github.event_name == 'workflow_dispatch' && inputs.job || (github.event.schedule == '15 9 * * 1-5' && 'entry' || 'eod') }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Restore market data
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/hist.pkl
+            data/events.pkl
+          key: mkt-${{ github.run_id }}
+          restore-keys: mkt-
+
+      - name: Paper trade (${{ env.JOB }})
+        run: python papertrade.py job "$JOB"
+
+      - name: Save market data
+        if: always() && hashFiles('data/hist.pkl') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data/hist.pkl
+            data/events.pkl
+          key: mkt-${{ github.run_id }}
+
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "paper-trader-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/paper reports/paper data/model.joblib data/model_canary.json data/model_config.json data/sec_list.csv data/ind_niftytotalmarket_list.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "paper trade $JOB $(TZ=Asia/Kolkata date +%F)"
+            git pull --rebase
+            git push
+          fi
+
+      - name: Email reports
+        if: always()
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: python notify.py

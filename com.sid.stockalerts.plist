@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sid.stockalerts</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/sid/Documents/StocksAnalysis/.venv/bin/python</string>
+        <string>/Users/sid/Documents/StocksAnalysis/alerts.py</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/sid/Documents/StocksAnalysis</string>
+    <key>StartInterval</key>
+    <integer>300</integer>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/sid/Documents/StocksAnalysis/data/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/sid/Documents/StocksAnalysis/data/launchd.err.log</string>
+</dict>
+</plist>

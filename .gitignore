@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.tmp
+.DS_Store
+# rebuilt/cached in CI; too large to commit daily
+data/hist.pkl
+data/events.pkl
+data/prices.pkl
+data/oos_h1.pkl
+data/paper/outbox.json
+data/paper/launchd.*.log
+data/launchd.*.log
+data/alert_state.json
+data/alerts.log
+.cache/

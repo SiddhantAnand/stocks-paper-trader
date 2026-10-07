@@ -1,0 +1,38 @@
+{
+ "start": "2026-10-07",
+ "end": "2026-12-02",
+ "done": {
+  "2026-10-07": [
+   "premarket",
+   "entry",
+   "eod"
+  ]
+ },
+ "finished": false,
+ "books": {
+  "main": {
+   "cash": 100000.00030944824,
+   "positions": []
+  },
+  "lookalike": {
+   "cash": 99999.99918518067,
+   "positions": []
+  }
+ },
+ "incidents": [
+  {
+   "date": "2026-10-07",
+   "what": "entry scores not reproducible; 6 trades voided; added self-check, canary, audit log, local yfinance cache"
+  }
+ ],
+ "thr": 1.0,
+ "risk_mult": 1.0,
+ "learning": [
+  {
+   "date": "2026-10-07",
+   "train_rows": 53074,
+   "thr": 1.0,
+   "risk_mult": 1.0
+  }
+ ]
+}
