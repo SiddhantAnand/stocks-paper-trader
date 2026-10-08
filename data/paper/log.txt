@@ -8,3 +8,5 @@
 2026-10-07 15:16:36 entry: 59 movers scored, 32 above thr 1.00, bought ['HFCL', 'SALSTEEL', 'CUPID']
 2026-10-07 15:47:21 INCIDENT: 15:16 entry scores not reproducible with model.joblib; 6 trades voided (data/paper/voided.csv); added self-check + canary + audit + local yf cache
 2026-10-07 15:52:38 eod: model retrained on 53074 setups; thr 1.0 risk x1.0; accuracy {}
+2026-10-08 22:01:37 premarket: trading day, positions aged 
+2026-10-08 22:01:37 entry: job started too late (after 15:40), no new trades today
