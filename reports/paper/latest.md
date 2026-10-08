@@ -1,10 +1,8 @@
-# Daily paper-trading report - Wed, 07 Oct 2026
+# Daily paper-trading report - Thu, 08 Oct 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
 **No trades today.** No stock passed the filters.
-
-> **Notice:** At 3:16 pm the system bought 6 stocks, but a check afterwards found the model scores used could not be reproduced (they were about 1.3 points too high). To keep the results honest, all 6 trades were cancelled at their purchase price (no profit or loss), and new safety checks were added that block trading if this ever happens again.
 
 ## Scoreboard (main strategy)
 | Measure | Value |
@@ -26,14 +24,14 @@ Nothing was bought or sold today.
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 22,603 (▼ -0.76%) |
-| Market fear (India VIX) | 13.9 - calm (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,100 |
+| Nifty 50 | 22,232 (▼ -1.64%) |
+| Market fear (India VIX) | 15.3 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,024 |
 | Moved 3% or more today | 0 |
 | Scored above the bar (1.0) | 0 |
 
 ## How the model is learning
-- Retrained tonight on **53,074** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **52,517** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **1.0** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
 
 ## Experiments running alongside

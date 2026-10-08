@@ -8,7 +8,8 @@
    "eod"
   ],
   "2026-10-08": [
-   "premarket"
+   "premarket",
+   "eod"
   ]
  },
  "finished": false,
@@ -34,6 +35,12 @@
   {
    "date": "2026-10-07",
    "train_rows": 53074,
+   "thr": 1.0,
+   "risk_mult": 1.0
+  },
+  {
+   "date": "2026-10-08",
+   "train_rows": 52517,
    "thr": 1.0,
    "risk_mult": 1.0
   }

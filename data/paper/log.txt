@@ -10,3 +10,5 @@
 2026-10-07 15:52:38 eod: model retrained on 53074 setups; thr 1.0 risk x1.0; accuracy {}
 2026-10-08 22:01:37 premarket: trading day, positions aged 
 2026-10-08 22:01:37 entry: job started too late (after 15:40), no new trades today
+2026-10-08 22:58:04 no cached price history - downloading 2 years (first cloud run)
+2026-10-08 23:02:50 eod: model retrained on 52517 setups; thr 1.0 risk x1.0; accuracy {}
