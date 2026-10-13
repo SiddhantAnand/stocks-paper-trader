@@ -2,42 +2,67 @@
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**No trades today.** No stock passed the filters.
+**No new trades today.** 91 stocks moved 3% or more, and 0 scored above the model's bar of 1.0.
+
+> **Notice:** GitHub started the scheduled runs about 7 hours late, so 8, 9 and 13 Oct entries were skipped and the 12 Oct run timed out. Runs now work at any hour and catch up missed days; 12 and 13 Oct were replayed at the closing price.
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,00,000** |
-| Today's change | Rs 0 (+0.00%) |
-| Total profit / loss since 2026-10-07 | **Rs 0** (+0.00%) |
+| Portfolio value | **Rs 1,01,487** |
+| Today's change | +Rs 1,487 (▲ +1.49%) |
+| Total profit / loss since 2026-10-07 | **+Rs 1,487** (▲ +1.49%) |
 | Trades completed | 0 (0 wins, 0 losses) |
 | Win rate | - (expected about 55.6%) |
 | Average result per trade | - (expected about ▲ +0.85%) |
 | Profit factor | - (expected about 1.73) |
-| Stocks held now | 0 of 3 slots |
-| Cash available | Rs 1,00,000 |
+| Stocks held now | 2 of 3 slots |
+| Cash available | Rs 51,120 |
 | Evidence so far | 0 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
 Nothing was bought or sold today.
+
+## Stocks we're holding
+| Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
+|---|---|---|---|---|---|---|---|
+| main | **SIGMAADV** | 2026-10-12 | 961.70 | 1,005.30 | ▲ +4.53% | 1,000.17 (profit target) | 932.85 (stop-loss) |
+| main | **E2E** | 2026-10-12 | 735.55 | 735.75 | ▲ +0.03% | 764.97 (profit target) | 713.48 (stop-loss) |
+| lookalike | **BODALCHEM** | 2026-10-12 | 177.77 | 176.41 | ▼ -0.77% | 184.88 (profit target) | 172.44 (stop-loss) |
+| lookalike | **SWANDEF** | 2026-10-12 | 2,931.10 | 2,968.20 | ▲ +1.27% | 3,048.34 (profit target) | 2,843.17 (stop-loss) |
+
+_Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
 
 ## Today's market check
 | Measure | Value |
 |---|---|
 | Nifty 50 | 22,722 (▲ +1.60%) |
 | Market fear (India VIX) | 14.1 - calm (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,019 |
-| Moved 3% or more today | 0 |
+| Stocks scanned | 1,022 |
+| Moved 3% or more today | 91 |
 | Scored above the bar (1.0) | 0 |
 
+## Top candidates the model looked at
+| Stock | Today's move | Model score | Decision |
+|---|---|---|---|
+| SIGMAADV | ▲ +4.53% | +0.84 | Skipped - score below the bar |
+| INOXWIND | ▲ +4.12% | +0.68 | Skipped - score below the bar |
+| MPHASIS | ▲ +4.79% | +0.49 | Skipped - score below the bar |
+| LOTUSDEV | ▼ -3.06% | +0.38 | Skipped - score below the bar |
+| TIPSMUSIC | ▲ +3.62% | +0.33 | Skipped - score below the bar |
+| PERSISTENT | ▲ +3.47% | +0.31 | Skipped - score below the bar |
+| PRESTIGE | ▲ +3.88% | +0.28 | Skipped - score below the bar |
+| STLNETWORK | ▼ -4.45% | +0.28 | Skipped - score below the bar |
+
 ## How the model is learning
-- Retrained tonight on **52,762** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **52,830** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **1.0** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
+- Prediction check: of 87 past predictions, stocks above the bar averaged - next day vs ▼ -0.87% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
-| lookalike | Rs 1,00,000 | Rs 0 | 0 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
+| lookalike | Rs 1,00,154 | +Rs 154 | 0 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.

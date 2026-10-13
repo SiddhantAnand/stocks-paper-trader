@@ -18,3 +18,15 @@
 2026-10-13 00:35:39 premarket: trading day, positions aged 
 2026-10-13 22:28:19 entry: job started too late (after 15:40), no new trades today
 2026-10-13 23:13:48 eod: model retrained on 52762 setups; thr 1.0 risk x1.0; accuracy {}
+2026-10-13 23:35:19 job: processing ['2026-10-12', '2026-10-13']
+2026-10-13 23:35:37 job: model retrained on data up to 2026-10-09 before catching up
+2026-10-13 23:35:38 premarket: trading day, positions aged 
+2026-10-13 23:38:18 [main] BUY SIGMAADV 34 @ 961.70 (Rs 32,698) pred +1.79 day -4.7% size x1.0  | PE 103.74613 mcap 19094Cr
+2026-10-13 23:38:19 [main] BUY E2E 22 @ 735.55 (Rs 16,182) pred +1.38 day +4.4% size x0.5  | PE 529.3165 mcap 15117Cr
+2026-10-13 23:38:19 [lookalike] BUY BODALCHEM 187 @ 177.77 (Rs 33,243) pred +0.01 day +3.0% size x1.0 lookalike of SIGMAADV (distance 4.73) | PE 33.347828 mcap 2222Cr
+2026-10-13 23:38:19 [lookalike] BUY SWANDEF 11 @ 2931.10 (Rs 32,242) pred +0.13 day +4.1% size x1.0 lookalike of E2E (distance 2.23) | PE 46.552696 mcap 15637Cr
+2026-10-13 23:38:19 entry: 91 movers scored, 2 above thr 1.00, bought ['SIGMAADV', 'E2E']
+2026-10-13 23:40:21 eod: model retrained on 52741 setups; thr 1.0 risk x1.0; accuracy {}
+2026-10-13 23:40:22 premarket: trading day, positions aged SIGMAADV(1), E2E(1), BODALCHEM(1), SWANDEF(1)
+2026-10-13 23:42:05 entry: 91 movers scored, 0 above thr 1.00, bought []
+2026-10-13 23:44:02 eod: model retrained on 52830 setups; thr 1.0 risk x1.0; accuracy {'labelled': 87, 'corr': np.float64(0.006), 'above_thr': 0, 'above_thr_avg': None, 'below_thr_avg': np.float64(-0.87)}
