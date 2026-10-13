@@ -4,7 +4,7 @@ on:
   schedule:
     # GitHub often starts scheduled runs hours late, so there are several tries. Each run processes any closed
     # session not yet done (buy at close, stop/target check, retrain, email); extra runs are no-ops.
-    - cron: "41 10 * * 1-5"  # 16:11 IST
+    - cron: "15 10 * * 1-5"  # 15:45 IST
     - cron: "17 13 * * 1-5"  # 18:47 IST
     - cron: "53 16 * * 1-5"  # 22:23 IST
     - cron: "29 21 * * 1-5"  # 02:59 IST next day
