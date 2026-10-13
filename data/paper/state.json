@@ -14,10 +14,6 @@
   "2026-10-09": [
    "premarket",
    "eod"
-  ],
-  "2026-10-13": [
-   "premarket",
-   "eod"
   ]
  },
  "finished": false,
@@ -35,6 +31,10 @@
   {
    "date": "2026-10-07",
    "what": "At 3:16 pm the system bought 6 stocks, but a check afterwards found the model scores used could not be reproduced (they were about 1.3 points too high). To keep the results honest, all 6 trades were cancelled at their purchase price (no profit or loss), and new safety checks were added that block trading if this ever happens again."
+  },
+  {
+   "date": "2026-10-13",
+   "text": "GitHub started the scheduled runs about 7 hours late, so 8, 9 and 13 Oct entries were skipped and the 12 Oct run timed out. Runs now work at any hour and catch up missed days; 12 and 13 Oct were replayed at the closing price."
   }
  ],
  "thr": 1.0,
@@ -55,12 +55,6 @@
   {
    "date": "2026-10-09",
    "train_rows": 52678,
-   "thr": 1.0,
-   "risk_mult": 1.0
-  },
-  {
-   "date": "2026-10-13",
-   "train_rows": 52762,
    "thr": 1.0,
    "risk_mult": 1.0
   }

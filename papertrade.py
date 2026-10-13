@@ -5,8 +5,8 @@ Phases (trading days only):
   monitor    09:15-15:30  stop/target exits from live 1-minute bars
   entry      15:15-15:28  time exits, score today's 3%+ movers with the model, buy at ~close
   eod        >= 16:00  update history, label predictions, retrain model, adapt threshold, write report
-Cloud (GitHub Actions): `job entry` (~14:45, waits for 15:15) and `job eod` (~16:00) check stops/targets
-after the fact from the day's 1-minute bars, so no all-day polling is needed.
+Cloud (GitHub Actions): `job` runs after the close (any hour, GitHub cron is often hours late) and processes
+every closed session not yet done: stops/targets from that day's 1-minute bars, buy at the close, learn.
 Usage: .venv/bin/python papertrade.py [tick|loop|job entry|job eod|report|status] [--force PHASE]
 """
 import argparse
@@ -39,8 +39,23 @@ END_DATE = "2026-12-02"  # 8 weeks of sessions
 BOOKS = ("main", "lookalike")
 
 
+DAY = None  # trading session being processed (dt.date); set by job() so late or catch-up runs book the right day
+
+
 def now():
     return dt.datetime.now(IST)
+
+
+def today():
+    return DAY or now().date()
+
+
+def ds():
+    return today().strftime("%Y-%m-%d")
+
+
+def stamp():
+    return f"{now():%H:%M}" if today() == now().date() else "close"
 
 
 def log(msg):
@@ -66,7 +81,7 @@ def save_json(path, obj):
 
 
 def new_state():
-    return {"start": f"{now():%Y-%m-%d}", "end": END_DATE, "done": {}, "finished": False,
+    return {"start": ds(), "end": END_DATE, "done": {}, "finished": False,
             "books": {b: {"cash": START_CAPITAL, "positions": []} for b in BOOKS}}
 
 
@@ -104,15 +119,22 @@ def is_trading_day(d):
 
 # ---------- prices ----------
 def intraday(syms):
-    df = yf.download([s + ".NS" for s in syms], period="1d", interval="1m", group_by="ticker",
-                     auto_adjust=False, progress=False, threads=True)
+    df = yf.download([s + ".NS" for s in syms], start=today(), end=today() + dt.timedelta(days=1), interval="1m",
+                     group_by="ticker", auto_adjust=False, progress=False, threads=True)
     out = {}
     for s in syms:
         t = s + ".NS"
         if t in df.columns.get_level_values(0):
             d = df[t].dropna(subset=["Close"])
-            if len(d) and d.index[-1].tz_convert(IST).date() == now().date():
+            d = d[d.index.tz_convert(IST).date == today()]
+            if len(d):
                 out[s] = d
+    missing = [s for s in syms if s not in out]
+    if missing:  # no 1-minute bars: fall back to the day's daily bar (same rule as the research backtest)
+        for k, v in M._download([s + ".NS" for s in missing], "1mo").items():
+            v = v[v.index.date == today()]
+            if len(v):
+                out[k[:-3]] = v
     return out
 
 
@@ -130,7 +152,7 @@ def close_position(st, book_name, p, px, reason):
     book["cash"] += p["qty"] * px - p["qty"] * p["entry_px"] * M.COST / 100
     book["positions"].remove(p)
     row = {k: v for k, v in p.items() if k not in ("feat", "fund")}
-    row.update(book=book_name, exit_date=f"{now():%Y-%m-%d}", exit_time=f"{now():%H:%M}", exit_px=round(px, 2),
+    row.update(book=book_name, exit_date=ds(), exit_time=stamp(), exit_px=round(px, 2),
                reason=reason, ret_net=round(net, 2), pnl=round(pnl, 2), lesson=lesson)
     row.update({"f_" + k: v for k, v in p["feat"].items()})
     row.update({"fund_" + k: v for k, v in (p.get("fund") or {}).items()})
@@ -181,7 +203,7 @@ def phase_premarket(st):
     M.refresh_reference_files()
     for b in st["books"]:
         for p in st["books"][b]["positions"]:
-            if p["entry_date"] != f"{now():%Y-%m-%d}":
+            if p["entry_date"] != ds():
                 p["sessions"] = p.get("sessions", 0) + 1
     log("premarket: trading day, positions aged " +
         ", ".join(f"{p['sym']}({p['sessions']})" for b in st["books"] for p in st["books"][b]["positions"]))
@@ -234,18 +256,19 @@ def phase_entry(st):
 
     # today's live daily bar for the whole universe, appended to history -> identical feature code as training
     tick = [s + ".NS" for s in syms] + ["^NSEI", "^INDIAVIX"]
-    today = M._download(tick, "5d")
-    h2 = {}
-    for k, v in today.items():
+    bars = M._download(tick, "1mo")
+    h2 = {s: v[v.index.date < today()] for s, v in hist.items()}
+    for k, v in bars.items():
         s = k[:-3] if k.endswith(".NS") else k
-        v = v[v.index.date == now().date()]
-        if s in hist and len(v):
-            h2[s] = pd.concat([hist[s][hist[s].index.date < now().date()], v])
-    if "^NSEI" not in h2:
-        log("entry: no live index bar, skipping")
-        return
-    cands = M.build_events(h2, [s for s in syms if s in h2], band, series, with_labels=False, only_last=True)
-    cands = cands[cands.date.dt.date == now().date()] if len(cands) else cands
+        v = v[v.index.date == today()]
+        if s in h2 and len(v):
+            h2[s] = pd.concat([h2[s], v])
+    if "^NSEI" not in h2 or h2["^NSEI"].index[-1].date() != today():
+        raise RuntimeError(f"no daily bars for {ds()} on Yahoo yet")
+    h2 = M.fill_gaps(h2, syms)
+    syms = [s for s in syms if s in h2 and h2[s].index[-1].date() == today()]
+    cands = M.build_events(h2, syms, band, series, with_labels=False, only_last=True)
+    cands = cands[cands.date.dt.date == today()] if len(cands) else cands
     if cands.empty:
         log("entry: no 3%+ movers passed filters")
         return
@@ -267,7 +290,7 @@ def phase_entry(st):
     ev = pd.read_pickle(os.path.join(M.DATA, "events.pkl")).dropna(subset=["y_h1"])
     mu, sd = ev[M.FEATS].mean(), ev[M.FEATS].std().replace(0, 1)
     z = lambda df: ((df[M.FEATS] - mu) / sd).fillna(0).to_numpy()
-    past = ev[ev.date < pd.Timestamp(now().date()) - pd.Timedelta(days=7)]
+    past = ev[ev.date < pd.Timestamp(today()) - pd.Timedelta(days=7)]
     nn_past = NearestNeighbors(n_neighbors=30).fit(z(past))
 
     def analog_avg(r):
@@ -341,7 +364,7 @@ def open_position(st, book_name, r, cfg, band, series, hist, size, analog_avg, i
     if qty < 1:
         return False
     b = float(band.get(r.sym, 20.0))
-    p = dict(sym=r.sym, entry_date=f"{now():%Y-%m-%d}", entry_time=f"{now():%H:%M}", entry_px=round(px, 2), qty=qty,
+    p = dict(sym=r.sym, entry_date=ds(), entry_time=stamp(), entry_px=round(px, 2), qty=qty,
              stop=round(px * (1 - cfg["sl"] / 100), 2), target=round(px * (1 + cfg["tp"] / 100), 2),
              hold=cfg["hold"], min_hold=2 if series.get(r.sym) == "BE" else 1, sessions=0, band=b,
              series=series.get(r.sym, "EQ"), industry=industry.get(r.sym, ""), prev_close=px,
@@ -365,13 +388,17 @@ def phase_eod(st):
         old = hist.get(s)
         hist[s] = v if old is None else pd.concat([old, v])[lambda x: ~x.index.duplicated(keep="last")].sort_index()
         hist[s] = hist[s].iloc[-520:]
+    hist = M.fill_gaps(hist, syms)
     pd.to_pickle(hist, M.HIST)
+    # learn and mark to market only with data up to the session being processed (no peeking on catch-up runs)
+    hist = {s: v[v.index.date <= today()] for s, v in hist.items()}
 
     # learning step 1: rebuild labelled events (adds every newly completed setup, incl. our live trades) and refit
     ev = M.build_events(hist, syms, band, series)
     ev.to_pickle(os.path.join(M.DATA, "events.pkl"))
     mdl = M.fit(ev, "y_h1")
     M.save_model(mdl, ev)
+    st["model_through"] = ds()
 
     # learning step 2: score yesterday's predictions against what actually happened
     pr = read_csv("predictions.csv")
@@ -403,13 +430,13 @@ def phase_eod(st):
     # mark to market
     last = {p["sym"]: float(hist[p["sym"]]["Close"].iloc[-1]) for b in st["books"]
             for p in st["books"][b]["positions"] if p["sym"] in hist}
-    rows = [dict(date=f"{now():%Y-%m-%d}", book=b, equity=round(equity(st["books"][b], last), 2),
+    rows = [dict(date=ds(), book=b, equity=round(equity(st["books"][b], last), 2),
                  cash=round(st["books"][b]["cash"], 2), open=len(st["books"][b]["positions"])) for b in st["books"]]
     append_csv("equity.csv", rows)
-    st.setdefault("learning", []).append(dict(date=f"{now():%Y-%m-%d}", train_rows=int(ev.y_h1.notna().sum()),
+    st.setdefault("learning", []).append(dict(date=ds(), train_rows=int(ev.y_h1.notna().sum()),
                                               thr=st["thr"], risk_mult=risk, **acc))
     headline = write_report(st, last, report_ctx(st, hist, len(syms), int(ev.y_h1.notna().sum()), acc))
-    queue_mail(os.path.join(REPORTS, f"{now():%Y-%m-%d}.md"), f"[Paper trade] Daily {now():%d %b}: {headline}")
+    queue_mail(os.path.join(REPORTS, f"{ds()}.md"), f"[Paper trade] Daily {today():%d %b}: {headline}")
     if week_ends_today(st):
         path = write_weekly(st, last)
         queue_mail(path, f"[Paper trade] Weekly review {os.path.basename(path)[:-3]}: {headline}")
@@ -423,7 +450,7 @@ def queue_mail(path, subject):
 
 
 def week_ends_today(st):
-    n = now()
+    n = today()
     if f"{n:%Y-%m-%d}" >= st["end"]:
         return True
     x = n + dt.timedelta(days=1)
@@ -443,7 +470,7 @@ def stats(df):
 
 
 def report_ctx(st, hist=None, universe=None, train_rows=None, acc=None):
-    day = f"{now():%Y-%m-%d}"
+    day = ds()
     ctx = {"day": day, "universe": universe, "train_rows": train_rows or 0, "acc": acc or {}}
     if hist is not None and "^NSEI" in hist:
         n = hist["^NSEI"]["Close"]
@@ -476,10 +503,10 @@ def report_ctx(st, hist=None, universe=None, train_rows=None, acc=None):
 def write_report(st, last, ctx=None):
     os.makedirs(REPORTS, exist_ok=True)
     tr, eq = read_csv("trades.csv"), read_csv("equity.csv")
-    today = f"{now():%Y-%m-%d}"
+    day = ds()
     cfg = load_json(CFG, {})
     text = R.daily_md(st, cfg, tr, eq, last, ctx or report_ctx(st), START_CAPITAL, M.COST)
-    for name in (f"{today}.md", "latest.md"):
+    for name in (f"{day}.md", "latest.md"):
         with open(os.path.join(REPORTS, name), "w") as f:
             f.write(text)
     main = st["books"]["main"]
@@ -488,7 +515,7 @@ def write_report(st, last, ctx=None):
 
 
 def write_weekly(st, last):
-    n = now()
+    n = today()
     y, w, _ = n.isocalendar()
     wk_start = (n - dt.timedelta(days=n.weekday())).strftime("%Y-%m-%d")
     tr, eq = read_csv("trades.csv"), read_csv("equity.csv")
@@ -575,51 +602,75 @@ def tick(force=None):
     save_json(STATE, st)
 
 
-def wait_until(t, latest=dt.time(17, 0)):
-    while now().time() < t < latest:
-        time.sleep(min(60, max(1, (dt.datetime.combine(now().date(), t, IST) - now()).total_seconds())))
-
-
-def job(kind):
-    """One scheduled cloud run. Stops/targets are checked after the fact on the day's 1-minute bars."""
-    st = load_json(STATE, None) or new_state()
+def pending_sessions(st):
+    """Closed trading days after the last completed eod, oldest first. Looks back at most a week because
+    Yahoo keeps 1-minute bars (used for stop/target checks) for only ~7 days."""
     n = now()
+    last_close = n.date() if n.time() >= dt.time(15, 35) else n.date() - dt.timedelta(days=1)
+    since = max([k for k, v in st["done"].items() if "eod" in v], default="")
+    days = [last_close - dt.timedelta(days=k) for k in range(7)]
+    keep = lambda s: since < s and st["start"] <= s <= st["end"]
+    return sorted(d for d in days if is_trading_day(d) and keep(d.strftime("%Y-%m-%d")))
+
+
+def job(kind=None):
+    """One scheduled cloud run, safe at any hour: processes every closed session not yet done (catch-up).
+    Entry is at the session close and stops/targets are checked on that day's 1-minute bars, matching the
+    research backtest (buy at close), so a run that GitHub starts hours late gives the same result."""
+    global DAY
+    st = load_json(STATE, None) or new_state()
     if st.get("finished"):
-        log(f"job {kind}: run already finished")
+        log("job: run already finished")
         return
-    if not is_trading_day(n):
-        log(f"job {kind}: not a trading day")
+    days = pending_sessions(st)
+    if not days:
+        print("job: no closed trading session waiting to be processed")
         return
-    day = f"{n:%Y-%m-%d}"
-    done = st["done"].setdefault(day, [])
+    log(f"job: processing {[f'{d}' for d in days]}")
+    since = max([k for k, v in st["done"].items() if "eod" in v], default="")
+    if since and st.get("model_through") != since:
+        # catch-up after a state rewind: the saved model may have seen later data -> retrain up to `since` only
+        syms, band, series, _ = M.load_meta()
+        ensure_data(syms, band, series)
+        h = M.fill_gaps({s: v[v.index.strftime("%Y-%m-%d") <= since] for s, v in M.load_history().items()}, syms)
+        ev = M.build_events(h, syms, band, series)
+        ev.to_pickle(os.path.join(M.DATA, "events.pkl"))
+        M.save_model(M.fit(ev, "y_h1"), ev)
+        st["model_through"] = since
+        log(f"job: model retrained on data up to {since} before catching up")
+    for d in days:
+        DAY = d
+        day = ds()
+        done = st["done"].setdefault(day, [])
 
-    def run(name, fn):
-        if name != "monitor" and name in done:
-            return
-        try:
-            fn(st)
-            if name != "monitor":
-                done.append(name)
-        except Exception:
-            log(f"{name} FAILED:\n{traceback.format_exc()}")
-        save_json(STATE, st)
+        def run(name, fn):
+            if name != "monitor" and name in done:
+                return
+            try:
+                fn(st)
+                if name != "monitor":
+                    done.append(name)
+            except Exception:
+                log(f"{day} {name} FAILED:\n{traceback.format_exc()}")
+            save_json(STATE, st)
 
-    run("premarket", phase_premarket)
-    if kind == "entry":
-        wait_until(dt.time(15, 15))
-        if now().time() > dt.time(15, 40):
-            log("entry: job started too late (after 15:40), no new trades today")
-        else:
-            run("monitor", phase_monitor)
-            run("entry", phase_entry)
-    else:
-        wait_until(dt.time(15, 45))
+        run("premarket", phase_premarket)
         run("monitor", phase_monitor)
+        run("entry", phase_entry)
+        fresh = now() < dt.datetime.combine(d, dt.time(15, 30), IST) + dt.timedelta(hours=14)
+        if "entry" not in done and fresh:
+            log(f"{day}: entry incomplete (data not ready?) - will retry on the next scheduled run")
+            break
         run("eod", phase_eod)
-    if day >= st["end"] and "eod" in done:
-        st["finished"] = True
-        log("run finished")
-    st["done"] = {k: v for k, v in st["done"].items() if k >= (n - dt.timedelta(days=10)).strftime("%Y-%m-%d")}
+        if "eod" not in done:
+            break
+        if day >= st["end"]:
+            st["finished"] = True
+            log("run finished")
+            break
+    DAY = None
+    cut = (now() - dt.timedelta(days=10)).strftime("%Y-%m-%d")
+    st["done"] = {k: v for k, v in st["done"].items() if k >= cut}
     save_json(STATE, st)
 
 

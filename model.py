@@ -1,10 +1,12 @@
 """Shared data, feature and label engine for research.py and papertrade.py (same code path = no train/live skew)."""
+import io
 import os
 import pickle
 import time
 
 import numpy as np
 import pandas as pd
+import requests
 import yfinance as yf
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -81,10 +83,41 @@ def _download(tickers, period, interval="1d"):
     return out
 
 
+def fill_gaps(hist, syms, lookback=25):
+    """Yahoo sometimes drops a whole session for most stocks (e.g. 12 Oct 2026). Features skip any stock with a
+    missing session, so fill recent gaps from NSE's official bhavcopy (unadjusted, same as our Yahoo bars)."""
+    have = [s for s in syms if s in hist]
+    for t in hist["^NSEI"].index[-lookback:]:
+        missing = [s for s in have if t not in hist[s].index]
+        if len(missing) < 0.2 * len(have):
+            continue
+        url = f"https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_{t:%d%m%Y}.csv"
+        try:
+            r = requests.get(url, headers=UA, timeout=30)
+            r.raise_for_status()
+            b = pd.read_csv(io.StringIO(r.text), skipinitialspace=True)
+        except Exception as e:
+            print(f"bhavcopy fill failed for {t.date()}: {e}")
+            continue
+        b.columns = b.columns.str.strip()
+        b = b[b.SERIES.str.strip().isin(["EQ", "BE"])].drop_duplicates("SYMBOL").set_index("SYMBOL")
+        n = 0
+        for s in missing:
+            if s in b.index:
+                x = b.loc[s]
+                row = pd.DataFrame({"Open": [x.OPEN_PRICE], "High": [x.HIGH_PRICE], "Low": [x.LOW_PRICE],
+                                    "Close": [x.CLOSE_PRICE], "Volume": [x.TTL_TRD_QNTY]},
+                                   index=pd.DatetimeIndex([t], name=hist[s].index.name), dtype=float)
+                hist[s] = pd.concat([hist[s], row]).sort_index()
+                n += 1
+        print(f"filled {n} of {len(missing)} missing bars for {t.date()} from NSE bhavcopy")
+    return hist
+
+
 def update_history(syms, period="2y"):
     tick = [s + ".NS" for s in syms] + ["^NSEI", "^INDIAVIX"]
     raw = _download(tick, period)
-    hist = {k[:-3] if k.endswith(".NS") else k: v for k, v in raw.items()}
+    hist = fill_gaps({k[:-3] if k.endswith(".NS") else k: v for k, v in raw.items()}, syms)
     with open(HIST, "wb") as f:
         pickle.dump(hist, f)
     return hist
