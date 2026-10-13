@@ -1,4 +1,4 @@
-# Daily paper-trading report - Fri, 09 Oct 2026
+# Daily paper-trading report - Tue, 13 Oct 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
@@ -24,14 +24,14 @@ Nothing was bought or sold today.
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 22,520 (▲ +1.30%) |
-| Market fear (India VIX) | 14.4 - calm (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,020 |
+| Nifty 50 | 22,722 (▲ +1.60%) |
+| Market fear (India VIX) | 14.1 - calm (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,019 |
 | Moved 3% or more today | 0 |
 | Scored above the bar (1.0) | 0 |
 
 ## How the model is learning
-- Retrained tonight on **52,678** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **52,762** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **1.0** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
 
 ## Experiments running alongside
