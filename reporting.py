@@ -17,7 +17,8 @@ BOOK_INFO = {
     "main": "The real strategy: the model's top picks.",
     "lookalike": "Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' "
                  "also work.",
-    "shadow": "Experiment: same model with different settings proposed in a weekly review; adopted only if it beats main.",
+    "shadow": "Practice account: settings found by the weekly self-tuning. They replace the main settings "
+              "automatically if they make more money over 20 trades.",
 }
 
 FACTORS = [

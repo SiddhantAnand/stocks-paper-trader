@@ -14,10 +14,11 @@ from model import DATA, FEATS, POLICIES, build_events, fit, load_history, load_m
 EVENTS = os.path.join(DATA, "events.pkl")
 
 
-def walk_forward(ev, target, min_train_days=120):
+def walk_forward(ev, target, min_train_days=120, months=None):
     ev = ev.dropna(subset=[target]).sort_values("date")
     out = []
-    for m in ev.date.dt.to_period("M").unique():
+    periods = ev.date.dt.to_period("M").unique()
+    for m in (periods[-months:] if months else periods):
         test = ev[ev.date.dt.to_period("M") == m]
         train = ev[ev.date < test.date.min() - pd.Timedelta(days=7)]  # embargo: labels look up to ~6 days ahead
         if train.date.nunique() < min_train_days:
@@ -55,6 +56,30 @@ def simulate(cands, cal, y, hd, slots=3):
                 avg=round(t.mean(), 2), pf=round(pf, 2), total=round((c.iloc[-1] / 1e5 - 1) * 100, 1),
                 wk8_med=round(w.median(), 1), wk8_worst=round(w.min(), 1), wk8_best=round(w.max(), 1),
                 wk8_pos=round((w > 0).mean() * 100), maxdd=round(((c / c.cummax()) - 1).min() * 100, 1))
+
+
+def tune(ev, cal_all, cur, months=12, thrs=(0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6), slots=(2, 3, 4)):
+    """Score every policy x threshold x slots on the last `months` of walk-forward predictions (days the model
+    had not trained on). Returns (result for the current settings, best result, all results)."""
+    rows = []
+    thrs = sorted(set(thrs) | {float(cur.get("thr", 1.0))})
+    for name in POLICIES:
+        y, hd = "y_" + name, "hd_" + name
+        oos = walk_forward(ev, y, months=months)
+        if oos.empty:
+            continue
+        cal = [d for d in cal_all if oos.date.min() <= d <= oos.date.max()]
+        for thr in thrs:
+            c = oos[oos.pred > thr].assign(score=lambda x: x.pred)
+            for k in slots:
+                rows.append(dict(policy=name, thr=thr, slots=k, oos=f"{oos.date.min():%Y-%m}..{oos.date.max():%Y-%m}",
+                                 **simulate(c, cal, y, hd, k)))
+    res = pd.DataFrame(rows)
+    is_cur = (res.policy == cur.get("policy", "h1")) & np.isclose(res.thr, cur.get("thr", 1.0)) & \
+             (res.slots == cur.get("slots", 3))
+    ok = res[(res.trades >= 60) & (res.maxdd >= -15)].sort_values("total", ascending=False)
+    return (res[is_cur].iloc[0].to_dict() if is_cur.any() else None,
+            ok.iloc[0].to_dict() if len(ok) else None, res)
 
 
 def main():

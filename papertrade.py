@@ -26,13 +26,18 @@ from sklearn.neighbors import NearestNeighbors
 
 import model as M
 import reporting as R
+import research
 
 IST = ZoneInfo("Asia/Kolkata")
 PAPER = os.path.join(M.DATA, "paper")
 REPORTS = os.environ.get("STOCKS_REPORTS", os.path.join(M.ROOT, "reports", "paper"))
 STATE = os.path.join(PAPER, "state.json")
 CFG = os.path.join(M.DATA, "model_config.json")
-SHADOW = os.path.join(M.DATA, "shadow_config.json")  # optional challenger settings from /weekly-review
+SHADOW = os.path.join(M.DATA, "shadow_config.json")  # challenger settings found by the weekly self-tuning
+SHADOW_MODEL = os.path.join(M.DATA, "model_shadow.joblib")  # only when the challenger uses another hold policy
+PROMOTE_TRADES = 20
+RUN_BUDGET = dt.timedelta(hours=5, minutes=30)  # GitHub kills a job at 6h; hand over to a fresh run before that
+CONTINUE = os.path.join(PAPER, "continue.flag")
 OUTBOX = os.path.join(PAPER, "outbox.json")
 START_CAPITAL = 100000.0
 END_DATE = "2026-12-02"  # 8 weeks of sessions
@@ -56,6 +61,14 @@ def ds():
 
 def stamp():
     return f"{now():%H:%M}" if today() == now().date() else "close"
+
+
+def target(cfg):
+    return "y_" + cfg.get("policy", "h1")
+
+
+def note(st, what):
+    st.setdefault("incidents", []).append({"date": ds(), "what": what})
 
 
 def log(msg):
@@ -312,12 +325,15 @@ def phase_entry(st):
             chosen.append(r.sym)
             held.add(r.sym)
 
-    # shadow book: same model, challenger settings proposed in a weekly review; runs independently of main
+    # shadow book: challenger settings from the weekly self-tuning; runs independently of main
     scfg = shadow_cfg(st)
     if scfg:
         sc, sb = {**cfg, **scfg}, st["books"]["shadow"]
         sheld = {p["sym"] for p in sb["positions"]}
-        for _, r in cands[cands.pred > sc["thr"]].sort_values("pred", ascending=False).iterrows():
+        sc_c = cands
+        if sc.get("policy") != cfg.get("policy") and os.path.exists(SHADOW_MODEL):
+            sc_c = cands.assign(pred=joblib.load(SHADOW_MODEL).predict(cands[M.FEATS]))
+        for _, r in sc_c[sc_c.pred > sc["thr"]].sort_values("pred", ascending=False).iterrows():
             if len(sb["positions"]) >= sc.get("slots", 3):
                 break
             if r.sym not in sheld:
@@ -396,9 +412,13 @@ def phase_eod(st):
     # learning step 1: rebuild labelled events (adds every newly completed setup, incl. our live trades) and refit
     ev = M.build_events(hist, syms, band, series)
     ev.to_pickle(os.path.join(M.DATA, "events.pkl"))
-    mdl = M.fit(ev, "y_h1")
+    cfg = load_json(CFG, {})
+    mdl = M.fit(ev, target(cfg))
     M.save_model(mdl, ev)
     st["model_through"] = ds()
+    scfg = load_json(SHADOW, None)
+    if scfg and scfg.get("policy") != cfg.get("policy"):
+        joblib.dump(M.fit(ev, target(scfg)), SHADOW_MODEL)
 
     # learning step 2: score yesterday's predictions against what actually happened
     pr = read_csv("predictions.csv")
@@ -414,18 +434,20 @@ def phase_eod(st):
 
     # learning step 3: adapt threshold / size from live paper results (risk governor)
     tr = read_csv("trades.csv")
-    cfg = load_json(CFG, {})
     thr, risk = st.get("thr", cfg.get("thr", 1.0)), st.get("risk_mult", 1.0)
+    base = cfg.get("thr", 1.0)
     m = tr[tr.book == "main"] if len(tr) else tr
     if len(m) >= 8:
         recent = m.ret_net.tail(10).mean()
         if recent < -0.3:
-            thr, risk = min(thr + 0.2, 1.8), 0.5
+            thr, risk = min(thr + 0.2, base + 0.8), 0.5
         elif recent > 0.5:
-            thr, risk = max(thr - 0.1, 0.8), 1.0
+            thr, risk = max(thr - 0.1, base - 0.2), 1.0
         else:
             risk = 1.0 if recent > 0 else 0.75
     st["thr"], st["risk_mult"] = round(thr, 2), risk
+    evolve(st, ev, hist, weekly=week_ends_today(st))
+    risk = st["risk_mult"]
 
     # mark to market
     last = {p["sym"]: float(hist[p["sym"]]["Close"].iloc[-1]) for b in st["books"]
@@ -447,6 +469,77 @@ def queue_mail(path, subject):
     box = load_json(OUTBOX, [])
     box.append({"path": os.path.relpath(path, M.ROOT), "subject": subject})
     save_json(OUTBOX, box)
+
+
+def settings_text(c):
+    return (f"score bar {c['thr']}, up to {c['slots']} stocks, hold {c['hold']} day(s), "
+            f"target +{c['tp']}%, stop-loss -{c['sl']}%")
+
+
+def evolve(st, ev, hist, weekly):
+    """Self-tuning. Weekly: search settings on the last 12 months of unseen data; a clear winner trades in the
+    shadow book. Daily: once the shadow has PROMOTE_TRADES closed trades and made more money than main over the
+    same period, its settings replace main automatically (versioned in model_config.json)."""
+    cfg, scfg = load_json(CFG, {}), load_json(SHADOW, None)
+    if scfg:
+        tr = read_csv("trades.csv")
+        t = tr[tr.exit_date >= scfg["started"]] if len(tr) else tr
+        s = t[t.book == "shadow"] if len(t) else t
+        m = t[t.book == "main"] if len(t) else t
+        s_pnl, m_pnl = (float(x.pnl.sum()) if len(x) else 0.0 for x in (s, m))
+        if len(s) >= PROMOTE_TRADES and s_pnl > m_pnl and s.ret_net.mean() > 0:
+            v = cfg.get("version", 1) + 1
+            old = settings_text(cfg)
+            cfg.update({k: scfg[k] for k in ("policy", "hold", "tp", "sl", "thr", "slots")}, version=v,
+                       research=scfg["evidence"], trained_to=ds())
+            cfg.setdefault("changelog", []).append(dict(
+                version=v, date=ds(), change=f"auto-promoted challenger: {settings_text(cfg)} (was {old})",
+                evidence=f"live since {scfg['started']}: challenger {len(s)} trades Rs {s_pnl:+,.0f} vs main "
+                         f"{len(m)} trades Rs {m_pnl:+,.0f}; backtest {scfg['evidence']}"))
+            save_json(CFG, cfg)
+            M.save_model(M.fit(ev, target(cfg)), ev)
+            st["thr"], st["risk_mult"] = cfg["thr"], 1.0
+            for f in (SHADOW, SHADOW_MODEL):
+                if os.path.exists(f):
+                    os.remove(f)
+            note(st, f"Settings upgraded automatically (version {v}). The practice settings made Rs {s_pnl:+,.0f} "
+                     f"over {len(s)} trades versus Rs {m_pnl:+,.0f} for the main settings, so the main strategy now "
+                     f"uses: {settings_text(cfg)}.")
+            log(f"evolve: promoted challenger to main v{v}: {settings_text(cfg)}")
+        elif len(s) >= 2 * PROMOTE_TRADES:
+            for f in (SHADOW, SHADOW_MODEL):
+                if os.path.exists(f):
+                    os.remove(f)
+            note(st, f"The practice settings ({settings_text(scfg)}) did not beat the main strategy over {len(s)} "
+                     f"trades (Rs {s_pnl:+,.0f} vs Rs {m_pnl:+,.0f}), so they were dropped.")
+            log("evolve: challenger retired")
+        return
+    if not weekly or st["books"].get("shadow", {}).get("positions"):
+        return
+    cur, best, res = research.tune(ev, list(hist["^NSEI"].index), cfg)
+    res.sort_values("total", ascending=False).to_csv(os.path.join(PAPER, "tuning_latest.csv"), index=False)
+    same = best is not None and (best["policy"], best["thr"], best["slots"]) == \
+        (cfg.get("policy"), cfg.get("thr"), cfg.get("slots"))
+    log(f"evolve: weekly search current={cur and {k: cur[k] for k in ('trades', 'total', 'pf', 'maxdd')}} "
+        f"best={best and {k: best[k] for k in ('policy', 'thr', 'slots', 'trades', 'total', 'pf', 'maxdd')}}")
+    if best is None or same or (cur is not None and best["total"] < cur["total"] + 5):
+        return
+    H, tp, sl = M.POLICIES[best["policy"]]
+    ch = dict(policy=best["policy"], hold=H, tp=tp, sl=sl, thr=float(best["thr"]), slots=int(best["slots"]),
+              started=ds(), evidence=dict(oos=best["oos"], trades=best["trades"], avg_net=best["avg"],
+                                          win=best["win"], pf=best["pf"], total=best["total"],
+                                          wk8_median=best["wk8_med"], wk8_worst=best["wk8_worst"],
+                                          maxdd=best["maxdd"]))
+    ch["name"] = settings_text(ch)
+    save_json(SHADOW, ch)
+    if ch["policy"] != cfg.get("policy"):
+        joblib.dump(M.fit(ev, target(ch)), SHADOW_MODEL)
+    st["books"]["shadow"] = {"cash": START_CAPITAL, "positions": []}
+    note(st, f"Weekly self-tuning found settings that earned {best['total']:+.1f}% over the last 12 months of "
+             f"unseen data, versus {cur['total'] if cur else '?'}% for the current ones: {ch['name']}. They now "
+             f"trade in a separate practice account and replace the main settings automatically if they make "
+             f"more money over the next {PROMOTE_TRADES} trades.")
+    log(f"evolve: new challenger {ch}")
 
 
 def week_ends_today(st):
@@ -613,20 +706,30 @@ def pending_sessions(st):
     return sorted(d for d in days if is_trading_day(d) and keep(d.strftime("%Y-%m-%d")))
 
 
-def job(kind=None):
-    """One scheduled cloud run, safe at any hour: processes every closed session not yet done (catch-up).
-    Entry is at the session close and stops/targets are checked on that day's 1-minute bars, matching the
-    research backtest (buy at close), so a run that GitHub starts hours late gives the same result."""
+def run_phase(st, name, fn):
+    done = st["done"].setdefault(ds(), [])
+    if name != "monitor" and name in done:
+        return True
+    try:
+        fn(st)
+        if name != "monitor":
+            done.append(name)
+        ok = True
+    except Exception:
+        log(f"{ds()} {name} FAILED:\n{traceback.format_exc()}")
+        ok = False
+    save_json(STATE, st)
+    return ok
+
+
+def catch_up(st):
+    """Process every closed session not yet done, at the closing price (same as the research backtest), so a
+    run that GitHub starts hours late still books the day."""
     global DAY
-    st = load_json(STATE, None) or new_state()
-    if st.get("finished"):
-        log("job: run already finished")
-        return
     days = pending_sessions(st)
     if not days:
-        print("job: no closed trading session waiting to be processed")
         return
-    log(f"job: processing {[f'{d}' for d in days]}")
+    log(f"catch-up: processing {[f'{d}' for d in days]}")
     since = max([k for k, v in st["done"].items() if "eod" in v], default="")
     if since and st.get("model_through") != since:
         # catch-up after a state rewind: the saved model may have seen later data -> retrain up to `since` only
@@ -635,39 +738,98 @@ def job(kind=None):
         h = M.fill_gaps({s: v[v.index.strftime("%Y-%m-%d") <= since] for s, v in M.load_history().items()}, syms)
         ev = M.build_events(h, syms, band, series)
         ev.to_pickle(os.path.join(M.DATA, "events.pkl"))
-        M.save_model(M.fit(ev, "y_h1"), ev)
+        M.save_model(M.fit(ev, target(load_json(CFG, {}))), ev)
         st["model_through"] = since
-        log(f"job: model retrained on data up to {since} before catching up")
+        log(f"catch-up: model retrained on data up to {since} first")
     for d in days:
         DAY = d
-        day = ds()
-        done = st["done"].setdefault(day, [])
-
-        def run(name, fn):
-            if name != "monitor" and name in done:
-                return
-            try:
-                fn(st)
-                if name != "monitor":
-                    done.append(name)
-            except Exception:
-                log(f"{day} {name} FAILED:\n{traceback.format_exc()}")
-            save_json(STATE, st)
-
-        run("premarket", phase_premarket)
-        run("monitor", phase_monitor)
-        run("entry", phase_entry)
+        run_phase(st, "premarket", phase_premarket)
+        run_phase(st, "monitor", phase_monitor)
+        entered = run_phase(st, "entry", phase_entry)
         fresh = now() < dt.datetime.combine(d, dt.time(15, 30), IST) + dt.timedelta(hours=14)
-        if "entry" not in done and fresh:
-            log(f"{day}: entry incomplete (data not ready?) - will retry on the next scheduled run")
+        if not entered and fresh:
+            log(f"{ds()}: entry incomplete (data not ready?) - will retry")
             break
-        run("eod", phase_eod)
-        if "eod" not in done:
+        if not run_phase(st, "eod", phase_eod):
             break
-        if day >= st["end"]:
+        if ds() >= st["end"]:
             st["finished"] = True
             log("run finished")
             break
+    DAY = None
+
+
+def next_session(st):
+    d = now().date()
+    for _ in range(10):
+        s = d.strftime("%Y-%m-%d")
+        if s > st["end"]:
+            return None
+        still_open = d > now().date() or now().time() < dt.time(15, 35)
+        if still_open and is_trading_day(d) and "eod" not in st["done"].get(s, []):
+            return d
+        d += dt.timedelta(days=1)
+    return None
+
+
+def at(d, h, m):
+    return dt.datetime.combine(d, dt.time(h, m), IST)
+
+
+def live_session(st, d, stop_at):
+    """Trade one session live: stop/target checks every 5 min, buy at the live price from 15:15, wrap up after
+    the close. Returns True if this run must hand over to a fresh run (time budget used up)."""
+    global DAY
+    DAY = d
+    log(f"live: session {ds()}, this run hands over at {stop_at:%d %b %H:%M} if still busy")
+    while True:
+        n = now()
+        if n >= stop_at:
+            return True
+        if n < at(d, 9, 10):
+            time.sleep(min(600, (min(at(d, 9, 10), stop_at) - n).total_seconds()))
+            continue
+        run_phase(st, "premarket", phase_premarket)
+        if n >= at(d, 15, 35):
+            DAY = None
+            catch_up(st)
+            if "eod" in st["done"].get(d.strftime("%Y-%m-%d"), []) or now() > at(d, 16, 30):
+                return False
+            DAY = d
+            time.sleep(600)
+            continue
+        if n >= at(d, 9, 15):
+            run_phase(st, "monitor", phase_monitor)
+        if at(d, 15, 15) <= n <= at(d, 15, 28) and not run_phase(st, "entry", phase_entry):
+            time.sleep(60)
+            continue
+        nxt = min(t for t in (n + dt.timedelta(minutes=5), at(d, 15, 15), at(d, 15, 35), stop_at) if t > n)
+        time.sleep(max(1, (nxt - now()).total_seconds()))
+
+
+def job(kind=None):
+    """One cloud run: first books any missed closed session (at the close price), then trades the current or
+    next session live if it opens within 6h. When the time budget is used up it writes CONTINUE and the
+    workflow starts a fresh run that carries on."""
+    global DAY
+    t0 = now()
+    if os.path.exists(CONTINUE):
+        os.remove(CONTINUE)
+    st = load_json(STATE, None) or new_state()
+    if st.get("finished"):
+        log("job: run already finished")
+        return
+    catch_up(st)
+    d = None if st.get("finished") else next_session(st)
+    if d is None or at(d, 9, 10) - now() > dt.timedelta(hours=6):
+        print(f"job: next session {d} is not close yet - a later scheduled run will start it")
+    else:
+        stop_at = t0 + RUN_BUDGET
+        if at(d, 14, 40) < stop_at < at(d, 15, 50) and t0 < at(d, 14, 40):
+            stop_at = at(d, 14, 40)  # never hand over during the 15:15 entry or the close
+        if live_session(st, d, stop_at):
+            open(CONTINUE, "w").close()
+            log("live: time budget used, handing over to a fresh run")
     DAY = None
     cut = (now() - dt.timedelta(days=10)).strftime("%Y-%m-%d")
     st["done"] = {k: v for k, v in st["done"].items() if k >= cut}

@@ -8,6 +8,7 @@ data/events.pkl
 data/prices.pkl
 data/oos_h1.pkl
 data/paper/outbox.json
+data/paper/continue.flag
 data/paper/launchd.*.log
 data/launchd.*.log
 data/alert_state.json
