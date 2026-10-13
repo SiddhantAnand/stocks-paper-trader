@@ -34,7 +34,7 @@
   },
   {
    "date": "2026-10-13",
-   "text": "GitHub started the scheduled runs about 7 hours late, so 8, 9 and 13 Oct entries were skipped and the 12 Oct run timed out. Runs now work at any hour and catch up missed days; 12 and 13 Oct were replayed at the closing price."
+   "what": "GitHub started the scheduled runs about 7 hours late, so 8, 9 and 13 Oct entries were skipped and the 12 Oct run timed out. Runs now work at any hour and catch up missed days; 12 and 13 Oct were replayed at the closing price."
   }
  ],
  "thr": 1.0,
