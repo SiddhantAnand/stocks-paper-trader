@@ -53,3 +53,10 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-14 09:20:00 [lookalike] SELL BODALCHEM 187 @ 172.44 (stop) net -3.35% pnl -1113 | hit stop intraday; weak market day at entry
 2026-10-14 09:55:00 [main] SELL E2E 22 @ 764.97 (target) net +3.65% pnl +591 | worked: target; entered on +4.4% day, close-in-range 0.92, pred +1.38
 2026-10-14 12:13:20 live: time budget used, handing over to a fresh run
+2026-10-14 12:13:51 live: session 2026-10-14, this run hands over at 14 Oct 17:43 if still busy
+2026-10-14 15:15:00 [lookalike] SELL SWANDEF 11 @ 2939.00 (time) net -0.08% pnl -26 | no follow-through, small time-exit loss (costs); weak market day at entry
+2026-10-14 15:16:02 [main] BUY STLTECH 18 @ 926.00 (Rs 16,668) pred +1.08 day -3.9% size x0.5  | PE 201.13882 mcap 47666Cr
+2026-10-14 15:16:03 [lookalike] BUY AHCL 1134 @ 29.04 (Rs 32,931) pred -3.61 day -5.0% size x1.0 lookalike of STLTECH (distance 7.67) | PE 42.705883 mcap 1544Cr
+2026-10-14 15:16:03 entry: 83 movers scored, 1 above thr 1.00, bought ['STLTECH']
+2026-10-14 15:35:00 catch-up: processing ['2026-10-14']
+2026-10-14 15:35:59 eod: model retrained on 52922 setups; thr 1.0 risk x1.0; accuracy {'labelled': 179, 'corr': np.float64(0.182), 'above_thr': 2, 'above_thr_avg': np.float64(3.65), 'below_thr_avg': np.float64(-0.3)}

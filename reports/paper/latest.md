@@ -1,68 +1,76 @@
-# Daily paper-trading report - Tue, 13 Oct 2026
+# Daily paper-trading report - Wed, 14 Oct 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**No new trades today.** 91 stocks moved 3% or more, and 0 scored above the model's bar of 1.0.
-
-> **Notice:** GitHub started the scheduled runs about 7 hours late, so 8, 9 and 13 Oct entries were skipped and the 12 Oct run timed out. Runs now work at any hour and catch up missed days; 12 and 13 Oct were replayed at the closing price.
+**Bought 1 stock(s), sold 2 for +Rs 1,784.**
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,01,487** |
-| Today's change | +Rs 1,487 (▲ +1.49%) |
-| Total profit / loss since 2026-10-07 | **+Rs 1,487** (▲ +1.49%) |
-| Trades completed | 0 (0 wins, 0 losses) |
-| Win rate | - (expected about 55.6%) |
-| Average result per trade | - (expected about ▲ +0.85%) |
+| Portfolio value | **Rs 1,01,760** |
+| Today's change | +Rs 273 (▲ +0.27%) |
+| Total profit / loss since 2026-10-07 | **+Rs 1,760** (▲ +1.76%) |
+| Trades completed | 2 (2 wins, 0 losses) |
+| Win rate | 100% (expected about 55.6%) |
+| Average result per trade | ▲ +3.65% (expected about ▲ +0.85%) |
 | Profit factor | - (expected about 1.73) |
-| Stocks held now | 2 of 3 slots |
-| Cash available | Rs 51,120 |
-| Evidence so far | 0 of ~80 trades needed for a reliable verdict |
+| Stocks held now | 1 of 3 slots |
+| Cash available | Rs 85,116 |
+| Evidence so far | 2 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
-Nothing was bought or sold today.
+### Sold
+| Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
+|---|---|---|---|---|---|---|
+| main | **SIGMAADV** | 961.70 | 1,000.17 | ▲ +3.65% | +Rs 1,194 | Hit the profit target |
+| lookalike | **BODALCHEM** | 177.77 | 172.44 | ▼ -3.35% | -Rs 1,113 | Hit the stop-loss (limits the loss) |
+| main | **E2E** | 735.55 | 764.97 | ▲ +3.65% | +Rs 591 | Hit the profit target |
+| lookalike | **SWANDEF** | 2,931.10 | 2,939.00 | ▼ -0.08% | -Rs 26 | Holding period ended - sold at about 3:15 pm |
+
+### Bought
+| Book | Stock | Price | Amount | Why |
+|---|---|---|---|---|
+| main | **STLTECH** | 926.00 | Rs 16,668 | moved -3.9% today and closed mid-range; volume 0.7x normal; uptrend; RSI 56; model score +1.08 (bar 1.0); similar past setups averaged -0.37%; bought at reduced size |
+| lookalike | **AHCL** | 29.04 | Rs 32,931 | moved -5.0% today and closed near the day's low; volume 0.2x normal; uptrend; RSI 57; model score -3.61 (bar 1.0); lookalike of STLTECH (distance 7.67) |
 
 ## Stocks we're holding
 | Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
 |---|---|---|---|---|---|---|---|
-| main | **SIGMAADV** | 2026-10-12 | 961.70 | 1,005.30 | ▲ +4.53% | 1,000.17 (profit target) | 932.85 (stop-loss) |
-| main | **E2E** | 2026-10-12 | 735.55 | 735.75 | ▲ +0.03% | 764.97 (profit target) | 713.48 (stop-loss) |
-| lookalike | **BODALCHEM** | 2026-10-12 | 177.77 | 176.41 | ▼ -0.77% | 184.88 (profit target) | 172.44 (stop-loss) |
-| lookalike | **SWANDEF** | 2026-10-12 | 2,931.10 | 2,968.20 | ▲ +1.27% | 3,048.34 (profit target) | 2,843.17 (stop-loss) |
+| main | **STLTECH** | 2026-10-14 | 926.00 | 924.65 | ▼ -0.15% | 963.04 (profit target) | 898.22 (stop-loss) |
+| lookalike | **AHCL** | 2026-10-14 | 29.04 | 29.04 | +0.00% | 30.20 (profit target) | 28.17 (stop-loss) |
 
 _Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 22,722 (▲ +1.60%) |
-| Market fear (India VIX) | 14.1 - calm (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Nifty 50 | 22,623 (▼ -0.44%) |
+| Market fear (India VIX) | 14.7 - calm (below 15 calm, 15-20 nervous, above 20 fearful) |
 | Stocks scanned | 1,022 |
-| Moved 3% or more today | 91 |
-| Scored above the bar (1.0) | 0 |
+| Moved 3% or more today | 83 |
+| Scored above the bar (1.0) | 1 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| SIGMAADV | ▲ +4.53% | +0.84 | Skipped - score below the bar |
-| INOXWIND | ▲ +4.12% | +0.68 | Skipped - score below the bar |
-| MPHASIS | ▲ +4.79% | +0.49 | Skipped - score below the bar |
-| LOTUSDEV | ▼ -3.06% | +0.38 | Skipped - score below the bar |
-| TIPSMUSIC | ▲ +3.62% | +0.33 | Skipped - score below the bar |
-| PERSISTENT | ▲ +3.47% | +0.31 | Skipped - score below the bar |
-| PRESTIGE | ▲ +3.88% | +0.28 | Skipped - score below the bar |
-| STLNETWORK | ▼ -4.45% | +0.28 | Skipped - score below the bar |
+| STLTECH | ▼ -3.89% | +1.08 | **Bought** |
+| LTTS | ▲ +5.74% | +0.24 | Skipped - score below the bar |
+| UTLSOLAR | ▲ +3.99% | +0.14 | Skipped - score below the bar |
+| ABDL | ▲ +3.64% | +0.09 | Skipped - score below the bar |
+| CSBBANK | ▲ +3.64% | +0.05 | Skipped - score below the bar |
+| MFSL | ▼ -3.20% | -0.02 | Skipped - score below the bar |
+| CRAFTSMAN | ▲ +3.08% | -0.02 | Skipped - score below the bar |
+| JWL | ▼ -3.22% | -0.04 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **52,830** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **52,922** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **1.0** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 87 past predictions, stocks above the bar averaged - next day vs ▼ -0.87% for the rest.
+- Prediction check: of 179 past predictions, stocks above the bar averaged ▲ +3.65% next day vs ▼ -0.30% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
-| lookalike | Rs 1,00,154 | +Rs 154 | 0 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
+| lookalike | Rs 98,861 | -Rs 1,139 | 2 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.
