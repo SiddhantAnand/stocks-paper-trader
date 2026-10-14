@@ -30,3 +30,26 @@
 2026-10-13 23:40:22 premarket: trading day, positions aged SIGMAADV(1), E2E(1), BODALCHEM(1), SWANDEF(1)
 2026-10-13 23:42:05 entry: 91 movers scored, 0 above thr 1.00, bought []
 2026-10-13 23:44:02 eod: model retrained on 52830 setups; thr 1.0 risk x1.0; accuracy {'labelled': 87, 'corr': np.float64(0.006), 'above_thr': 0, 'above_thr_avg': None, 'below_thr_avg': np.float64(-0.87)}
+2026-10-14 06:43:20 live: session 2026-10-14, this run hands over at 14 Oct 12:13 if still busy
+2026-10-14 09:10:02 premarket: trading day, positions aged SIGMAADV(2), E2E(2), BODALCHEM(2), SWANDEF(2)
+2026-10-14 09:15:00 2026-10-14 monitor FAILED:
+Traceback (most recent call last):
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 714, in run_phase
+    fn(st)
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 230, in phase_monitor
+    bars = intraday(sorted({p["sym"] for _, p in live}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 142, in intraday
+    d = d[d.index.tz_convert(IST).date == today()]
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py", line 395, in tz_convert
+    arr = self._data.tz_convert(tz)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/pandas/core/arrays/datetimes.py", line 931, in tz_convert
+    raise TypeError(
+TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
+
+2026-10-14 09:20:00 [main] SELL SIGMAADV 34 @ 1000.17 (target) net +3.65% pnl +1194 | worked: target; entered on -4.7% day, close-in-range 0.09, pred +1.79
+2026-10-14 09:20:00 [lookalike] SELL BODALCHEM 187 @ 172.44 (stop) net -3.35% pnl -1113 | hit stop intraday; weak market day at entry
+2026-10-14 09:55:00 [main] SELL E2E 22 @ 764.97 (target) net +3.65% pnl +591 | worked: target; entered on +4.4% day, close-in-range 0.92, pred +1.38
+2026-10-14 12:13:20 live: time budget used, handing over to a fresh run
