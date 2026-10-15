@@ -83,3 +83,7 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-10-15 09:20:00 [lookalike] SELL AHCL 1134 @ 28.17 (stop) net -3.35% pnl -1102 | hit stop intraday
 2026-10-15 14:27:51 live: time budget used, handing over to a fresh run
+2026-10-15 14:28:23 live: session 2026-10-15, this run hands over at 15 Oct 19:58 if still busy
+2026-10-15 15:15:57 entry: 137 movers scored, 0 above thr 1.00, bought []
+2026-10-15 15:35:00 catch-up: processing ['2026-10-15']
+2026-10-15 15:35:46 eod: model retrained on 53006 setups; thr 1.0 risk x1.0; accuracy {'labelled': 258, 'corr': np.float64(0.276), 'above_thr': 2, 'above_thr_avg': np.float64(3.65), 'below_thr_avg': np.float64(-0.79)}

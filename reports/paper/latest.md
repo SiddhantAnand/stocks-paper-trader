@@ -1,15 +1,15 @@
-# Daily paper-trading report - Wed, 14 Oct 2026
+# Daily paper-trading report - Thu, 15 Oct 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**Bought 1 stock(s), sold 2 for +Rs 1,784.**
+**No new trades today.** 137 stocks moved 3% or more, and 0 scored above the model's bar of 1.0.
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,01,760** |
-| Today's change | +Rs 273 (▲ +0.27%) |
-| Total profit / loss since 2026-10-07 | **+Rs 1,760** (▲ +1.76%) |
+| Portfolio value | **Rs 1,00,928** |
+| Today's change | -Rs 832 (▼ -0.82%) |
+| Total profit / loss since 2026-10-07 | **+Rs 928** (▲ +0.93%) |
 | Trades completed | 2 (2 wins, 0 losses) |
 | Win rate | 100% (expected about 55.6%) |
 | Average result per trade | ▲ +3.65% (expected about ▲ +0.85%) |
@@ -22,55 +22,45 @@
 ### Sold
 | Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
 |---|---|---|---|---|---|---|
-| main | **SIGMAADV** | 961.70 | 1,000.17 | ▲ +3.65% | +Rs 1,194 | Hit the profit target |
-| lookalike | **BODALCHEM** | 177.77 | 172.44 | ▼ -3.35% | -Rs 1,113 | Hit the stop-loss (limits the loss) |
-| main | **E2E** | 735.55 | 764.97 | ▲ +3.65% | +Rs 591 | Hit the profit target |
-| lookalike | **SWANDEF** | 2,931.10 | 2,939.00 | ▼ -0.08% | -Rs 26 | Holding period ended - sold at about 3:15 pm |
-
-### Bought
-| Book | Stock | Price | Amount | Why |
-|---|---|---|---|---|
-| main | **STLTECH** | 926.00 | Rs 16,668 | moved -3.9% today and closed mid-range; volume 0.7x normal; uptrend; RSI 56; model score +1.08 (bar 1.0); similar past setups averaged -0.37%; bought at reduced size |
-| lookalike | **AHCL** | 29.04 | Rs 32,931 | moved -5.0% today and closed near the day's low; volume 0.2x normal; uptrend; RSI 57; model score -3.61 (bar 1.0); lookalike of STLTECH (distance 7.67) |
+| lookalike | **AHCL** | 29.04 | 28.17 | ▼ -3.35% | -Rs 1,102 | Hit the stop-loss (limits the loss) |
 
 ## Stocks we're holding
 | Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
 |---|---|---|---|---|---|---|---|
-| main | **STLTECH** | 2026-10-14 | 926.00 | 924.65 | ▼ -0.15% | 963.04 (profit target) | 898.22 (stop-loss) |
-| lookalike | **AHCL** | 2026-10-14 | 29.04 | 29.04 | +0.00% | 30.20 (profit target) | 28.17 (stop-loss) |
+| main | **STLTECH** | 2026-10-14 | 926.00 | 878.45 | ▼ -5.13% | 963.04 (profit target) | 898.22 (stop-loss) |
 
 _Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 22,623 (▼ -0.44%) |
-| Market fear (India VIX) | 14.7 - calm (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Nifty 50 | 22,997 (▲ +1.66%) |
+| Market fear (India VIX) | 14.0 - calm (below 15 calm, 15-20 nervous, above 20 fearful) |
 | Stocks scanned | 1,022 |
-| Moved 3% or more today | 83 |
-| Scored above the bar (1.0) | 1 |
+| Moved 3% or more today | 137 |
+| Scored above the bar (1.0) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| STLTECH | ▼ -3.89% | +1.08 | **Bought** |
-| LTTS | ▲ +5.74% | +0.24 | Skipped - score below the bar |
-| UTLSOLAR | ▲ +3.99% | +0.14 | Skipped - score below the bar |
-| ABDL | ▲ +3.64% | +0.09 | Skipped - score below the bar |
-| CSBBANK | ▲ +3.64% | +0.05 | Skipped - score below the bar |
-| MFSL | ▼ -3.20% | -0.02 | Skipped - score below the bar |
-| CRAFTSMAN | ▲ +3.08% | -0.02 | Skipped - score below the bar |
-| JWL | ▼ -3.22% | -0.04 | Skipped - score below the bar |
+| PNCINFRA | ▼ -3.28% | +0.34 | Skipped - score below the bar |
+| APARINDS | ▼ -5.66% | +0.30 | Skipped - score below the bar |
+| STLTECH | ▼ -5.00% | +0.20 | Skipped - score below the bar |
+| HDBFS | ▼ -7.89% | +0.15 | Skipped - score below the bar |
+| SIGMAADV | ▼ -4.83% | +0.13 | Skipped - score below the bar |
+| AZAD | ▼ -4.00% | +0.08 | Skipped - score below the bar |
+| MSTCLTD | ▼ -3.58% | +0.05 | Skipped - score below the bar |
+| NEOGEN | ▼ -6.38% | +0.00 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **52,922** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **53,006** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **1.0** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 179 past predictions, stocks above the bar averaged ▲ +3.65% next day vs ▼ -0.30% for the rest.
+- Prediction check: of 258 past predictions, stocks above the bar averaged ▲ +3.65% next day vs ▼ -0.79% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
-| lookalike | Rs 98,861 | -Rs 1,139 | 2 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
+| lookalike | Rs 97,759 | -Rs 2,241 | 3 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.
