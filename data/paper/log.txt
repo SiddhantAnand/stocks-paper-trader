@@ -60,3 +60,5 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-14 15:16:03 entry: 83 movers scored, 1 above thr 1.00, bought ['STLTECH']
 2026-10-14 15:35:00 catch-up: processing ['2026-10-14']
 2026-10-14 15:35:59 eod: model retrained on 52922 setups; thr 1.0 risk x1.0; accuracy {'labelled': 179, 'corr': np.float64(0.182), 'above_thr': 2, 'above_thr_avg': np.float64(3.65), 'below_thr_avg': np.float64(-0.3)}
+2026-10-15 03:27:16 live: session 2026-10-15, this run hands over at 15 Oct 08:57 if still busy
+2026-10-15 08:57:16 live: time budget used, handing over to a fresh run
