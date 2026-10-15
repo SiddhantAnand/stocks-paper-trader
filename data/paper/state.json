@@ -29,6 +29,9 @@
    "premarket",
    "entry",
    "eod"
+  ],
+  "2026-10-15": [
+   "premarket"
   ]
  },
  "finished": false,
@@ -46,7 +49,7 @@
      "target": 963.04,
      "hold": 1,
      "min_hold": 2,
-     "sessions": 0,
+     "sessions": 1,
      "band": 5.0,
      "series": "BE",
      "industry": "Telecommunication",
@@ -94,64 +97,8 @@
    ]
   },
   "lookalike": {
-   "cash": 65929.63033197266,
-   "positions": [
-    {
-     "sym": "AHCL",
-     "entry_date": "2026-10-14",
-     "entry_time": "15:16",
-     "entry_px": 29.04,
-     "qty": 1134,
-     "stop": 28.17,
-     "target": 30.2,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 0,
-     "band": 5.0,
-     "series": "EQ",
-     "industry": "",
-     "prev_close": 29.040000915527344,
-     "pred": -3.614,
-     "analog_avg": null,
-     "size_mult": 1.0,
-     "note": "lookalike of STLTECH (distance 7.67)",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -4.974,
-      "gap": 1.342,
-      "oc": -6.232,
-      "clv": 0.0,
-      "r2": -1.593,
-      "r5": 3.052,
-      "r20": 43.905,
-      "d_sma20": -0.081,
-      "d_sma50": 39.196,
-      "trend": 1.0,
-      "rsi": 57.228,
-      "atr": 7.453,
-      "vr": 0.244,
-      "pos20": 0.535,
-      "d_hi52": -22.019,
-      "tv_log": 1.817,
-      "band": 5.0,
-      "is_be": 0.0,
-      "streak": -1.0,
-      "n_r1": -0.426,
-      "n_d50": -4.176,
-      "vix": 14.595,
-      "vix_ch5": 5.076,
-      "dow": 2.0
-     },
-     "fund": {
-      "pe": 42.705883,
-      "pb": 5.682975,
-      "mcap_cr": 1544,
-      "de": 17.133,
-      "roe": null,
-      "sector": "Healthcare"
-     }
-    }
-   ]
+   "cash": 97759.15057197266,
+   "positions": []
   }
  },
  "incidents": [
