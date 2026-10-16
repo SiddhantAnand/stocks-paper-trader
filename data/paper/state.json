@@ -34,69 +34,16 @@
    "premarket",
    "entry",
    "eod"
+  ],
+  "2026-10-16": [
+   "premarket"
   ]
  },
  "finished": false,
  "books": {
   "main": {
-   "cash": 85116.14065944823,
-   "positions": [
-    {
-     "sym": "STLTECH",
-     "entry_date": "2026-10-14",
-     "entry_time": "15:16",
-     "entry_px": 926.0,
-     "qty": 18,
-     "stop": 898.22,
-     "target": 963.04,
-     "hold": 1,
-     "min_hold": 2,
-     "sessions": 1,
-     "band": 5.0,
-     "series": "BE",
-     "industry": "Telecommunication",
-     "prev_close": 926.0,
-     "pred": 1.083,
-     "analog_avg": -0.367,
-     "size_mult": 0.5,
-     "note": "",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -3.887,
-      "gap": -2.818,
-      "oc": -1.1,
-      "clv": 0.255,
-      "r2": -8.692,
-      "r5": -8.93,
-      "r20": 8.615,
-      "d_sma20": 1.938,
-      "d_sma50": 18.331,
-      "trend": 1.0,
-      "rsi": 56.115,
-      "atr": 5.416,
-      "vr": 0.707,
-      "pos20": 0.533,
-      "d_hi52": -11.902,
-      "tv_log": 2.128,
-      "band": 5.0,
-      "is_be": 1.0,
-      "streak": -3.0,
-      "n_r1": -0.426,
-      "n_d50": -4.176,
-      "vix": 14.595,
-      "vix_ch5": 5.076,
-      "dow": 2.0
-     },
-     "fund": {
-      "pe": 201.13882,
-      "pb": 19.95674,
-      "mcap_cr": 47666,
-      "de": 85.626,
-      "roe": null,
-      "sector": "Technology"
-     }
-    }
-   ]
+   "cash": 100359.6022199951,
+   "positions": []
   },
   "lookalike": {
    "cash": 97759.15057197266,
