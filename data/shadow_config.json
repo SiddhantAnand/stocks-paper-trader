@@ -1,0 +1,21 @@
+{
+ "policy": "h1",
+ "hold": 1,
+ "tp": 4.0,
+ "sl": 3.0,
+ "thr": 0.4,
+ "slots": 2,
+ "started": "2026-10-16",
+ "evidence": {
+  "oos": "2025-11..2026-10",
+  "trades": 252,
+  "avg_net": 0.6,
+  "win": 51.6,
+  "pf": 1.46,
+  "total": 101.5,
+  "wk8_median": 7.8,
+  "wk8_worst": -9.1,
+  "maxdd": -14.3
+ },
+ "name": "score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%"
+}

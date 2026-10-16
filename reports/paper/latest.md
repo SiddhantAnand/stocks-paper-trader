@@ -1,66 +1,62 @@
-# Daily paper-trading report - Thu, 15 Oct 2026
+# Daily paper-trading report - Fri, 16 Oct 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**No new trades today.** 137 stocks moved 3% or more, and 0 scored above the model's bar of 1.0.
+**Bought 0 stock(s), sold 1 for -Rs 1,425.**
+
+> **Notice:** Weekly self-tuning found settings that earned +101.5% over the last 12 months of unseen data, versus 45.6% for the current ones: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%. They now trade in a separate practice account and replace the main settings automatically if they make more money over the next 20 trades.
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,00,928** |
-| Today's change | -Rs 832 (▼ -0.82%) |
-| Total profit / loss since 2026-10-07 | **+Rs 928** (▲ +0.93%) |
-| Trades completed | 2 (2 wins, 0 losses) |
-| Win rate | 100% (expected about 55.6%) |
-| Average result per trade | ▲ +3.65% (expected about ▲ +0.85%) |
-| Profit factor | - (expected about 1.73) |
-| Stocks held now | 1 of 3 slots |
-| Cash available | Rs 85,116 |
-| Evidence so far | 2 of ~80 trades needed for a reliable verdict |
+| Portfolio value | **Rs 1,00,360** |
+| Today's change | -Rs 569 (▼ -0.56%) |
+| Total profit / loss since 2026-10-07 | **+Rs 360** (▲ +0.36%) |
+| Trades completed | 3 (2 wins, 1 losses) |
+| Win rate | 67% (expected about 55.6%) |
+| Average result per trade | ▼ -0.42% (expected about ▲ +0.85%) |
+| Profit factor | 0.85 (expected about 1.73) |
+| Stocks held now | 0 of 3 slots |
+| Cash available | Rs 1,00,360 |
+| Evidence so far | 3 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
 ### Sold
 | Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
 |---|---|---|---|---|---|---|
-| lookalike | **AHCL** | 29.04 | 28.17 | ▼ -3.35% | -Rs 1,102 | Hit the stop-loss (limits the loss) |
-
-## Stocks we're holding
-| Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
-|---|---|---|---|---|---|---|---|
-| main | **STLTECH** | 2026-10-14 | 926.00 | 878.45 | ▼ -5.13% | 963.04 (profit target) | 898.22 (stop-loss) |
-
-_Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
+| main | **STLTECH** | 926.00 | 850.10 | ▼ -8.55% | -Rs 1,425 | Opened below the stop-loss - sold at the open |
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 22,997 (▲ +1.66%) |
+| Nifty 50 | 23,146 (▲ +0.65%) |
 | Market fear (India VIX) | 14.0 - calm (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,022 |
-| Moved 3% or more today | 137 |
+| Stocks scanned | 1,021 |
+| Moved 3% or more today | 65 |
 | Scored above the bar (1.0) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| PNCINFRA | ▼ -3.28% | +0.34 | Skipped - score below the bar |
-| APARINDS | ▼ -5.66% | +0.30 | Skipped - score below the bar |
-| STLTECH | ▼ -5.00% | +0.20 | Skipped - score below the bar |
-| HDBFS | ▼ -7.89% | +0.15 | Skipped - score below the bar |
-| SIGMAADV | ▼ -4.83% | +0.13 | Skipped - score below the bar |
-| AZAD | ▼ -4.00% | +0.08 | Skipped - score below the bar |
-| MSTCLTD | ▼ -3.58% | +0.05 | Skipped - score below the bar |
-| NEOGEN | ▼ -6.38% | +0.00 | Skipped - score below the bar |
+| MTARTECH | ▼ -3.14% | +0.63 | Skipped - score below the bar |
+| HDBFS | ▼ -5.02% | -0.24 | Skipped - score below the bar |
+| FIEMIND | ▲ +5.51% | -0.28 | Skipped - score below the bar |
+| AVALON | ▼ -3.09% | -0.33 | Skipped - score below the bar |
+| DIACABS | ▼ -3.05% | -0.40 | Skipped - score below the bar |
+| AEGISLOG | ▼ -3.06% | -0.50 | Skipped - score below the bar |
+| AEROFLEX | ▲ +3.02% | -0.55 | Skipped - score below the bar |
+| AETHER | ▼ -3.57% | -0.56 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **53,006** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **53,143** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **1.0** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 258 past predictions, stocks above the bar averaged ▲ +3.65% next day vs ▼ -0.79% for the rest.
+- Prediction check: of 384 past predictions, stocks above the bar averaged ▼ -0.37% next day vs ▼ -0.59% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
 | lookalike | Rs 97,759 | -Rs 2,241 | 3 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
+| shadow | Rs 1,00,000 | Rs 0 | 0 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.

@@ -36,7 +36,9 @@
    "eod"
   ],
   "2026-10-16": [
-   "premarket"
+   "premarket",
+   "entry",
+   "eod"
   ]
  },
  "finished": false,
@@ -48,6 +50,10 @@
   "lookalike": {
    "cash": 97759.15057197266,
    "positions": []
+  },
+  "shadow": {
+   "cash": 100000.0,
+   "positions": []
   }
  },
  "incidents": [
@@ -58,6 +64,10 @@
   {
    "date": "2026-10-13",
    "what": "GitHub started the scheduled runs about 7 hours late, so 8, 9 and 13 Oct entries were skipped and the 12 Oct run timed out. Runs now work at any hour and catch up missed days; 12 and 13 Oct were replayed at the closing price."
+  },
+  {
+   "date": "2026-10-16",
+   "what": "Weekly self-tuning found settings that earned +101.5% over the last 12 months of unseen data, versus 45.6% for the current ones: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%. They now trade in a separate practice account and replace the main settings automatically if they make more money over the next 20 trades."
   }
  ],
  "thr": 1.0,
@@ -119,7 +129,18 @@
    "above_thr": 2,
    "above_thr_avg": 3.65,
    "below_thr_avg": -0.79
+  },
+  {
+   "date": "2026-10-16",
+   "train_rows": 53143,
+   "thr": 1.0,
+   "risk_mult": 1.0,
+   "labelled": 384,
+   "corr": 0.169,
+   "above_thr": 3,
+   "above_thr_avg": -0.37,
+   "below_thr_avg": -0.59
   }
  ],
- "model_through": "2026-10-15"
+ "model_through": "2026-10-16"
 }
