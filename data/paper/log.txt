@@ -116,3 +116,6 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-16 15:37:43 evolve: weekly search current={'trades': 178, 'total': 45.6, 'pf': 1.5, 'maxdd': -12.3} best={'policy': 'h1', 'thr': 0.4, 'slots': 2, 'trades': 252, 'total': 101.5, 'pf': 1.46, 'maxdd': -14.3}
 2026-10-16 15:37:43 evolve: new challenger {'policy': 'h1', 'hold': 1, 'tp': 4.0, 'sl': 3.0, 'thr': 0.4, 'slots': 2, 'started': '2026-10-16', 'evidence': {'oos': '2025-11..2026-10', 'trades': 252, 'avg_net': 0.6, 'win': 51.6, 'pf': 1.46, 'total': 101.5, 'wk8_median': 7.8, 'wk8_worst': -9.1, 'maxdd': -14.3}, 'name': 'score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%'}
 2026-10-16 15:37:43 eod: model retrained on 53143 setups; thr 1.0 risk x1.0; accuracy {'labelled': 384, 'corr': np.float64(0.169), 'above_thr': 3, 'above_thr_avg': np.float64(-0.37), 'below_thr_avg': np.float64(-0.59)}
+2026-10-19 05:42:28 live: session 2026-10-19, this run hands over at 19 Oct 11:12 if still busy
+2026-10-19 09:10:00 premarket: trading day, positions aged 
+2026-10-19 11:12:28 live: time budget used, handing over to a fresh run

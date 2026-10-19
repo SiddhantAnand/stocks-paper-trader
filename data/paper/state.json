@@ -30,6 +30,9 @@
    "premarket",
    "entry",
    "eod"
+  ],
+  "2026-10-19": [
+   "premarket"
   ]
  },
  "finished": false,
