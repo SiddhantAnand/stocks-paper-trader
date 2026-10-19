@@ -119,3 +119,9 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-19 05:42:28 live: session 2026-10-19, this run hands over at 19 Oct 11:12 if still busy
 2026-10-19 09:10:00 premarket: trading day, positions aged 
 2026-10-19 11:12:28 live: time budget used, handing over to a fresh run
+2026-10-19 11:12:57 live: session 2026-10-19, this run hands over at 19 Oct 16:42 if still busy
+2026-10-19 15:15:58 [shadow] BUY PRAJIND 181 @ 275.60 (Rs 49,884) pred +0.95 day -4.0% size x1.0 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 168.04878 mcap 5066Cr
+2026-10-19 15:15:58 [shadow] BUY APTUS 234 @ 212.77 (Rs 49,788) pred +0.90 day -4.4% size x1.0 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 10.816285 mcap 10645Cr
+2026-10-19 15:15:58 entry: 128 movers scored, 0 above thr 1.00, bought []
+2026-10-19 15:35:00 catch-up: processing ['2026-10-19']
+2026-10-19 15:35:55 eod: model retrained on 53203 setups; thr 1.0 risk x1.0; accuracy {'labelled': 448, 'corr': np.float64(0.189), 'above_thr': 3, 'above_thr_avg': np.float64(-0.37), 'below_thr_avg': np.float64(-0.73)}
