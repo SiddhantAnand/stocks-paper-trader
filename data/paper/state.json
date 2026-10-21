@@ -31,6 +31,9 @@
    "premarket",
    "entry",
    "eod"
+  ],
+  "2026-10-21": [
+   "premarket"
   ]
  },
  "finished": false,
@@ -44,119 +47,8 @@
    "positions": []
   },
   "shadow": {
-   "cash": 328.2178955078125,
-   "positions": [
-    {
-     "sym": "PRAJIND",
-     "entry_date": "2026-10-19",
-     "entry_time": "15:15",
-     "entry_px": 275.6,
-     "qty": 181,
-     "stop": 267.33,
-     "target": 286.62,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 0,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Capital Goods",
-     "prev_close": 275.6000061035156,
-     "pred": 0.946,
-     "analog_avg": 0.157,
-     "size_mult": 1.0,
-     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -4.022,
-      "gap": 0.644,
-      "oc": -4.637,
-      "clv": 0.013,
-      "r2": -4.206,
-      "r5": -4.538,
-      "r20": -12.799,
-      "d_sma20": -8.432,
-      "d_sma50": -14.209,
-      "trend": 0.0,
-      "rsi": 26.097,
-      "atr": 3.351,
-      "vr": 1.062,
-      "pos20": 0.004,
-      "d_hi52": -35.555,
-      "tv_log": 1.08,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": -2.0,
-      "n_r1": -1.178,
-      "n_d50": -2.724,
-      "vix": 14.797,
-      "vix_ch5": -2.967,
-      "dow": 0.0
-     },
-     "fund": {
-      "pe": 168.04878,
-      "pb": 3.8696995,
-      "mcap_cr": 5066,
-      "de": 13.217,
-      "roe": null,
-      "sector": "Industrials"
-     }
-    },
-    {
-     "sym": "APTUS",
-     "entry_date": "2026-10-19",
-     "entry_time": "15:15",
-     "entry_px": 212.77,
-     "qty": 234,
-     "stop": 206.39,
-     "target": 221.28,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 0,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Financial Services",
-     "prev_close": 212.77000427246094,
-     "pred": 0.9,
-     "analog_avg": 0.516,
-     "size_mult": 1.0,
-     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -4.373,
-      "gap": -0.404,
-      "oc": -3.985,
-      "clv": 0.029,
-      "r2": -5.102,
-      "r5": -3.053,
-      "r20": -10.48,
-      "d_sma20": -6.87,
-      "d_sma50": -12.532,
-      "trend": 0.0,
-      "rsi": 30.589,
-      "atr": 3.15,
-      "vr": 0.52,
-      "pos20": 0.007,
-      "d_hi52": -34.076,
-      "tv_log": 1.54,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": -2.0,
-      "n_r1": -1.178,
-      "n_d50": -2.724,
-      "vix": 14.797,
-      "vix_ch5": -2.967,
-      "dow": 0.0
-     },
-     "fund": {
-      "pe": 10.816285,
-      "pb": 2.1032944,
-      "mcap_cr": 10645,
-      "de": 156.2,
-      "roe": null,
-      "sector": "Financial Services"
-     }
-    }
-   ]
+   "cash": 96661.3566655078,
+   "positions": []
   }
  },
  "incidents": [

@@ -127,3 +127,25 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-19 15:35:55 eod: model retrained on 53203 setups; thr 1.0 risk x1.0; accuracy {'labelled': 448, 'corr': np.float64(0.189), 'above_thr': 3, 'above_thr_avg': np.float64(-0.37), 'below_thr_avg': np.float64(-0.73)}
 2026-10-21 03:23:14 live: session 2026-10-21, this run hands over at 21 Oct 08:53 if still busy
 2026-10-21 08:53:14 live: time budget used, handing over to a fresh run
+2026-10-21 08:53:50 live: session 2026-10-21, this run hands over at 21 Oct 14:23 if still busy
+2026-10-21 09:10:00 premarket: trading day, positions aged PRAJIND(1), APTUS(1)
+2026-10-21 09:15:00 2026-10-21 monitor FAILED:
+Traceback (most recent call last):
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 714, in run_phase
+    fn(st)
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 230, in phase_monitor
+    bars = intraday(sorted({p["sym"] for _, p in live}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 142, in intraday
+    d = d[d.index.tz_convert(IST).date == today()]
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py", line 395, in tz_convert
+    arr = self._data.tz_convert(tz)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/pandas/core/arrays/datetimes.py", line 931, in tz_convert
+    raise TypeError(
+TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
+
+2026-10-21 09:50:00 [shadow] SELL PRAJIND 181 @ 267.33 (stop) net -3.35% pnl -1671 | hit stop intraday; weak market day at entry
+2026-10-21 11:10:00 [shadow] SELL APTUS 234 @ 206.39 (stop) net -3.35% pnl -1667 | hit stop intraday; weak market day at entry
+2026-10-21 14:23:50 live: time budget used, handing over to a fresh run
