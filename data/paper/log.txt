@@ -158,3 +158,9 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-22 08:59:44 live: session 2026-10-22, this run hands over at 22 Oct 14:29 if still busy
 2026-10-22 09:10:00 premarket: trading day, positions aged 
 2026-10-22 14:29:44 live: time budget used, handing over to a fresh run
+2026-10-22 14:30:22 live: session 2026-10-22, this run hands over at 22 Oct 20:00 if still busy
+2026-10-22 15:15:53 [shadow] BUY DIACABS 74 @ 325.00 (Rs 24,050) pred +0.77 day -3.8% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 87.66756 mcap 19557Cr
+2026-10-22 15:15:54 [shadow] BUY KABRAEXTRU 34 @ 707.95 (Rs 24,070) pred +0.48 day -3.8% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 594.91595 mcap 2742Cr
+2026-10-22 15:15:54 entry: 91 movers scored, 0 above thr 1.00, bought []
+2026-10-22 15:35:00 catch-up: processing ['2026-10-22']
+2026-10-22 15:35:48 eod: model retrained on 53569 setups; thr 1.0 risk x1.0; accuracy {'labelled': 782, 'corr': np.float64(0.118), 'above_thr': 3, 'above_thr_avg': np.float64(-0.37), 'below_thr_avg': np.float64(-1.32)}
