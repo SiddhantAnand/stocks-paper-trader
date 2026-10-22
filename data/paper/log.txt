@@ -155,3 +155,6 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-21 15:36:31 eod: model retrained on 53319 setups; thr 1.0 risk x1.0; accuracy {'labelled': 567, 'corr': np.float64(0.039), 'above_thr': 3, 'above_thr_avg': np.float64(-0.37), 'below_thr_avg': np.float64(-1.12)}
 2026-10-22 03:29:11 live: session 2026-10-22, this run hands over at 22 Oct 08:59 if still busy
 2026-10-22 08:59:11 live: time budget used, handing over to a fresh run
+2026-10-22 08:59:44 live: session 2026-10-22, this run hands over at 22 Oct 14:29 if still busy
+2026-10-22 09:10:00 premarket: trading day, positions aged 
+2026-10-22 14:29:44 live: time budget used, handing over to a fresh run
