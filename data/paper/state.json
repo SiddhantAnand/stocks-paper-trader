@@ -38,7 +38,9 @@
    "eod"
   ],
   "2026-10-23": [
-   "premarket"
+   "premarket",
+   "entry",
+   "eod"
   ]
  },
  "finished": false,
@@ -284,7 +286,18 @@
    "above_thr": 3,
    "above_thr_avg": -0.37,
    "below_thr_avg": -1.32
+  },
+  {
+   "date": "2026-10-23",
+   "train_rows": 53664,
+   "thr": 1.0,
+   "risk_mult": 1.0,
+   "labelled": 866,
+   "corr": 0.156,
+   "above_thr": 3,
+   "above_thr_avg": -0.37,
+   "below_thr_avg": -1.52
   }
  ],
- "model_through": "2026-10-22"
+ "model_through": "2026-10-23"
 }

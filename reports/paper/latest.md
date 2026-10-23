@@ -1,8 +1,8 @@
-# Daily paper-trading report - Thu, 22 Oct 2026
+# Daily paper-trading report - Fri, 23 Oct 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**No new trades today.** 91 stocks moved 3% or more, and 0 scored above the model's bar of 1.0.
+**No new trades today.** 295 stocks moved 3% or more, and 0 scored above the model's bar of 1.0.
 
 ## Scoreboard (main strategy)
 | Measure | Value |
@@ -19,51 +19,47 @@
 | Evidence so far | 3 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
-### Bought
-| Book | Stock | Price | Amount | Why |
-|---|---|---|---|---|
-| shadow | **DIACABS** | 325.00 | Rs 24,050 | moved -3.8% today and closed near the day's low; volume 0.8x normal; uptrend; RSI 35; model score +0.77 (bar 1.0); similar past setups averaged -4.74%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
-| shadow | **KABRAEXTRU** | 707.95 | Rs 24,070 | moved -3.8% today and closed mid-range; volume 0.4x normal; uptrend; RSI 44; model score +0.48 (bar 1.0); similar past setups averaged -2.35%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
+Nothing was bought or sold today.
 
 ## Stocks we're holding
 | Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
 |---|---|---|---|---|---|---|---|
-| shadow | **DIACABS** | 2026-10-22 | 325.00 | 326.65 | ▲ +0.51% | 338.00 (profit target) | 315.25 (stop-loss) |
-| shadow | **KABRAEXTRU** | 2026-10-22 | 707.95 | 702.65 | ▼ -0.75% | 736.27 (profit target) | 686.71 (stop-loss) |
+| shadow | **DIACABS** | 2026-10-22 | 325.00 | 315.05 | ▼ -3.06% | 338.00 (profit target) | 315.25 (stop-loss) |
+| shadow | **KABRAEXTRU** | 2026-10-22 | 707.95 | 678.85 | ▼ -4.11% | 736.27 (profit target) | 686.71 (stop-loss) |
 
 _Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 22,688 (▼ -0.54%) |
-| Market fear (India VIX) | 15.8 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,017 |
-| Moved 3% or more today | 91 |
+| Nifty 50 | 22,600 (▼ -0.39%) |
+| Market fear (India VIX) | 16.8 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,016 |
+| Moved 3% or more today | 295 |
 | Scored above the bar (1.0) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| DIACABS | ▼ -3.80% | +0.77 | Skipped - score below the bar |
-| KABRAEXTRU | ▼ -3.84% | +0.48 | Skipped - score below the bar |
-| MUTHOOTFIN | ▼ -3.00% | +0.03 | Skipped - score below the bar |
-| RAYMONDLSL | ▼ -3.98% | -0.00 | Skipped - score below the bar |
-| OFSS | ▼ -3.73% | -0.03 | Skipped - score below the bar |
-| TIMEX | ▼ -3.67% | -0.06 | Skipped - score below the bar |
-| GABRIEL | ▼ -4.46% | -0.06 | Skipped - score below the bar |
-| JAMNAAUTO | ▼ -4.11% | -0.09 | Skipped - score below the bar |
+| CAPILLARY | ▲ +5.34% | +0.16 | Skipped - score below the bar |
+| CUPID | ▼ -4.14% | -0.44 | Skipped - score below the bar |
+| SGMART | ▲ +4.14% | -0.78 | Skipped - score below the bar |
+| EXIDEIND | ▼ -3.30% | -0.91 | Skipped - score below the bar |
+| TITAGARH | ▼ -4.46% | -0.97 | Skipped - score below the bar |
+| DIACABS | ▼ -3.02% | -1.00 | Skipped - score below the bar |
+| FINCABLES | ▼ -4.16% | -1.01 | Skipped - score below the bar |
+| AEGISLOG | ▼ -4.42% | -1.01 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **53,569** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **53,664** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **1.0** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 782 past predictions, stocks above the bar averaged ▼ -0.37% next day vs ▼ -1.32% for the rest.
+- Prediction check: of 866 past predictions, stocks above the bar averaged ▼ -0.37% next day vs ▼ -1.52% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
 | lookalike | Rs 97,759 | -Rs 2,241 | 3 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 96,603 | -Rs 3,397 | 2 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| shadow | Rs 94,936 | -Rs 5,064 | 2 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.
