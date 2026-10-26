@@ -195,3 +195,15 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-26 09:20:00 [shadow] SELL DIACABS 74 @ 312.00 (gap_stop) net -4.35% pnl -1046 | gapped below stop overnight (overnight risk); weak market day at entry; historical analogs were negative
 2026-10-26 09:20:00 [shadow] SELL KABRAEXTRU 34 @ 671.65 (gap_stop) net -5.48% pnl -1318 | gapped below stop overnight (overnight risk); weak market day at entry; historical analogs were negative
 2026-10-26 11:21:51 live: time budget used, handing over to a fresh run
+2026-10-26 11:22:31 live: session 2026-10-26, this run hands over at 26 Oct 16:52 if still busy
+2026-10-26 15:16:05 [main] BUY KABRAEXTRU 23 @ 705.00 (Rs 16,215) pred +1.92 day +3.9% size x0.5  | PE 594.91595 mcap 2742Cr
+2026-10-26 15:16:05 [main] BUY SWIGGY 90 @ 185.75 (Rs 16,718) pred +1.25 day +5.5% size x0.5  | PE None mcap 48719Cr
+2026-10-26 15:16:06 [main] BUY RAIN 162 @ 205.68 (Rs 33,320) pred +1.18 day +3.8% size x1.0  | PE 12.873512 mcap 6915Cr
+2026-10-26 15:16:06 [shadow] BUY KABRAEXTRU 33 @ 705.00 (Rs 23,265) pred +1.92 day +3.9% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 594.91595 mcap 2742Cr
+2026-10-26 15:16:06 [shadow] BUY SWIGGY 126 @ 185.75 (Rs 23,404) pred +1.25 day +5.5% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE None mcap 48719Cr
+2026-10-26 15:16:06 [lookalike] BUY SWANDEF 12 @ 2576.40 (Rs 30,917) pred -3.35 day -5.0% size x1.0 lookalike of KABRAEXTRU (distance 4.91) | PE 38.830444 mcap 13573Cr
+2026-10-26 15:16:06 [lookalike] BUY J&KBANK 278 @ 117.17 (Rs 32,573) pred +1.02 day +3.6% size x1.0 lookalike of SWIGGY (distance 2.86) | PE 5.463369 mcap 12893Cr
+2026-10-26 15:16:06 [lookalike] BUY PWL 261 @ 124.62 (Rs 32,526) pred +1.01 day +3.9% size x1.0 lookalike of RAIN (distance 0.55) | PE 1557.625 mcap 36245Cr
+2026-10-26 15:16:06 entry: 126 movers scored, 6 above thr 1.00, bought ['KABRAEXTRU', 'SWIGGY', 'RAIN']
+2026-10-26 15:35:00 catch-up: processing ['2026-10-26']
+2026-10-26 15:35:53 eod: model retrained on 53942 setups; thr 1.0 risk x1.0; accuracy {'labelled': 1141, 'corr': np.float64(0.031), 'above_thr': 3, 'above_thr_avg': np.float64(-0.37), 'below_thr_avg': np.float64(-1.31)}

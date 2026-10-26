@@ -1,65 +1,87 @@
-# Daily paper-trading report - Fri, 23 Oct 2026
+# Daily paper-trading report - Mon, 26 Oct 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**No new trades today.** 295 stocks moved 3% or more, and 0 scored above the model's bar of 1.0.
+**Bought 3 stock(s), sold 0.**
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,00,360** |
-| Today's change | Rs 0 (+0.00%) |
-| Total profit / loss since 2026-10-07 | **+Rs 360** (▲ +0.36%) |
+| Portfolio value | **Rs 1,00,431** |
+| Today's change | +Rs 71 (▲ +0.07%) |
+| Total profit / loss since 2026-10-07 | **+Rs 431** (▲ +0.43%) |
 | Trades completed | 3 (2 wins, 1 losses) |
 | Win rate | 67% (expected about 55.6%) |
 | Average result per trade | ▼ -0.42% (expected about ▲ +0.85%) |
 | Profit factor | 0.85 (expected about 1.73) |
-| Stocks held now | 0 of 3 slots |
-| Cash available | Rs 1,00,360 |
+| Stocks held now | 3 of 3 slots |
+| Cash available | Rs 34,107 |
 | Evidence so far | 3 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
-Nothing was bought or sold today.
+### Sold
+| Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
+|---|---|---|---|---|---|---|
+| shadow | **DIACABS** | 325.00 | 312.00 | ▼ -4.35% | -Rs 1,046 | Opened below the stop-loss - sold at the open |
+| shadow | **KABRAEXTRU** | 707.95 | 671.65 | ▼ -5.48% | -Rs 1,318 | Opened below the stop-loss - sold at the open |
+
+### Bought
+| Book | Stock | Price | Amount | Why |
+|---|---|---|---|---|
+| main | **KABRAEXTRU** | 705.00 | Rs 16,215 | moved +3.9% today and closed near the day's high; volume 0.3x normal; uptrend; RSI 45; model score +1.92 (bar 1.0); similar past setups averaged -1.84%; bought at reduced size |
+| main | **SWIGGY** | 185.75 | Rs 16,718 | moved +5.5% today and closed mid-range; volume 3.3x normal; downtrend; RSI 24; model score +1.25 (bar 1.0); similar past setups averaged -0.38%; bought at reduced size |
+| main | **RAIN** | 205.68 | Rs 33,320 | moved +3.8% today and closed near the day's high; volume 0.5x normal; uptrend; RSI 45; model score +1.18 (bar 1.0); similar past setups averaged +0.11% |
+| lookalike | **SWANDEF** | 2,576.40 | Rs 30,917 | moved -5.0% today and closed near the day's low; volume 0.4x normal; uptrend; RSI 36; model score -3.35 (bar 1.0); lookalike of KABRAEXTRU (distance 4.91) |
+| lookalike | **J&KBANK** | 117.17 | Rs 32,573 | moved +3.6% today and closed near the day's high; volume 1.4x normal; downtrend; RSI 27; model score +1.02 (bar 1.0); lookalike of SWIGGY (distance 2.86) |
+| lookalike | **PWL** | 124.62 | Rs 32,526 | moved +3.9% today and closed near the day's high; volume 0.5x normal; uptrend; RSI 43; model score +1.01 (bar 1.0); lookalike of RAIN (distance 0.55) |
+| shadow | **KABRAEXTRU** | 705.00 | Rs 23,265 | moved +3.9% today and closed near the day's high; volume 0.3x normal; uptrend; RSI 45; model score +1.92 (bar 1.0); similar past setups averaged -1.84%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
+| shadow | **SWIGGY** | 185.75 | Rs 23,404 | moved +5.5% today and closed mid-range; volume 3.3x normal; downtrend; RSI 24; model score +1.25 (bar 1.0); similar past setups averaged -0.38%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
 
 ## Stocks we're holding
 | Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
 |---|---|---|---|---|---|---|---|
-| shadow | **DIACABS** | 2026-10-22 | 325.00 | 315.05 | ▼ -3.06% | 338.00 (profit target) | 315.25 (stop-loss) |
-| shadow | **KABRAEXTRU** | 2026-10-22 | 707.95 | 678.85 | ▼ -4.11% | 736.27 (profit target) | 686.71 (stop-loss) |
+| main | **KABRAEXTRU** | 2026-10-26 | 705.00 | 705.90 | ▲ +0.13% | 733.20 (profit target) | 683.85 (stop-loss) |
+| main | **SWIGGY** | 2026-10-26 | 185.75 | 185.75 | +0.00% | 193.18 (profit target) | 180.18 (stop-loss) |
+| main | **RAIN** | 2026-10-26 | 205.68 | 205.99 | ▲ +0.15% | 213.91 (profit target) | 199.51 (stop-loss) |
+| lookalike | **SWANDEF** | 2026-10-26 | 2,576.40 | 2,696.70 | ▲ +4.67% | 2,679.46 (profit target) | 2,499.11 (stop-loss) |
+| lookalike | **J&KBANK** | 2026-10-26 | 117.17 | 117.02 | ▼ -0.13% | 121.86 (profit target) | 113.65 (stop-loss) |
+| lookalike | **PWL** | 2026-10-26 | 124.62 | 124.84 | ▲ +0.18% | 129.60 (profit target) | 120.88 (stop-loss) |
+| shadow | **KABRAEXTRU** | 2026-10-26 | 705.00 | 705.90 | ▲ +0.13% | 733.20 (profit target) | 683.85 (stop-loss) |
+| shadow | **SWIGGY** | 2026-10-26 | 185.75 | 185.75 | +0.00% | 193.18 (profit target) | 180.18 (stop-loss) |
 
 _Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 22,600 (▼ -0.39%) |
-| Market fear (India VIX) | 16.8 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,016 |
-| Moved 3% or more today | 295 |
-| Scored above the bar (1.0) | 0 |
+| Nifty 50 | 22,753 (▲ +0.68%) |
+| Market fear (India VIX) | 17.1 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,018 |
+| Moved 3% or more today | 126 |
+| Scored above the bar (1.0) | 6 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| CAPILLARY | ▲ +5.34% | +0.16 | Skipped - score below the bar |
-| CUPID | ▼ -4.14% | -0.44 | Skipped - score below the bar |
-| SGMART | ▲ +4.14% | -0.78 | Skipped - score below the bar |
-| EXIDEIND | ▼ -3.30% | -0.91 | Skipped - score below the bar |
-| TITAGARH | ▼ -4.46% | -0.97 | Skipped - score below the bar |
-| DIACABS | ▼ -3.02% | -1.00 | Skipped - score below the bar |
-| FINCABLES | ▼ -4.16% | -1.01 | Skipped - score below the bar |
-| AEGISLOG | ▼ -4.42% | -1.01 | Skipped - score below the bar |
+| KABRAEXTRU | ▲ +3.85% | +1.92 | **Bought** |
+| SWIGGY | ▲ +5.54% | +1.25 | **Bought** |
+| RAIN | ▲ +3.78% | +1.18 | **Bought** |
+| BLUESTONE | ▲ +3.98% | +1.06 | Skipped - all slots full |
+| J&KBANK | ▲ +3.61% | +1.02 | Bought in look-alike experiment |
+| PWL | ▲ +3.89% | +1.01 | Bought in look-alike experiment |
+| SYRMA | ▲ +4.53% | +0.93 | Skipped - score below the bar |
+| DCBBANK | ▼ -4.03% | +0.91 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **53,664** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **53,942** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **1.0** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 866 past predictions, stocks above the bar averaged ▼ -0.37% next day vs ▼ -1.52% for the rest.
+- Prediction check: of 1141 past predictions, stocks above the bar averaged ▼ -0.37% next day vs ▼ -1.31% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
-| lookalike | Rs 97,759 | -Rs 2,241 | 3 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 94,936 | -Rs 5,064 | 2 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| lookalike | Rs 99,218 | -Rs 782 | 3 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
+| shadow | Rs 94,326 | -Rs 5,674 | 4 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.
