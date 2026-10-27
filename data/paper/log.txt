@@ -231,3 +231,11 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-27 09:53:41 live: session 2026-10-27, this run hands over at 27 Oct 14:40 if still busy
 2026-10-27 10:18:41 [lookalike] SELL PWL 261 @ 129.60 (target) net +3.65% pnl +1186 | worked: target; entered on +3.9% day, close-in-range 0.93, pred +1.01
 2026-10-27 14:40:00 live: time budget used, handing over to a fresh run
+2026-10-27 14:40:34 live: session 2026-10-27, this run hands over at 27 Oct 20:10 if still busy
+2026-10-27 15:15:00 [main] SELL SWIGGY 90 @ 190.00 (time) net +1.94% pnl +324 | worked: time; entered on +5.5% day, close-in-range 0.67, pred +1.25
+2026-10-27 15:15:00 [main] SELL RAIN 162 @ 202.35 (time) net -1.97% pnl -656 | no obvious flag - normal variance
+2026-10-27 15:15:00 [shadow] SELL SWIGGY 126 @ 190.00 (time) net +1.94% pnl +454 | worked: time; entered on +5.5% day, close-in-range 0.67, pred +1.25
+2026-10-27 15:16:18 [shadow] BUY SURYAROSNI 109 @ 216.00 (Rs 23,544) pred +0.53 day +8.2% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 14.918297 mcap 4649Cr
+2026-10-27 15:16:18 entry: 164 movers scored, 0 above thr 1.00, bought []
+2026-10-27 15:35:00 catch-up: processing ['2026-10-27']
+2026-10-27 15:35:56 eod: model retrained on 54059 setups; thr 1.0 risk x1.0; accuracy {'labelled': 1265, 'corr': np.float64(0.097), 'above_thr': 8, 'above_thr_avg': np.float64(0.25), 'below_thr_avg': np.float64(-1.08)}
