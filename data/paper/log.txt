@@ -228,3 +228,6 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-10-27 09:30:00 [lookalike] SELL J&KBANK 278 @ 121.86 (target) net +3.65% pnl +1190 | worked: target; entered on +3.6% day, close-in-range 0.96, pred +1.02
 2026-10-27 09:53:02 live: time budget used, handing over to a fresh run
+2026-10-27 09:53:41 live: session 2026-10-27, this run hands over at 27 Oct 14:40 if still busy
+2026-10-27 10:18:41 [lookalike] SELL PWL 261 @ 129.60 (target) net +3.65% pnl +1186 | worked: target; entered on +3.9% day, close-in-range 0.93, pred +1.01
+2026-10-27 14:40:00 live: time budget used, handing over to a fresh run
