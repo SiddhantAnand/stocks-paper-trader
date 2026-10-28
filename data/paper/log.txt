@@ -262,3 +262,5 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-28 09:20:00 [shadow] SELL KABRAEXTRU 33 @ 777.00 (gap_target) net +9.86% pnl +2295 | worked: gap_target; entered on +3.9% day, close-in-range 1.00, pred +1.92
 2026-10-28 09:20:00 [shadow] SELL SURYAROSNI 109 @ 209.52 (stop) net -3.35% pnl -789 | hit stop intraday; historical analogs were negative
 2026-10-28 09:37:30 live: time budget used, handing over to a fresh run
+2026-10-28 09:38:03 live: session 2026-10-28, this run hands over at 28 Oct 14:40 if still busy
+2026-10-28 14:40:00 live: time budget used, handing over to a fresh run
