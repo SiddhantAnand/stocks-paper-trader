@@ -264,3 +264,14 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-28 09:37:30 live: time budget used, handing over to a fresh run
 2026-10-28 09:38:03 live: session 2026-10-28, this run hands over at 28 Oct 14:40 if still busy
 2026-10-28 14:40:00 live: time budget used, handing over to a fresh run
+2026-10-28 14:40:30 live: session 2026-10-28, this run hands over at 28 Oct 20:10 if still busy
+2026-10-28 15:15:00 [lookalike] SELL SWANDEF 12 @ 2670.00 (time) net +3.28% pnl +1015 | worked: time; entered on -5.0% day, close-in-range 0.00, pred -3.35
+2026-10-28 15:16:15 [main] BUY TIPSMUSIC 21 @ 795.00 (Rs 16,695) pred +1.35 day +7.2% size x0.5  | PE 44.735508 mcap 10109Cr
+2026-10-28 15:16:15 [main] BUY AEQUS 159 @ 211.75 (Rs 33,668) pred +1.02 day -3.4% size x1.0  | PE None mcap 13867Cr
+2026-10-28 15:16:16 [shadow] BUY TIPSMUSIC 30 @ 795.00 (Rs 23,850) pred +1.35 day +7.2% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 44.735508 mcap 10109Cr
+2026-10-28 15:16:16 [shadow] BUY AEQUS 227 @ 211.75 (Rs 48,067) pred +1.02 day -3.4% size x1.0 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE None mcap 13867Cr
+2026-10-28 15:16:16 [lookalike] BUY OMNI 47 @ 712.80 (Rs 33,502) pred +0.68 day +4.5% size x1.0 lookalike of TIPSMUSIC (distance 2.25) | PE 82.15437 mcap 8819Cr
+2026-10-28 15:16:16 [lookalike] BUY SKYGOLD 39 @ 855.65 (Rs 33,370) pred -0.37 day -8.5% size x1.0 lookalike of AEQUS (distance 3.43) | PE 33.498432 mcap 13250Cr
+2026-10-28 15:16:16 entry: 112 movers scored, 2 above thr 1.00, bought ['TIPSMUSIC', 'AEQUS']
+2026-10-28 15:35:00 catch-up: processing ['2026-10-28']
+2026-10-28 15:35:40 eod: model retrained on 54245 setups; thr 1.0 risk x1.0; accuracy {'labelled': 1425, 'corr': np.float64(0.118), 'above_thr': 9, 'above_thr_avg': np.float64(1.3), 'below_thr_avg': np.float64(-1.0)}
