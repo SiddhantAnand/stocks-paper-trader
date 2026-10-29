@@ -2,11 +2,6 @@
  "start": "2026-10-07",
  "end": "2026-12-02",
  "done": {
-  "2026-10-19": [
-   "premarket",
-   "entry",
-   "eod"
-  ],
   "2026-10-21": [
    "premarket",
    "entry",
