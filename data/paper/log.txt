@@ -296,3 +296,7 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-10-29 09:20:00 [lookalike] SELL SKYGOLD 39 @ 903.00 (gap_target) net +5.18% pnl +1730 | worked: gap_target; entered on -8.5% day, close-in-range 0.54, pred -0.37
 2026-10-29 09:52:06 live: time budget used, handing over to a fresh run
+2026-10-29 09:52:49 live: session 2026-10-29, this run hands over at 29 Oct 14:40 if still busy
+2026-10-29 11:42:49 [main] SELL AEQUS 159 @ 220.22 (target) net +3.65% pnl +1229 | worked: target; entered on -3.4% day, close-in-range 0.33, pred +1.02
+2026-10-29 11:42:49 [shadow] SELL AEQUS 227 @ 220.22 (target) net +3.65% pnl +1754 | worked: target; entered on -3.4% day, close-in-range 0.33, pred +1.02
+2026-10-29 14:40:00 live: time budget used, handing over to a fresh run

@@ -44,7 +44,7 @@
  "finished": false,
  "books": {
   "main": {
-   "cash": 51263.51008528807,
+   "cash": 86160.65121028808,
    "positions": [
     {
      "sym": "TIPSMUSIC",
@@ -99,61 +99,6 @@
       "de": 1.258,
       "roe": 0.78121,
       "sector": "Communication Services"
-     }
-    },
-    {
-     "sym": "AEQUS",
-     "entry_date": "2026-10-28",
-     "entry_time": "15:16",
-     "entry_px": 211.75,
-     "qty": 159,
-     "stop": 205.4,
-     "target": 220.22,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Capital Goods",
-     "prev_close": 211.75,
-     "pred": 1.023,
-     "analog_avg": 0.183,
-     "size_mult": 1.0,
-     "note": "",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -3.355,
-      "gap": -0.091,
-      "oc": -3.266,
-      "clv": 0.325,
-      "r2": -12.644,
-      "r5": -14.254,
-      "r20": -18.589,
-      "d_sma20": -18.57,
-      "d_sma50": -15.281,
-      "trend": 1.0,
-      "rsi": 29.178,
-      "atr": 7.187,
-      "vr": 0.719,
-      "pos20": 0.155,
-      "d_hi52": -28.147,
-      "tv_log": 2.086,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": -2.0,
-      "n_r1": -0.189,
-      "n_d50": -2.562,
-      "vix": 16.245,
-      "vix_ch5": 3.603,
-      "dow": 2.0
-     },
-     "fund": {
-      "pe": null,
-      "pb": 9.954868,
-      "mcap_cr": 13867,
-      "de": 60.082,
-      "roe": -0.18395,
-      "sector": "Industrials"
      }
     }
    ]
@@ -219,7 +164,7 @@
    ]
   },
   "shadow": {
-   "cash": 24338.918780546854,
+   "cash": 74160.62340554685,
    "positions": [
     {
      "sym": "TIPSMUSIC",
@@ -274,61 +219,6 @@
       "de": 1.258,
       "roe": 0.78121,
       "sector": "Communication Services"
-     }
-    },
-    {
-     "sym": "AEQUS",
-     "entry_date": "2026-10-28",
-     "entry_time": "15:16",
-     "entry_px": 211.75,
-     "qty": 227,
-     "stop": 205.4,
-     "target": 220.22,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Capital Goods",
-     "prev_close": 211.75,
-     "pred": 1.023,
-     "analog_avg": 0.183,
-     "size_mult": 1.0,
-     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -3.355,
-      "gap": -0.091,
-      "oc": -3.266,
-      "clv": 0.325,
-      "r2": -12.644,
-      "r5": -14.254,
-      "r20": -18.589,
-      "d_sma20": -18.57,
-      "d_sma50": -15.281,
-      "trend": 1.0,
-      "rsi": 29.178,
-      "atr": 7.187,
-      "vr": 0.719,
-      "pos20": 0.155,
-      "d_hi52": -28.147,
-      "tv_log": 2.086,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": -2.0,
-      "n_r1": -0.189,
-      "n_d50": -2.562,
-      "vix": 16.245,
-      "vix_ch5": 3.603,
-      "dow": 2.0
-     },
-     "fund": {
-      "pe": null,
-      "pb": 9.954868,
-      "mcap_cr": 13867,
-      "de": 60.082,
-      "roe": -0.18395,
-      "sector": "Industrials"
      }
     }
    ]
