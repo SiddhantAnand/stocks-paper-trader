@@ -1,85 +1,77 @@
-# Daily paper-trading report - Wed, 28 Oct 2026
+# Daily paper-trading report - Thu, 29 Oct 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**Bought 2 stock(s), sold 1 for +Rs 1,599.**
+**Bought 0 stock(s), sold 2 for +Rs 1,094.**
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,01,635** |
-| Today's change | +Rs 777 (▲ +0.77%) |
-| Total profit / loss since 2026-10-07 | **+Rs 1,635** (▲ +1.64%) |
-| Trades completed | 6 (4 wins, 2 losses) |
-| Win rate | 67% (expected about 55.6%) |
+| Portfolio value | **Rs 1,02,721** |
+| Today's change | +Rs 1,085 (▲ +1.07%) |
+| Total profit / loss since 2026-10-07 | **+Rs 2,721** (▲ +2.72%) |
+| Trades completed | 8 (5 wins, 3 losses) |
+| Win rate | 62% (expected about 55.6%) |
 | Average result per trade | ▲ +1.43% (expected about ▲ +0.85%) |
-| Profit factor | 1.82 (expected about 1.73) |
-| Stocks held now | 2 of 3 slots |
-| Cash available | Rs 51,264 |
-| Evidence so far | 6 of ~80 trades needed for a reliable verdict |
+| Profit factor | 2.01 (expected about 1.73) |
+| Stocks held now | 0 of 3 slots |
+| Cash available | Rs 1,02,721 |
+| Evidence so far | 8 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
 ### Sold
 | Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
 |---|---|---|---|---|---|---|
-| main | **KABRAEXTRU** | 705.00 | 777.00 | ▲ +9.86% | +Rs 1,599 | Opened above the profit target - sold at the open |
-| shadow | **KABRAEXTRU** | 705.00 | 777.00 | ▲ +9.86% | +Rs 2,295 | Opened above the profit target - sold at the open |
-| shadow | **SURYAROSNI** | 216.00 | 209.52 | ▼ -3.35% | -Rs 789 | Hit the stop-loss (limits the loss) |
-| lookalike | **SWANDEF** | 2,576.40 | 2,670.00 | ▲ +3.28% | +Rs 1,015 | Holding period ended - sold at about 3:15 pm |
+| lookalike | **SKYGOLD** | 855.65 | 903.00 | ▲ +5.18% | +Rs 1,730 | Opened above the profit target - sold at the open |
+| main | **AEQUS** | 211.75 | 220.22 | ▲ +3.65% | +Rs 1,229 | Hit the profit target |
+| shadow | **AEQUS** | 211.75 | 220.22 | ▲ +3.65% | +Rs 1,754 | Hit the profit target |
+| main | **TIPSMUSIC** | 795.00 | 791.35 | ▼ -0.81% | -Rs 135 | Holding period ended - sold at about 3:15 pm |
+| lookalike | **OMNI** | 712.80 | 716.60 | ▲ +0.18% | +Rs 61 | Holding period ended - sold at about 3:15 pm |
+| shadow | **TIPSMUSIC** | 795.00 | 791.35 | ▼ -0.81% | -Rs 193 | Holding period ended - sold at about 3:15 pm |
 
 ### Bought
 | Book | Stock | Price | Amount | Why |
 |---|---|---|---|---|
-| main | **TIPSMUSIC** | 795.00 | Rs 16,695 | moved +7.2% today and closed near the day's high; volume 1.8x normal; uptrend; RSI 68; model score +1.35 (bar 1.0); similar past setups averaged -0.59%; bought at reduced size |
-| main | **AEQUS** | 211.75 | Rs 33,668 | moved -3.4% today and closed mid-range; volume 0.7x normal; uptrend; RSI 29; model score +1.02 (bar 1.0); similar past setups averaged +0.18% |
-| lookalike | **OMNI** | 712.80 | Rs 33,502 | moved +4.5% today and closed near the day's high; volume 0.7x normal; uptrend; RSI 65; model score +0.68 (bar 1.0); lookalike of TIPSMUSIC (distance 2.25) |
-| lookalike | **SKYGOLD** | 855.65 | Rs 33,370 | moved -8.5% today and closed mid-range; volume 3.1x normal; uptrend; RSI 42; model score -0.37 (bar 1.0); lookalike of AEQUS (distance 3.43) |
-| shadow | **TIPSMUSIC** | 795.00 | Rs 23,850 | moved +7.2% today and closed near the day's high; volume 1.8x normal; uptrend; RSI 68; model score +1.35 (bar 1.0); similar past setups averaged -0.59%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
-| shadow | **AEQUS** | 211.75 | Rs 48,067 | moved -3.4% today and closed mid-range; volume 0.7x normal; uptrend; RSI 29; model score +1.02 (bar 1.0); similar past setups averaged +0.18%; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
+| shadow | **MSTCLTD** | 574.00 | Rs 48,790 | moved +3.8% today and closed near the day's high; volume 1.1x normal; downtrend; RSI 31; model score +0.41 (bar 0.9); similar past setups averaged +0.43%; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
 
 ## Stocks we're holding
 | Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
 |---|---|---|---|---|---|---|---|
-| main | **TIPSMUSIC** | 2026-10-28 | 795.00 | 793.90 | ▼ -0.14% | 826.80 (profit target) | 771.15 (stop-loss) |
-| main | **AEQUS** | 2026-10-28 | 211.75 | 211.95 | ▲ +0.09% | 220.22 (profit target) | 205.40 (stop-loss) |
-| lookalike | **OMNI** | 2026-10-28 | 712.80 | 719.25 | ▲ +0.90% | 741.31 (profit target) | 691.42 (stop-loss) |
-| lookalike | **SKYGOLD** | 2026-10-28 | 855.65 | 858.30 | ▲ +0.31% | 889.88 (profit target) | 829.98 (stop-loss) |
-| shadow | **TIPSMUSIC** | 2026-10-28 | 795.00 | 793.90 | ▼ -0.14% | 826.80 (profit target) | 771.15 (stop-loss) |
-| shadow | **AEQUS** | 2026-10-28 | 211.75 | 211.95 | ▲ +0.09% | 220.22 (profit target) | 205.40 (stop-loss) |
+| shadow | **MSTCLTD** | 2026-10-29 | 574.00 | 571.95 | ▼ -0.36% | 596.96 (profit target) | 556.78 (stop-loss) |
 
 _Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 22,699 (▼ -0.22%) |
-| Market fear (India VIX) | 16.3 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,021 |
-| Moved 3% or more today | 112 |
-| Scored above the bar (1.0) | 2 |
+| Nifty 50 | 22,937 (▲ +1.05%) |
+| Market fear (India VIX) | 15.1 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,022 |
+| Moved 3% or more today | 110 |
+| Scored above the bar (0.9) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| TIPSMUSIC | ▲ +7.20% | +1.35 | **Bought** |
-| AEQUS | ▼ -3.35% | +1.02 | **Bought** |
-| OMNI | ▲ +4.53% | +0.68 | Bought in look-alike experiment |
-| KPITTECH | ▲ +3.53% | +0.13 | Skipped - score below the bar |
-| BAJAJHLDNG | ▼ -3.50% | +0.11 | Skipped - score below the bar |
-| KISSHT | ▲ +3.97% | +0.10 | Skipped - score below the bar |
-| FSL | ▲ +3.01% | +0.09 | Skipped - score below the bar |
-| UPL | ▲ +3.18% | +0.09 | Skipped - score below the bar |
+| MSTCLTD | ▲ +3.79% | +0.41 | Skipped - score below the bar |
+| GREAVESCOT | ▲ +3.91% | +0.28 | Skipped - score below the bar |
+| ZENTEC | ▲ +3.58% | +0.10 | Skipped - score below the bar |
+| CEMPRO | ▲ +5.24% | -0.23 | Skipped - score below the bar |
+| CARTRADE | ▼ -5.64% | -0.25 | Skipped - score below the bar |
+| THELEELA | ▲ +5.75% | -0.26 | Skipped - score below the bar |
+| SUNFLAG | ▲ +3.25% | -0.39 | Skipped - score below the bar |
+| QPOWER | ▲ +5.17% | -0.39 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **54,245** past setups, including every setup that finished today. Recent data counts more.
-- The bar to buy is **1.0** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 1425 past predictions, stocks above the bar averaged ▲ +1.30% next day vs ▼ -1.00% for the rest.
+- Retrained tonight on **54,358** past setups, including every setup that finished today. Recent data counts more.
+- The bar to buy is **0.9** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
+- Prediction check: of 1527 past predictions, stocks above the bar averaged ▲ +1.34% next day vs ▼ -0.97% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
-| lookalike | Rs 1,01,556 | +Rs 1,556 | 6 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 96,269 | -Rs 3,731 | 7 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| lookalike | Rs 1,02,941 | +Rs 2,941 | 8 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
+| shadow | Rs 97,643 | -Rs 2,357 | 9 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.
