@@ -331,3 +331,7 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-10-30 09:58:34 live: time budget used, handing over to a fresh run
 2026-10-30 09:59:09 live: session 2026-10-30, this run hands over at 30 Oct 14:40 if still busy
 2026-10-30 14:40:00 live: time budget used, handing over to a fresh run
+2026-10-30 14:40:37 live: session 2026-10-30, this run hands over at 30 Oct 20:10 if still busy
+2026-10-30 15:15:47 entry: 238 movers scored, 0 above thr 0.90, bought []
+2026-10-30 15:35:00 catch-up: processing ['2026-10-30']
+2026-10-30 15:35:37 eod: model retrained on 54471 setups; thr 0.8 risk x1.0; accuracy {'labelled': 1633, 'corr': np.float64(0.135), 'above_thr': 11, 'above_thr_avg': np.float64(1.34), 'below_thr_avg': np.float64(-1.05)}

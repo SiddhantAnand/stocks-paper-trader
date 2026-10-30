@@ -1,14 +1,14 @@
-# Daily paper-trading report - Thu, 29 Oct 2026
+# Daily paper-trading report - Fri, 30 Oct 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**Bought 0 stock(s), sold 2 for +Rs 1,094.**
+**No new trades today.** 238 stocks moved 3% or more, and 0 scored above the model's bar of 0.8.
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
 | Portfolio value | **Rs 1,02,721** |
-| Today's change | +Rs 1,085 (▲ +1.07%) |
+| Today's change | Rs 0 (-0.00%) |
 | Total profit / loss since 2026-10-07 | **+Rs 2,721** (▲ +2.72%) |
 | Trades completed | 8 (5 wins, 3 losses) |
 | Win rate | 62% (expected about 55.6%) |
@@ -22,56 +22,39 @@
 ### Sold
 | Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
 |---|---|---|---|---|---|---|
-| lookalike | **SKYGOLD** | 855.65 | 903.00 | ▲ +5.18% | +Rs 1,730 | Opened above the profit target - sold at the open |
-| main | **AEQUS** | 211.75 | 220.22 | ▲ +3.65% | +Rs 1,229 | Hit the profit target |
-| shadow | **AEQUS** | 211.75 | 220.22 | ▲ +3.65% | +Rs 1,754 | Hit the profit target |
-| main | **TIPSMUSIC** | 795.00 | 791.35 | ▼ -0.81% | -Rs 135 | Holding period ended - sold at about 3:15 pm |
-| lookalike | **OMNI** | 712.80 | 716.60 | ▲ +0.18% | +Rs 61 | Holding period ended - sold at about 3:15 pm |
-| shadow | **TIPSMUSIC** | 795.00 | 791.35 | ▼ -0.81% | -Rs 193 | Holding period ended - sold at about 3:15 pm |
-
-### Bought
-| Book | Stock | Price | Amount | Why |
-|---|---|---|---|---|
-| shadow | **MSTCLTD** | 574.00 | Rs 48,790 | moved +3.8% today and closed near the day's high; volume 1.1x normal; downtrend; RSI 31; model score +0.41 (bar 0.9); similar past setups averaged +0.43%; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
-
-## Stocks we're holding
-| Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
-|---|---|---|---|---|---|---|---|
-| shadow | **MSTCLTD** | 2026-10-29 | 574.00 | 571.95 | ▼ -0.36% | 596.96 (profit target) | 556.78 (stop-loss) |
-
-_Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
+| shadow | **MSTCLTD** | 574.00 | 556.78 | ▼ -3.35% | -Rs 1,634 | Hit the stop-loss (limits the loss) |
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 22,937 (▲ +1.05%) |
-| Market fear (India VIX) | 15.1 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,022 |
-| Moved 3% or more today | 110 |
-| Scored above the bar (0.9) | 0 |
+| Nifty 50 | 23,053 (▲ +0.51%) |
+| Market fear (India VIX) | 15.3 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,030 |
+| Moved 3% or more today | 238 |
+| Scored above the bar (0.8) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| MSTCLTD | ▲ +3.79% | +0.41 | Skipped - score below the bar |
-| GREAVESCOT | ▲ +3.91% | +0.28 | Skipped - score below the bar |
-| ZENTEC | ▲ +3.58% | +0.10 | Skipped - score below the bar |
-| CEMPRO | ▲ +5.24% | -0.23 | Skipped - score below the bar |
-| CARTRADE | ▼ -5.64% | -0.25 | Skipped - score below the bar |
-| THELEELA | ▲ +5.75% | -0.26 | Skipped - score below the bar |
-| SUNFLAG | ▲ +3.25% | -0.39 | Skipped - score below the bar |
-| QPOWER | ▲ +5.17% | -0.39 | Skipped - score below the bar |
+| LAURUSLABS | ▲ +5.93% | +0.11 | Skipped - score below the bar |
+| ATHERENERG | ▲ +5.84% | -0.05 | Skipped - score below the bar |
+| PPLPHARMA | ▲ +3.55% | -0.10 | Skipped - score below the bar |
+| HONAUT | ▼ -3.20% | -0.11 | Skipped - score below the bar |
+| EQUITASBNK | ▼ -7.98% | -0.13 | Skipped - score below the bar |
+| OSWALPUMPS | ▼ -3.38% | -0.17 | Skipped - score below the bar |
+| EIDPARRY | ▼ -4.15% | -0.21 | Skipped - score below the bar |
+| COFORGE | ▲ +4.79% | -0.22 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **54,358** past setups, including every setup that finished today. Recent data counts more.
-- The bar to buy is **0.9** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 1527 past predictions, stocks above the bar averaged ▲ +1.34% next day vs ▼ -0.97% for the rest.
+- Retrained tonight on **54,471** past setups, including every setup that finished today. Recent data counts more.
+- The bar to buy is **0.8** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
+- Prediction check: of 1633 past predictions, stocks above the bar averaged ▲ +1.34% next day vs ▼ -1.05% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
 | lookalike | Rs 1,02,941 | +Rs 2,941 | 8 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 97,643 | -Rs 2,357 | 9 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| shadow | Rs 96,183 | -Rs 3,817 | 10 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.
