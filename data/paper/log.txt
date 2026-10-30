@@ -329,3 +329,5 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-10-30 09:45:00 [shadow] SELL MSTCLTD 85 @ 556.78 (stop) net -3.35% pnl -1634 | hit stop intraday
 2026-10-30 09:58:34 live: time budget used, handing over to a fresh run
+2026-10-30 09:59:09 live: session 2026-10-30, this run hands over at 30 Oct 14:40 if still busy
+2026-10-30 14:40:00 live: time budget used, handing over to a fresh run
