@@ -36,6 +36,9 @@
    "premarket",
    "entry",
    "eod"
+  ],
+  "2026-10-30": [
+   "premarket"
   ]
  },
  "finished": false,
@@ -49,64 +52,8 @@
    "positions": []
   },
   "shadow": {
-   "cash": 49027.64767312497,
-   "positions": [
-    {
-     "sym": "MSTCLTD",
-     "entry_date": "2026-10-29",
-     "entry_time": "15:16",
-     "entry_px": 574.0,
-     "qty": 85,
-     "stop": 556.78,
-     "target": 596.96,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 0,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Services",
-     "prev_close": 574.0,
-     "pred": 0.409,
-     "analog_avg": 0.434,
-     "size_mult": 1.0,
-     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": 3.788,
-      "gap": 0.759,
-      "oc": 3.006,
-      "clv": 1.0,
-      "r2": 3.228,
-      "r5": -3.965,
-      "r20": -19.501,
-      "d_sma20": -10.76,
-      "d_sma50": -17.438,
-      "trend": 0.0,
-      "rsi": 30.965,
-      "atr": 4.751,
-      "vr": 1.136,
-      "pos20": 0.148,
-      "d_hi52": -28.696,
-      "tv_log": 1.096,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": 1.0,
-      "n_r1": 1.066,
-      "n_d50": -1.444,
-      "vix": 15.113,
-      "vix_ch5": -4.109,
-      "dow": 3.0
-     },
-     "fund": {
-      "pe": 17.127277,
-      "pb": 4.4642854,
-      "mcap_cr": 4036,
-      "de": 16.041,
-      "roe": null,
-      "sector": "Industrials"
-     }
-    }
-   ]
+   "cash": 96183.18267312497,
+   "positions": []
   }
  },
  "incidents": [
