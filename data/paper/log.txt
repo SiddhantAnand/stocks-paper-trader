@@ -340,3 +340,15 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-02 09:25:59 live: time budget used, handing over to a fresh run
 2026-11-02 09:26:38 live: session 2026-11-02, this run hands over at 02 Nov 14:40 if still busy
 2026-11-02 14:40:00 live: time budget used, handing over to a fresh run
+2026-11-02 14:40:34 live: session 2026-11-02, this run hands over at 02 Nov 20:10 if still busy
+2026-11-02 15:16:18 [main] BUY E2E 34 @ 499.50 (Rs 16,983) pred +1.71 day -4.0% size x0.5  | PE 89.03743 mcap 10263Cr
+2026-11-02 15:16:18 [main] BUY DYNAMATECH 1 @ 11977.00 (Rs 11,977) pred +1.06 day +3.2% size x0.5  | PE 191.37462 mcap 8122Cr
+2026-11-02 15:16:18 [main] BUY INTELLECT 64 @ 531.80 (Rs 34,035) pred +0.80 day +5.4% size x1.0  | PE 21.263494 mcap 7479Cr
+2026-11-02 15:16:18 [shadow] BUY E2E 48 @ 499.50 (Rs 23,976) pred +1.71 day -4.0% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 89.03743 mcap 10263Cr
+2026-11-02 15:16:18 [shadow] BUY DYNAMATECH 2 @ 11977.00 (Rs 23,954) pred +1.06 day +3.2% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 191.37462 mcap 8122Cr
+2026-11-02 15:16:18 [lookalike] BUY STLTECH 43 @ 783.30 (Rs 33,682) pred -2.45 day -5.0% size x1.0 lookalike of E2E (distance 2.23) | PE 56.967274 mcap 40278Cr
+2026-11-02 15:16:19 [lookalike] BUY JAMNAAUTO 273 @ 125.41 (Rs 34,237) pred +0.11 day +3.8% size x1.0 lookalike of DYNAMATECH (distance 0.94) | PE 21.432478 mcap 5015Cr
+2026-11-02 15:16:19 [lookalike] BUY PNCINFRA 264 @ 129.86 (Rs 34,283) pred +0.04 day +4.8% size x1.0 lookalike of INTELLECT (distance 2.41) | PE 5.279268 mcap 3332Cr
+2026-11-02 15:16:19 entry: 222 movers scored, 3 above thr 0.80, bought ['E2E', 'DYNAMATECH', 'INTELLECT']
+2026-11-02 15:35:00 catch-up: processing ['2026-11-02']
+2026-11-02 15:36:06 eod: model retrained on 54716 setups; thr 0.8 risk x1.0; accuracy {'labelled': 1860, 'corr': np.float64(0.11), 'above_thr': 11, 'above_thr_avg': np.float64(1.34), 'below_thr_avg': np.float64(-0.78)}
