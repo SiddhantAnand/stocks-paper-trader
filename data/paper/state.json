@@ -39,7 +39,7 @@
  "finished": false,
  "books": {
   "main": {
-   "cash": 39725.36897884277,
+   "cash": 75002.72577884278,
    "positions": [
     {
      "sym": "E2E",
@@ -150,66 +150,11 @@
       "roe": null,
       "sector": "Consumer Cyclical"
      }
-    },
-    {
-     "sym": "INTELLECT",
-     "entry_date": "2026-11-02",
-     "entry_time": "15:16",
-     "entry_px": 531.8,
-     "qty": 64,
-     "stop": 515.85,
-     "target": 553.07,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Information Technology",
-     "prev_close": 531.7999877929688,
-     "pred": 0.801,
-     "analog_avg": 1.644,
-     "size_mult": 1.0,
-     "note": "",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": 5.401,
-      "gap": 0.0,
-      "oc": 5.401,
-      "clv": 0.708,
-      "r2": -11.786,
-      "r5": -11.91,
-      "r20": -12.955,
-      "d_sma20": -11.017,
-      "d_sma50": -16.713,
-      "trend": 0.0,
-      "rsi": 34.823,
-      "atr": 6.563,
-      "vr": 7.848,
-      "pos20": 0.306,
-      "d_hi52": -57.271,
-      "tv_log": 1.304,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": 1.0,
-      "n_r1": 1.206,
-      "n_d50": 0.393,
-      "vix": 15.565,
-      "vix_ch5": -9.295,
-      "dow": 0.0
-     },
-     "fund": {
-      "pe": 21.263494,
-      "pb": 2.2222593,
-      "mcap_cr": 7479,
-      "de": 2.733,
-      "roe": 0.111219995,
-      "sector": "Technology"
-     }
     }
    ]
   },
   "lookalike": {
-   "cash": 739.2219691577193,
+   "cash": 33872.67132915771,
    "positions": [
     {
      "sym": "STLTECH",
@@ -319,61 +264,6 @@
       "de": 13.054,
       "roe": null,
       "sector": "Consumer Cyclical"
-     }
-    },
-    {
-     "sym": "PNCINFRA",
-     "entry_date": "2026-11-02",
-     "entry_time": "15:16",
-     "entry_px": 129.86,
-     "qty": 264,
-     "stop": 125.96,
-     "target": 135.05,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Construction",
-     "prev_close": 129.86000061035156,
-     "pred": 0.038,
-     "analog_avg": null,
-     "size_mult": 1.0,
-     "note": "lookalike of INTELLECT (distance 2.41)",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": 4.785,
-      "gap": 0.783,
-      "oc": 3.971,
-      "clv": 0.858,
-      "r2": -3.075,
-      "r5": -2.836,
-      "r20": -6.008,
-      "d_sma20": -5.918,
-      "d_sma50": -16.44,
-      "trend": 0.0,
-      "rsi": 37.959,
-      "atr": 6.494,
-      "vr": 0.246,
-      "pos20": 0.172,
-      "d_hi52": -55.443,
-      "tv_log": 1.092,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": 1.0,
-      "n_r1": 1.206,
-      "n_d50": 0.393,
-      "vix": 15.565,
-      "vix_ch5": -9.295,
-      "dow": 0.0
-     },
-     "fund": {
-      "pe": 5.279268,
-      "pb": 0.45963705,
-      "mcap_cr": 3332,
-      "de": 81.801,
-      "roe": 0.091000006,
-      "sector": "Industrials"
      }
     }
    ]

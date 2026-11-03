@@ -372,3 +372,7 @@ Traceback (most recent call last):
 TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-11-03 09:19:42 live: time budget used, handing over to a fresh run
+2026-11-03 09:20:17 live: session 2026-11-03, this run hands over at 03 Nov 14:40 if still busy
+2026-11-03 09:45:17 [main] SELL INTELLECT 64 @ 553.07 (target) net +3.65% pnl +1242 | worked: target; entered on +5.4% day, close-in-range 0.71, pred +0.80
+2026-11-03 13:05:17 [lookalike] SELL PNCINFRA 264 @ 125.96 (stop) net -3.35% pnl -1150 | hit stop intraday
+2026-11-03 14:40:00 live: time budget used, handing over to a fresh run
