@@ -1,73 +1,76 @@
-# Daily paper-trading report - Tue, 03 Nov 2026
+# Daily paper-trading report - Wed, 04 Nov 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**Bought 0 stock(s), sold 2 for +Rs 1,426.**
+**Bought 0 stock(s), sold 1 for -Rs 569.**
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,03,982** |
-| Today's change | +Rs 1,462 (▲ +1.43%) |
-| Total profit / loss since 2026-10-07 | **+Rs 3,982** (▲ +3.98%) |
-| Trades completed | 10 (7 wins, 3 losses) |
-| Win rate | 70% (expected about 55.6%) |
-| Average result per trade | ▲ +1.66% (expected about ▲ +0.85%) |
-| Profit factor | 2.47 (expected about 1.73) |
-| Stocks held now | 1 of 3 slots |
-| Cash available | Rs 87,164 |
-| Evidence so far | 10 of ~80 trades needed for a reliable verdict |
+| Portfolio value | **Rs 1,03,578** |
+| Today's change | -Rs 404 (▼ -0.39%) |
+| Total profit / loss since 2026-10-07 | **+Rs 3,578** (▲ +3.58%) |
+| Trades completed | 11 (7 wins, 4 losses) |
+| Win rate | 64% (expected about 55.6%) |
+| Average result per trade | ▲ +1.21% (expected about ▲ +0.85%) |
+| Profit factor | 1.90 (expected about 1.73) |
+| Stocks held now | 0 of 3 slots |
+| Cash available | Rs 1,03,578 |
+| Evidence so far | 11 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
 ### Sold
 | Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
 |---|---|---|---|---|---|---|
-| main | **INTELLECT** | 531.80 | 553.07 | ▲ +3.65% | +Rs 1,242 | Hit the profit target |
-| lookalike | **PNCINFRA** | 129.86 | 125.96 | ▼ -3.35% | -Rs 1,150 | Hit the stop-loss (limits the loss) |
-| main | **DYNAMATECH** | 11,977.00 | 12,203.00 | ▲ +1.54% | +Rs 184 | Holding period ended - sold at about 3:15 pm |
-| lookalike | **JAMNAAUTO** | 125.41 | 123.01 | ▼ -2.26% | -Rs 775 | Holding period ended - sold at about 3:15 pm |
-| shadow | **DYNAMATECH** | 11,977.00 | 12,203.00 | ▲ +1.54% | +Rs 368 | Holding period ended - sold at about 3:15 pm |
+| main | **E2E** | 499.50 | 484.51 | ▼ -3.35% | -Rs 569 | Hit the stop-loss (limits the loss) |
+| lookalike | **STLTECH** | 783.30 | 738.30 | ▼ -6.09% | -Rs 2,053 | Opened below the stop-loss - sold at the open |
+| shadow | **E2E** | 499.50 | 484.51 | ▼ -3.35% | -Rs 803 | Hit the stop-loss (limits the loss) |
+
+### Bought
+| Book | Stock | Price | Amount | Why |
+|---|---|---|---|---|
+| shadow | **KIRLPNU** | 574.20 | Rs 47,659 | moved +4.5% today and closed near the day's high; volume 0.5x normal; downtrend; RSI 39; model score +0.55 (bar 0.8); similar past setups averaged +0.35%; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
+| shadow | **SUMICHEM** | 328.10 | Rs 47,574 | moved +4.5% today and closed near the day's high; volume 1.1x normal; downtrend; RSI 25; model score +0.45 (bar 0.8); similar past setups averaged +0.01%; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
 
 ## Stocks we're holding
 | Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
 |---|---|---|---|---|---|---|---|
-| main | **E2E** | 2026-11-02 | 499.50 | 494.65 | ▼ -0.97% | 519.48 (profit target) | 484.51 (stop-loss) |
-| lookalike | **STLTECH** | 2026-11-02 | 783.30 | 759.65 | ▼ -3.02% | 814.63 (profit target) | 759.80 (stop-loss) |
-| shadow | **E2E** | 2026-11-02 | 499.50 | 494.65 | ▼ -0.97% | 519.48 (profit target) | 484.51 (stop-loss) |
+| shadow | **KIRLPNU** | 2026-11-04 | 574.20 | 574.20 | +0.00% | 597.17 (profit target) | 556.97 (stop-loss) |
+| shadow | **SUMICHEM** | 2026-11-04 | 328.10 | 328.10 | +0.00% | 341.22 (profit target) | 318.26 (stop-loss) |
 
 _Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 23,811 (▲ +1.58%) |
-| Market fear (India VIX) | 15.7 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Nifty 50 | 23,961 (▲ +0.63%) |
+| Market fear (India VIX) | 15.2 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
 | Stocks scanned | 1,043 |
-| Moved 3% or more today | 94 |
+| Moved 3% or more today | 223 |
 | Scored above the bar (0.8) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| LLOYDSENGG | ▼ -5.99% | +0.28 | Skipped - score below the bar |
-| LATENTVIEW | ▼ -3.11% | +0.24 | Skipped - score below the bar |
-| RAIN | ▼ -7.32% | +0.15 | Skipped - score below the bar |
-| GLAND | ▲ +3.06% | +0.12 | Skipped - score below the bar |
-| ENRIN | ▼ -3.55% | +0.11 | Skipped - score below the bar |
-| LTFOODS | ▲ +3.79% | +0.10 | Skipped - score below the bar |
-| SHADOWFAX | ▲ +3.92% | +0.10 | Skipped - score below the bar |
-| MSTCLTD | ▲ +3.17% | +0.09 | Skipped - score below the bar |
+| KIRLPNU | ▲ +4.46% | +0.55 | Skipped - score below the bar |
+| SUMICHEM | ▲ +4.52% | +0.45 | Skipped - score below the bar |
+| ANANTRAJ | ▲ +3.78% | +0.45 | Skipped - score below the bar |
+| EMMVEE | ▲ +6.55% | +0.41 | Skipped - score below the bar |
+| ALKYLAMINE | ▼ -4.18% | +0.35 | Skipped - score below the bar |
+| JSFB | ▲ +7.37% | +0.28 | Skipped - score below the bar |
+| ABSLAMC | ▲ +5.36% | +0.27 | Skipped - score below the bar |
+| AEQUS | ▲ +4.87% | +0.27 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **54,952** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **55,055** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **0.8** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 2077 past predictions, stocks above the bar averaged ▲ +0.82% next day vs ▼ -0.73% for the rest.
+- Prediction check: of 2169 past predictions, stocks above the bar averaged ▲ +0.82% next day vs ▼ -0.70% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
-| lookalike | Rs 1,00,000 | Rs 0 | 10 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 96,319 | -Rs 3,681 | 11 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| lookalike | Rs 98,964 | -Rs 1,036 | 11 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
+| shadow | Rs 95,748 | -Rs 4,252 | 12 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.

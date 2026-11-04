@@ -38,7 +38,9 @@
    "eod"
   ],
   "2026-11-04": [
-   "premarket"
+   "premarket",
+   "entry",
+   "eod"
   ]
  },
  "finished": false,
@@ -52,8 +54,119 @@
    "positions": []
   },
   "shadow": {
-   "cash": 95747.90767312497,
-   "positions": []
+   "cash": 514.8057749316067,
+   "positions": [
+    {
+     "sym": "KIRLPNU",
+     "entry_date": "2026-11-04",
+     "entry_time": "15:37",
+     "entry_px": 574.2,
+     "qty": 83,
+     "stop": 556.97,
+     "target": 597.17,
+     "hold": 1,
+     "min_hold": 1,
+     "sessions": 0,
+     "band": 20.0,
+     "series": "EQ",
+     "industry": "Capital Goods",
+     "prev_close": 574.2000122070312,
+     "pred": 0.553,
+     "analog_avg": 0.35,
+     "size_mult": 1.0,
+     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
+     "cfg_ver": 1,
+     "feat": {
+      "r1": 4.457,
+      "gap": 0.064,
+      "oc": 4.391,
+      "clv": 0.932,
+      "r2": 2.508,
+      "r5": 5.765,
+      "r20": -19.223,
+      "d_sma20": -5.353,
+      "d_sma50": -14.497,
+      "trend": 0.0,
+      "rsi": 39.394,
+      "atr": 5.327,
+      "vr": 0.452,
+      "pos20": 0.269,
+      "d_hi52": -47.731,
+      "tv_log": 0.974,
+      "band": 20.0,
+      "is_be": 0.0,
+      "streak": 1.0,
+      "n_r1": 0.629,
+      "n_d50": 3.155,
+      "vix": 15.208,
+      "vix_ch5": -6.415,
+      "dow": 2.0
+     },
+     "fund": {
+      "pe": 28.86878,
+      "pb": 5.7865562,
+      "mcap_cr": 7463,
+      "de": 0.047,
+      "roe": 0.21188,
+      "sector": "Industrials"
+     }
+    },
+    {
+     "sym": "SUMICHEM",
+     "entry_date": "2026-11-04",
+     "entry_time": "15:37",
+     "entry_px": 328.1,
+     "qty": 145,
+     "stop": 318.26,
+     "target": 341.22,
+     "hold": 1,
+     "min_hold": 1,
+     "sessions": 0,
+     "band": 20.0,
+     "series": "EQ",
+     "industry": "Chemicals",
+     "prev_close": 328.1000061035156,
+     "pred": 0.449,
+     "analog_avg": 0.01,
+     "size_mult": 1.0,
+     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
+     "cfg_ver": 1,
+     "feat": {
+      "r1": 4.524,
+      "gap": 0.016,
+      "oc": 4.507,
+      "clv": 0.947,
+      "r2": 2.212,
+      "r5": -2.191,
+      "r20": -21.517,
+      "d_sma20": -11.805,
+      "d_sma50": -24.205,
+      "trend": 0.0,
+      "rsi": 24.885,
+      "atr": 4.668,
+      "vr": 1.06,
+      "pos20": 0.134,
+      "d_hi52": -42.645,
+      "tv_log": 1.199,
+      "band": 20.0,
+      "is_be": 0.0,
+      "streak": 1.0,
+      "n_r1": 0.629,
+      "n_d50": 3.155,
+      "vix": 15.208,
+      "vix_ch5": -6.415,
+      "dow": 2.0
+     },
+     "fund": {
+      "pe": 29.294643,
+      "pb": 4.4443545,
+      "mcap_cr": 16377,
+      "de": 1.507,
+      "roe": 0.162,
+      "sector": "Basic Materials"
+     }
+    }
+   ]
   }
  },
  "incidents": [
@@ -261,7 +374,18 @@
    "above_thr": 13,
    "above_thr_avg": 0.82,
    "below_thr_avg": -0.73
+  },
+  {
+   "date": "2026-11-04",
+   "train_rows": 55055,
+   "thr": 0.8,
+   "risk_mult": 1.0,
+   "labelled": 2169,
+   "corr": 0.169,
+   "above_thr": 13,
+   "above_thr_avg": 0.82,
+   "below_thr_avg": -0.7
   }
  ],
- "model_through": "2026-11-03"
+ "model_through": "2026-11-04"
 }
