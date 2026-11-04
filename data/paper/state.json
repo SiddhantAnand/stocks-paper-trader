@@ -36,189 +36,24 @@
    "premarket",
    "entry",
    "eod"
+  ],
+  "2026-11-04": [
+   "premarket"
   ]
  },
  "finished": false,
  "books": {
   "main": {
-   "cash": 87163.80627884278,
-   "positions": [
-    {
-     "sym": "E2E",
-     "entry_date": "2026-11-02",
-     "entry_time": "15:16",
-     "entry_px": 499.5,
-     "qty": 34,
-     "stop": 484.51,
-     "target": 519.48,
-     "hold": 1,
-     "min_hold": 2,
-     "sessions": 1,
-     "band": 5.0,
-     "series": "BE",
-     "industry": "Information Technology",
-     "prev_close": 499.5,
-     "pred": 1.713,
-     "analog_avg": -1.663,
-     "size_mult": 0.5,
-     "note": "",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -4.016,
-      "gap": -4.996,
-      "oc": 1.032,
-      "clv": 0.304,
-      "r2": -8.809,
-      "r5": -15.959,
-      "r20": -22.917,
-      "d_sma20": -22.116,
-      "d_sma50": -20.308,
-      "trend": 1.0,
-      "rsi": 29.77,
-      "atr": 7.386,
-      "vr": 1.21,
-      "pos20": 0.019,
-      "d_hi52": -34.706,
-      "tv_log": 1.837,
-      "band": 5.0,
-      "is_be": 1.0,
-      "streak": -2.0,
-      "n_r1": 1.206,
-      "n_d50": 0.393,
-      "vix": 15.565,
-      "vix_ch5": -9.295,
-      "dow": 0.0
-     },
-     "fund": {
-      "pe": 89.03743,
-      "pb": 5.6864104,
-      "mcap_cr": 10263,
-      "de": 27.557,
-      "roe": 0.06943,
-      "sector": "Technology"
-     }
-    }
-   ]
+   "cash": 103577.70577884278,
+   "positions": []
   },
   "lookalike": {
-   "cash": 67334.57265734863,
-   "positions": [
-    {
-     "sym": "STLTECH",
-     "entry_date": "2026-11-02",
-     "entry_time": "15:16",
-     "entry_px": 783.3,
-     "qty": 43,
-     "stop": 759.8,
-     "target": 814.63,
-     "hold": 1,
-     "min_hold": 2,
-     "sessions": 1,
-     "band": 5.0,
-     "series": "BE",
-     "industry": "Telecommunication",
-     "prev_close": 783.2999877929688,
-     "pred": -2.451,
-     "analog_avg": null,
-     "size_mult": 1.0,
-     "note": "lookalike of E2E (distance 2.23)",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -4.997,
-      "gap": -4.997,
-      "oc": 0.0,
-      "clv": 0.5,
-      "r2": -9.742,
-      "r5": -9.711,
-      "r20": -18.009,
-      "d_sma20": -13.92,
-      "d_sma50": -6.131,
-      "trend": 1.0,
-      "rsi": 39.431,
-      "atr": 7.24,
-      "vr": 0.267,
-      "pos20": 0.077,
-      "d_hi52": -25.478,
-      "tv_log": 2.187,
-      "band": 5.0,
-      "is_be": 1.0,
-      "streak": -4.0,
-      "n_r1": 1.206,
-      "n_d50": 0.393,
-      "vix": 15.565,
-      "vix_ch5": -9.295,
-      "dow": 0.0
-     },
-     "fund": {
-      "pe": 56.967274,
-      "pb": 8.863366,
-      "mcap_cr": 40278,
-      "de": 21.77,
-      "roe": 0.2292,
-      "sector": "Technology"
-     }
-    }
-   ]
+   "cash": 98963.58548244629,
+   "positions": []
   },
   "shadow": {
-   "cash": 72575.34367312497,
-   "positions": [
-    {
-     "sym": "E2E",
-     "entry_date": "2026-11-02",
-     "entry_time": "15:16",
-     "entry_px": 499.5,
-     "qty": 48,
-     "stop": 484.51,
-     "target": 519.48,
-     "hold": 1,
-     "min_hold": 2,
-     "sessions": 1,
-     "band": 5.0,
-     "series": "BE",
-     "industry": "Information Technology",
-     "prev_close": 499.5,
-     "pred": 1.713,
-     "analog_avg": -1.663,
-     "size_mult": 0.5,
-     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -4.016,
-      "gap": -4.996,
-      "oc": 1.032,
-      "clv": 0.304,
-      "r2": -8.809,
-      "r5": -15.959,
-      "r20": -22.917,
-      "d_sma20": -22.116,
-      "d_sma50": -20.308,
-      "trend": 1.0,
-      "rsi": 29.77,
-      "atr": 7.386,
-      "vr": 1.21,
-      "pos20": 0.019,
-      "d_hi52": -34.706,
-      "tv_log": 1.837,
-      "band": 5.0,
-      "is_be": 1.0,
-      "streak": -2.0,
-      "n_r1": 1.206,
-      "n_d50": 0.393,
-      "vix": 15.565,
-      "vix_ch5": -9.295,
-      "dow": 0.0
-     },
-     "fund": {
-      "pe": 89.03743,
-      "pb": 5.6864104,
-      "mcap_cr": 10263,
-      "de": 27.557,
-      "roe": 0.06943,
-      "sector": "Technology"
-     }
-    }
-   ]
+   "cash": 95747.90767312497,
+   "positions": []
   }
  },
  "incidents": [
