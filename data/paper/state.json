@@ -41,6 +41,9 @@
    "premarket",
    "entry",
    "eod"
+  ],
+  "2026-11-05": [
+   "premarket"
   ]
  },
  "finished": false,
@@ -66,7 +69,7 @@
      "target": 597.17,
      "hold": 1,
      "min_hold": 1,
-     "sessions": 0,
+     "sessions": 1,
      "band": 20.0,
      "series": "EQ",
      "industry": "Capital Goods",
@@ -121,7 +124,7 @@
      "target": 341.22,
      "hold": 1,
      "min_hold": 1,
-     "sessions": 0,
+     "sessions": 1,
      "band": 20.0,
      "series": "EQ",
      "industry": "Chemicals",
