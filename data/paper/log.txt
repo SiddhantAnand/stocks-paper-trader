@@ -431,3 +431,17 @@ Traceback (most recent call last):
 TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-11-05 10:55:43 live: time budget used, handing over to a fresh run
+2026-11-05 10:56:19 live: session 2026-11-05, this run hands over at 05 Nov 16:26 if still busy
+2026-11-05 15:15:00 [shadow] SELL KIRLPNU 83 @ 570.85 (time) net -0.93% pnl -445 | no follow-through, small time-exit loss (costs)
+2026-11-05 15:15:00 [shadow] SELL SUMICHEM 145 @ 329.15 (time) net -0.03% pnl -14 | no follow-through, small time-exit loss (costs)
+2026-11-05 15:16:43 [main] BUY HFCL 78 @ 219.61 (Rs 17,130) pred +1.26 day -3.7% size x0.5  | PE 38.15009 mcap 33452Cr
+2026-11-05 15:16:44 [main] BUY MOTILALOFS 31 @ 1094.90 (Rs 33,942) pred +1.18 day +8.1% size x1.0  | PE 24.952143 mcap 66020Cr
+2026-11-05 15:16:44 [main] BUY MBAPL 88 @ 194.00 (Rs 17,072) pred +0.87 day +3.6% size x0.5  | PE 56.181557 mcap 8541Cr
+2026-11-05 15:16:44 [shadow] BUY HFCL 108 @ 219.61 (Rs 23,718) pred +1.26 day -3.7% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 38.15009 mcap 33452Cr
+2026-11-05 15:16:44 [shadow] BUY MOTILALOFS 43 @ 1094.90 (Rs 47,081) pred +1.18 day +8.1% size x1.0 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 24.952143 mcap 66020Cr
+2026-11-05 15:16:45 [lookalike] BUY STLTECH 43 @ 757.75 (Rs 32,583) pred -0.74 day -5.0% size x1.0 lookalike of HFCL (distance 1.24) | PE 55.109093 mcap 38964Cr
+2026-11-05 15:16:45 [lookalike] BUY 360ONE 28 @ 1143.00 (Rs 32,004) pred +0.41 day +7.0% size x1.0 lookalike of MOTILALOFS (distance 1.10) | PE 38.74576 mcap 49021Cr
+2026-11-05 15:16:45 [lookalike] BUY SHYAMMETL 25 @ 1274.80 (Rs 31,870) pred +0.42 day +3.5% size x1.0 lookalike of MBAPL (distance 1.75) | PE 26.444122 mcap 35505Cr
+2026-11-05 15:16:45 entry: 223 movers scored, 4 above thr 0.80, bought ['HFCL', 'MOTILALOFS', 'MBAPL']
+2026-11-05 15:35:00 catch-up: processing ['2026-11-05']
+2026-11-05 15:36:07 eod: model retrained on 55281 setups; thr 0.8 risk x1.0; accuracy {'labelled': 2392, 'corr': np.float64(0.188), 'above_thr': 13, 'above_thr_avg': np.float64(0.82), 'below_thr_avg': np.float64(-0.58)}
