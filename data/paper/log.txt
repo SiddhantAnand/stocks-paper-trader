@@ -465,3 +465,17 @@ Traceback (most recent call last):
 TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-11-06 10:50:46 live: time budget used, handing over to a fresh run
+2026-11-06 10:51:21 live: session 2026-11-06, this run hands over at 06 Nov 16:21 if still busy
+2026-11-06 15:15:00 [main] SELL MOTILALOFS 31 @ 1103.00 (time) net +0.39% pnl +132 | worked: time; entered on +8.1% day, close-in-range 0.98, pred +1.19
+2026-11-06 15:15:00 [main] SELL MBAPL 88 @ 195.41 (time) net +0.38% pnl +64 | worked: time; entered on +3.6% day, close-in-range 1.00, pred +0.87
+2026-11-06 15:15:00 [lookalike] SELL 360ONE 28 @ 1138.00 (time) net -0.79% pnl -252 | no follow-through, small time-exit loss (costs)
+2026-11-06 15:15:00 [lookalike] SELL SHYAMMETL 25 @ 1304.20 (time) net +1.96% pnl +623 | worked: time; entered on +3.5% day, close-in-range 0.83, pred +0.42
+2026-11-06 15:15:00 [shadow] SELL MOTILALOFS 43 @ 1103.00 (time) net +0.39% pnl +184 | worked: time; entered on +8.1% day, close-in-range 0.98, pred +1.19
+2026-11-06 15:15:56 [main] BUY KISSHT 99 @ 346.90 (Rs 34,343) pred +1.72 day +4.9% size x1.0  | PE 15.10708 mcap 7075Cr
+2026-11-06 15:15:56 [main] BUY KMEW 26 @ 649.00 (Rs 16,874) pred +1.11 day -79.4% size x0.5  | PE 60.362453 mcap 1647Cr
+2026-11-06 15:15:56 [shadow] BUY KISSHT 137 @ 346.90 (Rs 47,525) pred +1.72 day +4.9% size x1.0 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 15.10708 mcap 7075Cr
+2026-11-06 15:15:56 [lookalike] BUY ACE 28 @ 1167.05 (Rs 32,677) pred -0.24 day +3.5% size x1.0 lookalike of KISSHT (distance 2.16) | PE 31.820164 mcap 13901Cr
+2026-11-06 15:15:56 [lookalike] BUY AEROFLEX 68 @ 483.30 (Rs 32,864) pred -0.15 day -10.5% size x1.0 lookalike of KMEW (distance 45.92) | PE 70.8871 mcap 6398Cr
+2026-11-06 15:15:56 entry: 132 movers scored, 2 above thr 0.80, bought ['KISSHT', 'KMEW']
+2026-11-06 15:35:00 catch-up: processing ['2026-11-06']
+2026-11-06 15:35:42 eod: model retrained on 55497 setups; thr 0.8 risk x1.0; accuracy {'labelled': 2601, 'corr': np.float64(0.158), 'above_thr': 16, 'above_thr_avg': np.float64(0.45), 'below_thr_avg': np.float64(-0.63)}
