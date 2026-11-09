@@ -39,63 +39,8 @@
  "finished": false,
  "books": {
   "main": {
-   "cash": 51981.703720913094,
+   "cash": 87578.72287091309,
    "positions": [
-    {
-     "sym": "KISSHT",
-     "entry_date": "2026-11-06",
-     "entry_time": "15:15",
-     "entry_px": 346.9,
-     "qty": 99,
-     "stop": 336.49,
-     "target": 360.78,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Financial Services",
-     "prev_close": 346.8999938964844,
-     "pred": 1.722,
-     "analog_avg": 0.035,
-     "size_mult": 1.0,
-     "note": "",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": 4.883,
-      "gap": 0.227,
-      "oc": 4.646,
-      "clv": 1.0,
-      "r2": 10.11,
-      "r5": 13.831,
-      "r20": -6.785,
-      "d_sma20": 3.946,
-      "d_sma50": 2.897,
-      "trend": 0.0,
-      "rsi": 56.008,
-      "atr": 5.69,
-      "vr": 0.82,
-      "pos20": 0.589,
-      "d_hi52": -10.627,
-      "tv_log": 1.384,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": 2.0,
-      "n_r1": 1.64,
-      "n_d50": 7.282,
-      "vix": 17.43,
-      "vix_ch5": 13.922,
-      "dow": 4.0
-     },
-     "fund": {
-      "pe": 15.10708,
-      "pb": 2.4987168,
-      "mcap_cr": 7075,
-      "de": 94.754,
-      "roe": null,
-      "sector": "Financial Services"
-     }
-    },
     {
      "sym": "KMEW",
      "entry_date": "2026-11-06",
@@ -214,64 +159,8 @@
    ]
   },
   "shadow": {
-   "cash": 47150.111704013645,
-   "positions": [
-    {
-     "sym": "KISSHT",
-     "entry_date": "2026-11-06",
-     "entry_time": "15:15",
-     "entry_px": 346.9,
-     "qty": 137,
-     "stop": 336.49,
-     "target": 360.78,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Financial Services",
-     "prev_close": 346.8999938964844,
-     "pred": 1.722,
-     "analog_avg": 0.035,
-     "size_mult": 1.0,
-     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": 4.883,
-      "gap": 0.227,
-      "oc": 4.646,
-      "clv": 1.0,
-      "r2": 10.11,
-      "r5": 13.831,
-      "r20": -6.785,
-      "d_sma20": 3.946,
-      "d_sma50": 2.897,
-      "trend": 0.0,
-      "rsi": 56.008,
-      "atr": 5.69,
-      "vr": 0.82,
-      "pos20": 0.589,
-      "d_hi52": -10.627,
-      "tv_log": 1.384,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": 2.0,
-      "n_r1": 1.64,
-      "n_d50": 7.282,
-      "vix": 17.43,
-      "vix_ch5": 13.922,
-      "dow": 4.0
-     },
-     "fund": {
-      "pe": 15.10708,
-      "pb": 2.4987168,
-      "mcap_cr": 7075,
-      "de": 94.754,
-      "roe": null,
-      "sector": "Financial Services"
-     }
-    }
-   ]
+   "cash": 96410.63315401363,
+   "positions": []
   }
  },
  "incidents": [
