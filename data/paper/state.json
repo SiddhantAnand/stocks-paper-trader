@@ -33,130 +33,20 @@
    "eod"
   ],
   "2026-11-09": [
-   "premarket"
+   "premarket",
+   "entry",
+   "eod"
   ]
  },
  "finished": false,
  "books": {
   "main": {
-   "cash": 87578.72287091309,
-   "positions": [
-    {
-     "sym": "KMEW",
-     "entry_date": "2026-11-06",
-     "entry_time": "15:15",
-     "entry_px": 649.0,
-     "qty": 26,
-     "stop": 629.53,
-     "target": 674.96,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Services",
-     "prev_close": 649.0,
-     "pred": 1.112,
-     "analog_avg": -1.512,
-     "size_mult": 0.5,
-     "note": "",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -79.353,
-      "gap": -79.607,
-      "oc": 1.248,
-      "clv": 0.984,
-      "r2": -80.51,
-      "r5": -79.029,
-      "r20": -80.072,
-      "d_sma20": -78.996,
-      "d_sma50": -78.46,
-      "trend": 1.0,
-      "rsi": 14.514,
-      "atr": 54.176,
-      "vr": 6.752,
-      "pos20": 0.02,
-      "d_hi52": -81.007,
-      "tv_log": 1.54,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": -2.0,
-      "n_r1": 1.64,
-      "n_d50": 7.282,
-      "vix": 17.43,
-      "vix_ch5": 13.922,
-      "dow": 4.0
-     },
-     "fund": {
-      "pe": 60.362453,
-      "pb": 2.7848883,
-      "mcap_cr": 1647,
-      "de": 38.764,
-      "roe": null,
-      "sector": "Industrials"
-     }
-    }
-   ]
+   "cash": 104809.6638709131,
+   "positions": []
   },
   "lookalike": {
-   "cash": 64765.507559008794,
-   "positions": [
-    {
-     "sym": "ACE",
-     "entry_date": "2026-11-06",
-     "entry_time": "15:15",
-     "entry_px": 1167.05,
-     "qty": 28,
-     "stop": 1132.04,
-     "target": 1213.73,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Capital Goods",
-     "prev_close": 1167.050048828125,
-     "pred": -0.244,
-     "analog_avg": null,
-     "size_mult": 1.0,
-     "note": "lookalike of KISSHT (distance 2.16)",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": 3.494,
-      "gap": -1.738,
-      "oc": 5.325,
-      "clv": 0.892,
-      "r2": 5.639,
-      "r5": 17.327,
-      "r20": -1.081,
-      "d_sma20": 6.775,
-      "d_sma50": 2.093,
-      "trend": 0.0,
-      "rsi": 59.057,
-      "atr": 4.205,
-      "vr": 2.237,
-      "pos20": 0.794,
-      "d_hi52": -7.961,
-      "tv_log": 1.464,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": 5.0,
-      "n_r1": 1.64,
-      "n_d50": 7.282,
-      "vix": 17.43,
-      "vix_ch5": 13.922,
-      "dow": 4.0
-     },
-     "fund": {
-      "pe": 31.820164,
-      "pb": 6.91055,
-      "mcap_cr": 13901,
-      "de": 0.393,
-      "roe": null,
-      "sector": "Industrials"
-     }
-    }
-   ]
+   "cash": 97320.1366590088,
+   "positions": []
   },
   "shadow": {
    "cash": 96410.63315401363,
@@ -401,7 +291,18 @@
    "above_thr": 16,
    "above_thr_avg": 0.45,
    "below_thr_avg": -0.63
+  },
+  {
+   "date": "2026-11-09",
+   "train_rows": 55632,
+   "thr": 0.8,
+   "risk_mult": 1.0,
+   "labelled": 2728,
+   "corr": 0.159,
+   "above_thr": 18,
+   "above_thr_avg": 0.68,
+   "below_thr_avg": -0.55
   }
  ],
- "model_through": "2026-11-06"
+ "model_through": "2026-11-09"
 }

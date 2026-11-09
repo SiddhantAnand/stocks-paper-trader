@@ -1,87 +1,67 @@
-# Daily paper-trading report - Fri, 06 Nov 2026
+# Daily paper-trading report - Mon, 09 Nov 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**Bought 2 stock(s), sold 2 for +Rs 197.**
+**Bought 0 stock(s), sold 3 for +Rs 1,035.**
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,03,027** |
-| Today's change | -Rs 742 (▼ -0.71%) |
-| Total profit / loss since 2026-10-07 | **+Rs 3,027** (▲ +3.03%) |
-| Trades completed | 13 (9 wins, 4 losses) |
+| Portfolio value | **Rs 1,04,810** |
+| Today's change | +Rs 1,783 (▲ +1.73%) |
+| Total profit / loss since 2026-10-07 | **+Rs 4,810** (▲ +4.81%) |
+| Trades completed | 16 (11 wins, 5 losses) |
 | Win rate | 69% (expected about 55.6%) |
-| Average result per trade | ▲ +1.08% (expected about ▲ +0.85%) |
-| Profit factor | 1.96 (expected about 1.73) |
-| Stocks held now | 3 of 3 slots |
-| Cash available | Rs 35,428 |
-| Evidence so far | 13 of ~80 trades needed for a reliable verdict |
+| Average result per trade | ▲ +1.03% (expected about ▲ +0.85%) |
+| Profit factor | 1.91 (expected about 1.73) |
+| Stocks held now | 0 of 3 slots |
+| Cash available | Rs 1,04,810 |
+| Evidence so far | 16 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
 ### Sold
 | Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
 |---|---|---|---|---|---|---|
-| main | **MOTILALOFS** | 1,094.90 | 1,103.00 | ▲ +0.39% | +Rs 132 | Holding period ended - sold at about 3:15 pm |
-| main | **MBAPL** | 194.00 | 195.41 | ▲ +0.38% | +Rs 64 | Holding period ended - sold at about 3:15 pm |
-| lookalike | **360ONE** | 1,143.00 | 1,138.00 | ▼ -0.79% | -Rs 252 | Holding period ended - sold at about 3:15 pm |
-| lookalike | **SHYAMMETL** | 1,274.80 | 1,304.20 | ▲ +1.96% | +Rs 623 | Holding period ended - sold at about 3:15 pm |
-| shadow | **MOTILALOFS** | 1,094.90 | 1,103.00 | ▲ +0.39% | +Rs 184 | Holding period ended - sold at about 3:15 pm |
-
-### Bought
-| Book | Stock | Price | Amount | Why |
-|---|---|---|---|---|
-| main | **KISSHT** | 346.90 | Rs 34,343 | moved +4.9% today and closed near the day's high; volume 0.8x normal; downtrend; RSI 56; model score +1.72 (bar 0.8); similar past setups averaged +0.04% |
-| main | **KMEW** | 649.00 | Rs 16,874 | moved -79.4% today and closed near the day's high; volume 6.8x normal; uptrend; RSI 15; model score +1.11 (bar 0.8); similar past setups averaged -1.51%; bought at reduced size |
-| lookalike | **ACE** | 1,167.05 | Rs 32,677 | moved +3.5% today and closed near the day's high; volume 2.2x normal; downtrend; RSI 59; model score -0.24 (bar 0.8); lookalike of KISSHT (distance 2.16) |
-| lookalike | **AEROFLEX** | 483.30 | Rs 32,864 | moved -10.6% today and closed mid-range; volume 1.1x normal; downtrend; RSI 45; model score -0.15 (bar 0.8); lookalike of KMEW (distance 45.92) |
-| shadow | **KISSHT** | 346.90 | Rs 47,525 | moved +4.9% today and closed near the day's high; volume 0.8x normal; downtrend; RSI 56; model score +1.72 (bar 0.8); similar past setups averaged +0.04%; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
-
-## Stocks we're holding
-| Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
-|---|---|---|---|---|---|---|---|
-| main | **HFCL** | 2026-11-05 | 219.61 | 210.66 | ▼ -4.08% | 228.39 (profit target) | 213.02 (stop-loss) |
-| main | **KISSHT** | 2026-11-06 | 346.90 | 345.40 | ▼ -0.43% | 360.78 (profit target) | 336.49 (stop-loss) |
-| main | **KMEW** | 2026-11-06 | 649.00 | 652.80 | ▲ +0.59% | 674.96 (profit target) | 629.53 (stop-loss) |
-| lookalike | **STLTECH** | 2026-11-05 | 757.75 | 719.90 | ▼ -5.00% | 788.06 (profit target) | 735.02 (stop-loss) |
-| lookalike | **ACE** | 2026-11-06 | 1,167.05 | 1,167.70 | ▲ +0.06% | 1,213.73 (profit target) | 1,132.04 (stop-loss) |
-| lookalike | **AEROFLEX** | 2026-11-06 | 483.30 | 482.70 | ▼ -0.12% | 502.63 (profit target) | 468.80 (stop-loss) |
-| shadow | **HFCL** | 2026-11-05 | 219.61 | 210.66 | ▼ -4.08% | 228.39 (profit target) | 213.02 (stop-loss) |
-| shadow | **KISSHT** | 2026-11-06 | 346.90 | 345.40 | ▼ -0.43% | 360.78 (profit target) | 336.49 (stop-loss) |
-
-_Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
+| main | **HFCL** | 219.61 | 213.00 | ▼ -3.36% | -Rs 576 | Opened below the stop-loss - sold at the open |
+| lookalike | **STLTECH** | 757.75 | 688.00 | ▼ -9.55% | -Rs 3,113 | Opened below the stop-loss - sold at the open |
+| lookalike | **AEROFLEX** | 483.30 | 502.95 | ▲ +3.72% | +Rs 1,221 | Opened above the profit target - sold at the open |
+| shadow | **HFCL** | 219.61 | 213.00 | ▼ -3.36% | -Rs 797 | Opened below the stop-loss - sold at the open |
+| main | **KISSHT** | 346.90 | 360.78 | ▲ +3.65% | +Rs 1,254 | Hit the profit target |
+| shadow | **KISSHT** | 346.90 | 360.78 | ▲ +3.65% | +Rs 1,735 | Hit the profit target |
+| main | **KMEW** | 649.00 | 665.00 | ▲ +2.12% | +Rs 357 | Holding period ended - sold at about 3:15 pm |
+| lookalike | **ACE** | 1,167.05 | 1,166.75 | ▼ -0.38% | -Rs 123 | Holding period ended - sold at about 3:15 pm |
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 25,030 (▲ +2.01%) |
-| Market fear (India VIX) | 17.6 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,047 |
-| Moved 3% or more today | 132 |
-| Scored above the bar (0.8) | 2 |
+| Nifty 50 | 25,045 (▲ +0.06%) |
+| Market fear (India VIX) | 17.4 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,051 |
+| Moved 3% or more today | 126 |
+| Scored above the bar (0.8) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| KISSHT | ▲ +4.88% | +1.72 | **Bought** |
-| KMEW | ▼ -79.35% | +1.11 | **Bought** |
-| ARVINDFASN | ▼ -3.27% | +0.71 | Skipped - score below the bar |
-| SMLMAH | ▲ +4.85% | +0.70 | Skipped - score below the bar |
-| SPECTRUM | ▲ +4.68% | +0.62 | Skipped - score below the bar |
-| APTUS | ▼ -3.13% | +0.59 | Skipped - score below the bar |
-| WELSPUNLIV | ▼ -4.76% | +0.47 | Skipped - score below the bar |
-| TATACAP | ▲ +3.18% | +0.46 | Skipped - score below the bar |
+| SYNGENE | ▲ +4.64% | -0.09 | Skipped - score below the bar |
+| LAURUSLABS | ▲ +4.44% | -0.09 | Skipped - score below the bar |
+| IGIL | ▲ +5.14% | -0.14 | Skipped - score below the bar |
+| SGMART | ▲ +4.91% | -0.19 | Skipped - score below the bar |
+| WELSPUNLIV | ▲ +4.76% | -0.20 | Skipped - score below the bar |
+| UNIONBANK | ▲ +5.08% | -0.20 | Skipped - score below the bar |
+| GROWW | ▲ +3.34% | -0.21 | Skipped - score below the bar |
+| BANKBARODA | ▲ +3.79% | -0.22 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **55,497** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **55,632** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **0.8** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 2601 past predictions, stocks above the bar averaged ▲ +0.45% next day vs ▼ -0.63% for the rest.
+- Prediction check: of 2728 past predictions, stocks above the bar averaged ▲ +0.68% next day vs ▼ -0.55% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
-| lookalike | Rs 97,685 | -Rs 2,315 | 13 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 94,300 | -Rs 5,700 | 15 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| lookalike | Rs 97,320 | -Rs 2,680 | 16 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
+| shadow | Rs 96,411 | -Rs 3,589 | 17 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.

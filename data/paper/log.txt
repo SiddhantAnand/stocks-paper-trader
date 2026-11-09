@@ -507,3 +507,9 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-09 14:29:35 [main] SELL KISSHT 99 @ 360.78 (target) net +3.65% pnl +1254 | worked: target; entered on +4.9% day, close-in-range 1.00, pred +1.72
 2026-11-09 14:29:35 [shadow] SELL KISSHT 137 @ 360.78 (target) net +3.65% pnl +1735 | worked: target; entered on +4.9% day, close-in-range 1.00, pred +1.72
 2026-11-09 14:40:00 live: time budget used, handing over to a fresh run
+2026-11-09 14:40:35 live: session 2026-11-09, this run hands over at 09 Nov 20:10 if still busy
+2026-11-09 15:15:00 [main] SELL KMEW 26 @ 665.00 (time) net +2.12% pnl +357 | worked: time; entered on -79.4% day, close-in-range 0.98, pred +1.11
+2026-11-09 15:15:00 [lookalike] SELL ACE 28 @ 1166.75 (time) net -0.38% pnl -123 | no follow-through, small time-exit loss (costs)
+2026-11-09 15:16:12 entry: 126 movers scored, 0 above thr 0.80, bought []
+2026-11-09 15:35:00 catch-up: processing ['2026-11-09']
+2026-11-09 15:36:06 eod: model retrained on 55632 setups; thr 0.8 risk x1.0; accuracy {'labelled': 2728, 'corr': np.float64(0.159), 'above_thr': 18, 'above_thr_avg': np.float64(0.68), 'below_thr_avg': np.float64(-0.55)}
