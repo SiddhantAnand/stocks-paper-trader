@@ -553,3 +553,16 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-12 12:16:26 [main] SELL SETL 52 @ 344.76 (target) net +3.65% pnl +629 | worked: target; entered on -3.8% day, close-in-range 0.07, pred +1.34
 2026-11-12 12:16:26 [shadow] SELL SETL 72 @ 344.76 (target) net +3.65% pnl +871 | worked: target; entered on -3.8% day, close-in-range 0.07, pred +1.34
 2026-11-12 14:40:00 live: time budget used, handing over to a fresh run
+2026-11-12 14:40:40 live: session 2026-11-12, this run hands over at 12 Nov 20:10 if still busy
+2026-11-12 15:15:00 [main] SELL RAIN 104 @ 167.02 (time) net -0.81% pnl -142 | no follow-through, small time-exit loss (costs); up-day but closed off highs; historical analogs were negative
+2026-11-12 15:15:00 [main] SELL MPHASIS 7 @ 2409.90 (time) net +0.87% pnl +145 | worked: time; entered on -3.0% day, close-in-range 0.07, pred +0.86
+2026-11-12 15:15:00 [lookalike] SELL BIRLACABLE 98 @ 321.00 (time) net -3.02% pnl -976 | no obvious flag - normal variance
+2026-11-12 15:15:00 [lookalike] SELL GALLANTT 61 @ 527.70 (time) net -0.12% pnl -39 | no follow-through, small time-exit loss (costs)
+2026-11-12 15:15:00 [shadow] SELL RAIN 143 @ 167.02 (time) net -0.81% pnl -196 | no follow-through, small time-exit loss (costs); up-day but closed off highs; historical analogs were negative
+2026-11-12 15:16:04 [main] BUY SHARDACROP 23 @ 745.50 (Rs 17,146) pred +0.91 day +4.2% size x0.5  | PE 10.463976 mcap 6735Cr
+2026-11-12 15:16:04 [shadow] BUY SHARDACROP 32 @ 745.50 (Rs 23,856) pred +0.91 day +4.2% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 10.463976 mcap 6735Cr
+2026-11-12 15:16:04 [shadow] BUY KTKBANK 66 @ 366.25 (Rs 24,172) pred +0.76 day +4.8% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 8.936145 mcap 13874Cr
+2026-11-12 15:16:04 [lookalike] BUY KIRLPNU 49 @ 661.05 (Rs 32,391) pred +0.48 day +3.4% size x1.0 lookalike of SHARDACROP (distance 1.42) | PE 33.26546 mcap 8599Cr
+2026-11-12 15:16:04 entry: 93 movers scored, 1 above thr 0.80, bought ['SHARDACROP']
+2026-11-12 15:35:00 catch-up: processing ['2026-11-12']
+2026-11-12 15:35:55 eod: model retrained on 55906 setups; thr 0.8 risk x1.0; accuracy {'labelled': 2977, 'corr': np.float64(0.137), 'above_thr': 21, 'above_thr_avg': np.float64(0.89), 'below_thr_avg': np.float64(-0.46)}
