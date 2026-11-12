@@ -548,3 +548,8 @@ Traceback (most recent call last):
 TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-11-12 09:15:39 live: time budget used, handing over to a fresh run
+2026-11-12 09:16:26 live: session 2026-11-12, this run hands over at 12 Nov 14:40 if still busy
+2026-11-12 09:21:26 [lookalike] SELL TDPOWERSYS 53 @ 631.23 (target) net +3.65% pnl +1174 | worked: target; entered on +6.2% day, close-in-range 0.78, pred +0.83
+2026-11-12 12:16:26 [main] SELL SETL 52 @ 344.76 (target) net +3.65% pnl +629 | worked: target; entered on -3.8% day, close-in-range 0.07, pred +1.34
+2026-11-12 12:16:26 [shadow] SELL SETL 72 @ 344.76 (target) net +3.65% pnl +871 | worked: target; entered on -3.8% day, close-in-range 0.07, pred +1.34
+2026-11-12 14:40:00 live: time budget used, handing over to a fresh run
