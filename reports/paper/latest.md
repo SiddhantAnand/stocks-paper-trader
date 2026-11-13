@@ -1,85 +1,63 @@
-# Daily paper-trading report - Thu, 12 Nov 2026
+# Daily paper-trading report - Fri, 13 Nov 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**Bought 1 stock(s), sold 3 for +Rs 632.**
+**Bought 0 stock(s), sold 1 for -Rs 451.**
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,05,368** |
-| Today's change | +Rs 505 (▲ +0.48%) |
-| Total profit / loss since 2026-10-07 | **+Rs 5,368** (▲ +5.37%) |
-| Trades completed | 19 (13 wins, 6 losses) |
-| Win rate | 68% (expected about 55.6%) |
-| Average result per trade | ▲ +1.06% (expected about ▲ +0.85%) |
-| Profit factor | 2.07 (expected about 1.73) |
-| Stocks held now | 1 of 3 slots |
-| Cash available | Rs 88,296 |
-| Evidence so far | 19 of ~80 trades needed for a reliable verdict |
+| Portfolio value | **Rs 1,04,991** |
+| Today's change | -Rs 377 (▼ -0.36%) |
+| Total profit / loss since 2026-10-07 | **+Rs 4,991** (▲ +4.99%) |
+| Trades completed | 20 (13 wins, 7 losses) |
+| Win rate | 65% (expected about 55.6%) |
+| Average result per trade | ▲ +0.88% (expected about ▲ +0.85%) |
+| Profit factor | 1.82 (expected about 1.73) |
+| Stocks held now | 0 of 3 slots |
+| Cash available | Rs 1,04,991 |
+| Evidence so far | 20 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
 ### Sold
 | Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
 |---|---|---|---|---|---|---|
-| lookalike | **TDPOWERSYS** | 606.95 | 631.23 | ▲ +3.65% | +Rs 1,174 | Hit the profit target |
-| main | **SETL** | 331.50 | 344.76 | ▲ +3.65% | +Rs 629 | Hit the profit target |
-| shadow | **SETL** | 331.50 | 344.76 | ▲ +3.65% | +Rs 871 | Hit the profit target |
-| main | **RAIN** | 167.80 | 167.02 | ▼ -0.81% | -Rs 142 | Holding period ended - sold at about 3:15 pm |
-| main | **MPHASIS** | 2,380.80 | 2,409.90 | ▲ +0.87% | +Rs 145 | Holding period ended - sold at about 3:15 pm |
-| lookalike | **BIRLACABLE** | 329.80 | 321.00 | ▼ -3.02% | -Rs 976 | Holding period ended - sold at about 3:15 pm |
-| lookalike | **GALLANTT** | 526.50 | 527.70 | ▼ -0.12% | -Rs 39 | Holding period ended - sold at about 3:15 pm |
-| shadow | **RAIN** | 167.80 | 167.02 | ▼ -0.81% | -Rs 196 | Holding period ended - sold at about 3:15 pm |
-
-### Bought
-| Book | Stock | Price | Amount | Why |
-|---|---|---|---|---|
-| main | **SHARDACROP** | 745.50 | Rs 17,146 | moved +4.2% today and closed near the day's high; volume 1.6x normal; downtrend; RSI 63; model score +0.91 (bar 0.8); similar past setups averaged -0.76%; bought at reduced size |
-| lookalike | **KIRLPNU** | 661.05 | Rs 32,391 | moved +3.4% today and closed near the day's high; volume 0.4x normal; downtrend; RSI 60; model score +0.48 (bar 0.8); lookalike of SHARDACROP (distance 1.42) |
-| shadow | **SHARDACROP** | 745.50 | Rs 23,856 | moved +4.2% today and closed near the day's high; volume 1.6x normal; downtrend; RSI 63; model score +0.91 (bar 0.8); similar past setups averaged -0.76%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
-| shadow | **KTKBANK** | 366.25 | Rs 24,172 | moved +4.8% today and closed near the day's high; volume 1.7x normal; downtrend; RSI 71; model score +0.76 (bar 0.8); similar past setups averaged -1.28%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
-
-## Stocks we're holding
-| Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
-|---|---|---|---|---|---|---|---|
-| main | **SHARDACROP** | 2026-11-12 | 745.50 | 742.30 | ▼ -0.43% | 775.32 (profit target) | 723.13 (stop-loss) |
-| lookalike | **KIRLPNU** | 2026-11-12 | 661.05 | 660.85 | ▼ -0.03% | 687.49 (profit target) | 641.22 (stop-loss) |
-| shadow | **SHARDACROP** | 2026-11-12 | 745.50 | 742.30 | ▼ -0.43% | 775.32 (profit target) | 723.13 (stop-loss) |
-| shadow | **KTKBANK** | 2026-11-12 | 366.25 | 366.00 | ▼ -0.07% | 380.90 (profit target) | 355.26 (stop-loss) |
-
-_Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
+| main | **SHARDACROP** | 745.50 | 728.50 | ▼ -2.63% | -Rs 451 | Holding period ended - sold at about 3:15 pm |
+| lookalike | **KIRLPNU** | 661.05 | 659.50 | ▼ -0.58% | -Rs 189 | Holding period ended - sold at about 3:15 pm |
+| shadow | **SHARDACROP** | 745.50 | 728.50 | ▼ -2.63% | -Rs 628 | Holding period ended - sold at about 3:15 pm |
+| shadow | **KTKBANK** | 366.25 | 362.40 | ▼ -1.40% | -Rs 339 | Holding period ended - sold at about 3:15 pm |
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 25,299 (▲ +0.18%) |
-| Market fear (India VIX) | 16.6 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,047 |
-| Moved 3% or more today | 93 |
-| Scored above the bar (0.8) | 1 |
+| Nifty 50 | 25,144 (▼ -0.61%) |
+| Market fear (India VIX) | 15.8 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,048 |
+| Moved 3% or more today | 64 |
+| Scored above the bar (0.8) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| SHARDACROP | ▲ +4.16% | +0.91 | **Bought** |
-| KTKBANK | ▲ +4.79% | +0.76 | Skipped - score below the bar |
-| SENORES | ▲ +3.59% | +0.75 | Skipped - score below the bar |
-| PFOCUS | ▲ +3.80% | +0.68 | Skipped - score below the bar |
-| PINELABS | ▲ +5.55% | +0.60 | Skipped - score below the bar |
-| DBREALTY | ▲ +4.68% | +0.57 | Skipped - score below the bar |
-| QUESS | ▼ -3.08% | +0.56 | Skipped - score below the bar |
-| INDUSINDBK | ▲ +3.27% | +0.55 | Skipped - score below the bar |
+| TEGA | ▼ -3.11% | +0.39 | Skipped - score below the bar |
+| ALKEM | ▼ -3.62% | +0.21 | Skipped - score below the bar |
+| GRANULES | ▼ -3.38% | +0.13 | Skipped - score below the bar |
+| KPIGREEN | ▼ -3.15% | +0.13 | Skipped - score below the bar |
+| SENORES | ▼ -3.66% | +0.08 | Skipped - score below the bar |
+| TIMEX | ▼ -3.18% | +0.07 | Skipped - score below the bar |
+| MUTHOOTFIN | ▼ -3.10% | +0.06 | Skipped - score below the bar |
+| SONATSOFTW | ▼ -3.38% | +0.04 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **55,906** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **56,022** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **0.8** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 2977 past predictions, stocks above the bar averaged ▲ +0.89% next day vs ▼ -0.46% for the rest.
+- Prediction check: of 3065 past predictions, stocks above the bar averaged ▲ +0.76% next day vs ▼ -0.47% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
-| lookalike | Rs 97,470 | -Rs 2,530 | 19 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 96,967 | -Rs 3,033 | 19 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| lookalike | Rs 97,290 | -Rs 2,710 | 20 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
+| shadow | Rs 96,120 | -Rs 3,880 | 21 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.

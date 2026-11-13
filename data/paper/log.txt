@@ -588,3 +588,11 @@ Traceback (most recent call last):
 TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-11-13 14:25:43 live: time budget used, handing over to a fresh run
+2026-11-13 14:26:18 live: session 2026-11-13, this run hands over at 13 Nov 19:56 if still busy
+2026-11-13 15:15:00 [main] SELL SHARDACROP 23 @ 728.50 (time) net -2.63% pnl -451 | historical analogs were negative
+2026-11-13 15:15:00 [lookalike] SELL KIRLPNU 49 @ 659.50 (time) net -0.58% pnl -189 | no follow-through, small time-exit loss (costs)
+2026-11-13 15:15:00 [shadow] SELL SHARDACROP 32 @ 728.50 (time) net -2.63% pnl -627 | historical analogs were negative
+2026-11-13 15:15:00 [shadow] SELL KTKBANK 66 @ 362.40 (time) net -1.40% pnl -339 | historical analogs were negative
+2026-11-13 15:15:42 entry: 64 movers scored, 0 above thr 0.80, bought []
+2026-11-13 15:35:00 catch-up: processing ['2026-11-13']
+2026-11-13 15:35:32 eod: model retrained on 56022 setups; thr 0.8 risk x1.0; accuracy {'labelled': 3065, 'corr': np.float64(0.128), 'above_thr': 22, 'above_thr_avg': np.float64(0.76), 'below_thr_avg': np.float64(-0.47)}
