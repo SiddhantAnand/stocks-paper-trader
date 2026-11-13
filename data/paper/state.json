@@ -36,6 +36,9 @@
    "premarket",
    "entry",
    "eod"
+  ],
+  "2026-11-13": [
+   "premarket"
   ]
  },
  "finished": false,
@@ -53,7 +56,7 @@
      "target": 775.32,
      "hold": 1,
      "min_hold": 1,
-     "sessions": 0,
+     "sessions": 1,
      "band": 20.0,
      "series": "EQ",
      "industry": "Chemicals",
@@ -113,7 +116,7 @@
      "target": 687.49,
      "hold": 1,
      "min_hold": 1,
-     "sessions": 0,
+     "sessions": 1,
      "band": 20.0,
      "series": "EQ",
      "industry": "Capital Goods",
@@ -173,7 +176,7 @@
      "target": 775.32,
      "hold": 1,
      "min_hold": 1,
-     "sessions": 0,
+     "sessions": 1,
      "band": 20.0,
      "series": "EQ",
      "industry": "Chemicals",
@@ -228,7 +231,7 @@
      "target": 380.9,
      "hold": 1,
      "min_hold": 1,
-     "sessions": 0,
+     "sessions": 1,
      "band": 20.0,
      "series": "EQ",
      "industry": "Financial Services",
