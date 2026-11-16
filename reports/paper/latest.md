@@ -1,14 +1,14 @@
-# Daily paper-trading report - Fri, 13 Nov 2026
+# Daily paper-trading report - Mon, 16 Nov 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**Bought 0 stock(s), sold 1 for -Rs 451.**
+**No new trades today.** 122 stocks moved 3% or more, and 0 scored above the model's bar of 0.8.
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
 | Portfolio value | **Rs 1,04,991** |
-| Today's change | -Rs 377 (▼ -0.36%) |
+| Today's change | Rs 0 (-0.00%) |
 | Total profit / loss since 2026-10-07 | **+Rs 4,991** (▲ +4.99%) |
 | Trades completed | 20 (13 wins, 7 losses) |
 | Win rate | 65% (expected about 55.6%) |
@@ -19,45 +19,51 @@
 | Evidence so far | 20 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
-### Sold
-| Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
-|---|---|---|---|---|---|---|
-| main | **SHARDACROP** | 745.50 | 728.50 | ▼ -2.63% | -Rs 451 | Holding period ended - sold at about 3:15 pm |
-| lookalike | **KIRLPNU** | 661.05 | 659.50 | ▼ -0.58% | -Rs 189 | Holding period ended - sold at about 3:15 pm |
-| shadow | **SHARDACROP** | 745.50 | 728.50 | ▼ -2.63% | -Rs 628 | Holding period ended - sold at about 3:15 pm |
-| shadow | **KTKBANK** | 366.25 | 362.40 | ▼ -1.40% | -Rs 339 | Holding period ended - sold at about 3:15 pm |
+### Bought
+| Book | Stock | Price | Amount | Why |
+|---|---|---|---|---|
+| shadow | **SHILCTECH** | 3,430.00 | Rs 24,010 | moved -3.6% today and closed near the day's low; volume 1.1x normal; downtrend; RSI 35; model score +0.76 (bar 0.8); similar past setups averaged -0.75%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
+| shadow | **ASHAPURMIN** | 402.70 | Rs 47,921 | moved -3.0% today and closed near the day's low; volume 1.0x normal; downtrend; RSI 32; model score +0.70 (bar 0.8); similar past setups averaged +0.07%; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
+
+## Stocks we're holding
+| Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
+|---|---|---|---|---|---|---|---|
+| shadow | **SHILCTECH** | 2026-11-16 | 3,430.00 | 3,431.20 | ▲ +0.03% | 3,567.20 (profit target) | 3,327.10 (stop-loss) |
+| shadow | **ASHAPURMIN** | 2026-11-16 | 402.70 | 402.95 | ▲ +0.06% | 418.81 (profit target) | 390.62 (stop-loss) |
+
+_Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 25,144 (▼ -0.61%) |
-| Market fear (India VIX) | 15.8 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,048 |
-| Moved 3% or more today | 64 |
+| Nifty 50 | 25,291 (▲ +0.58%) |
+| Market fear (India VIX) | 15.7 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,044 |
+| Moved 3% or more today | 122 |
 | Scored above the bar (0.8) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| TEGA | ▼ -3.11% | +0.39 | Skipped - score below the bar |
-| ALKEM | ▼ -3.62% | +0.21 | Skipped - score below the bar |
-| GRANULES | ▼ -3.38% | +0.13 | Skipped - score below the bar |
-| KPIGREEN | ▼ -3.15% | +0.13 | Skipped - score below the bar |
-| SENORES | ▼ -3.66% | +0.08 | Skipped - score below the bar |
-| TIMEX | ▼ -3.18% | +0.07 | Skipped - score below the bar |
-| MUTHOOTFIN | ▼ -3.10% | +0.06 | Skipped - score below the bar |
-| SONATSOFTW | ▼ -3.38% | +0.04 | Skipped - score below the bar |
+| SHILCTECH | ▼ -3.59% | +0.76 | Skipped - score below the bar |
+| ASHAPURMIN | ▼ -3.03% | +0.70 | Skipped - score below the bar |
+| RRKABEL | ▼ -5.19% | +0.68 | Skipped - score below the bar |
+| TEJASNET | ▼ -3.61% | +0.62 | Skipped - score below the bar |
+| THANGAMAYL | ▼ -3.27% | +0.60 | Skipped - score below the bar |
+| LATENTVIEW | ▼ -3.25% | +0.56 | Skipped - score below the bar |
+| TEGA | ▼ -4.27% | +0.55 | Skipped - score below the bar |
+| SCHNEIDER | ▼ -3.32% | +0.54 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **56,022** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **56,097** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **0.8** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 3065 past predictions, stocks above the bar averaged ▲ +0.76% next day vs ▼ -0.47% for the rest.
+- Prediction check: of 3124 past predictions, stocks above the bar averaged ▲ +0.76% next day vs ▼ -0.50% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
 | lookalike | Rs 97,290 | -Rs 2,710 | 20 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 96,120 | -Rs 3,880 | 21 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| shadow | Rs 96,158 | -Rs 3,842 | 21 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.
