@@ -26,6 +26,9 @@
    "premarket",
    "entry",
    "eod"
+  ],
+  "2026-11-16": [
+   "premarket"
   ]
  },
  "finished": false,
