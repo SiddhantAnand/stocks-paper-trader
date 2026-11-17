@@ -1,69 +1,79 @@
-# Daily paper-trading report - Mon, 16 Nov 2026
+# Daily paper-trading report - Tue, 17 Nov 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**No new trades today.** 122 stocks moved 3% or more, and 0 scored above the model's bar of 0.8.
+**Bought 1 stock(s), sold 0.**
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,04,991** |
-| Today's change | Rs 0 (-0.00%) |
-| Total profit / loss since 2026-10-07 | **+Rs 4,991** (▲ +4.99%) |
+| Portfolio value | **Rs 1,04,972** |
+| Today's change | -Rs 19 (▼ -0.02%) |
+| Total profit / loss since 2026-10-07 | **+Rs 4,972** (▲ +4.97%) |
 | Trades completed | 20 (13 wins, 7 losses) |
 | Win rate | 65% (expected about 55.6%) |
 | Average result per trade | ▲ +0.88% (expected about ▲ +0.85%) |
 | Profit factor | 1.82 (expected about 1.73) |
-| Stocks held now | 0 of 3 slots |
-| Cash available | Rs 1,04,991 |
+| Stocks held now | 1 of 3 slots |
+| Cash available | Rs 87,658 |
 | Evidence so far | 20 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
+### Sold
+| Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
+|---|---|---|---|---|---|---|
+| shadow | **ASHAPURMIN** | 402.70 | 418.81 | ▲ +3.65% | +Rs 1,749 | Hit the profit target |
+| shadow | **SHILCTECH** | 3,430.00 | 3,406.10 | ▼ -1.05% | -Rs 251 | Holding period ended - sold at about 3:15 pm |
+
 ### Bought
 | Book | Stock | Price | Amount | Why |
 |---|---|---|---|---|
-| shadow | **SHILCTECH** | 3,430.00 | Rs 24,010 | moved -3.6% today and closed near the day's low; volume 1.1x normal; downtrend; RSI 35; model score +0.76 (bar 0.8); similar past setups averaged -0.75%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
-| shadow | **ASHAPURMIN** | 402.70 | Rs 47,921 | moved -3.0% today and closed near the day's low; volume 1.0x normal; downtrend; RSI 32; model score +0.70 (bar 0.8); similar past setups averaged +0.07%; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
+| main | **HFCL** | 188.40 | Rs 17,333 | moved -3.5% today and closed mid-range; volume 1.2x normal; downtrend; RSI 31; model score +1.17 (bar 0.8); similar past setups averaged -0.11%; bought at reduced size |
+| lookalike | **STLTECH** | 641.50 | Rs 32,075 | moved -5.0% today and closed near the day's low; volume 1.2x normal; downtrend; RSI 32; model score -1.26 (bar 0.8); lookalike of HFCL (distance 1.63) |
+| shadow | **HFCL** | 188.40 | Rs 24,304 | moved -3.5% today and closed mid-range; volume 1.2x normal; downtrend; RSI 31; model score +1.17 (bar 0.8); similar past setups averaged -0.11%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
+| shadow | **EBGNG** | 526.95 | Rs 48,479 | moved -4.9% today and closed near the day's low; volume 0.4x normal; downtrend; RSI 32; model score +0.75 (bar 0.8); similar past setups averaged +0.34%; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
 
 ## Stocks we're holding
 | Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
 |---|---|---|---|---|---|---|---|
-| shadow | **SHILCTECH** | 2026-11-16 | 3,430.00 | 3,431.20 | ▲ +0.03% | 3,567.20 (profit target) | 3,327.10 (stop-loss) |
-| shadow | **ASHAPURMIN** | 2026-11-16 | 402.70 | 402.95 | ▲ +0.06% | 418.81 (profit target) | 390.62 (stop-loss) |
+| main | **HFCL** | 2026-11-17 | 188.40 | 188.19 | ▼ -0.11% | 195.94 (profit target) | 182.75 (stop-loss) |
+| lookalike | **STLTECH** | 2026-11-17 | 641.50 | 641.50 | +0.00% | 667.16 (profit target) | 622.25 (stop-loss) |
+| shadow | **HFCL** | 2026-11-17 | 188.40 | 188.19 | ▼ -0.11% | 195.94 (profit target) | 182.75 (stop-loss) |
+| shadow | **EBGNG** | 2026-11-17 | 526.95 | 527.40 | ▲ +0.09% | 548.03 (profit target) | 511.14 (stop-loss) |
 
 _Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 25,291 (▲ +0.58%) |
-| Market fear (India VIX) | 15.7 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,044 |
-| Moved 3% or more today | 122 |
-| Scored above the bar (0.8) | 0 |
+| Nifty 50 | 25,387 (▲ +0.38%) |
+| Market fear (India VIX) | 15.5 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,043 |
+| Moved 3% or more today | 79 |
+| Scored above the bar (0.8) | 1 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| SHILCTECH | ▼ -3.59% | +0.76 | Skipped - score below the bar |
-| ASHAPURMIN | ▼ -3.03% | +0.70 | Skipped - score below the bar |
-| RRKABEL | ▼ -5.19% | +0.68 | Skipped - score below the bar |
-| TEJASNET | ▼ -3.61% | +0.62 | Skipped - score below the bar |
-| THANGAMAYL | ▼ -3.27% | +0.60 | Skipped - score below the bar |
-| LATENTVIEW | ▼ -3.25% | +0.56 | Skipped - score below the bar |
-| TEGA | ▼ -4.27% | +0.55 | Skipped - score below the bar |
-| SCHNEIDER | ▼ -3.32% | +0.54 | Skipped - score below the bar |
+| HFCL | ▼ -3.48% | +1.17 | **Bought** |
+| EBGNG | ▼ -4.87% | +0.75 | Skipped - score below the bar |
+| JSLL | ▼ -3.41% | +0.69 | Skipped - score below the bar |
+| MTARTECH | ▼ -3.49% | +0.28 | Skipped - score below the bar |
+| V2RETAIL | ▲ +3.88% | +0.28 | Skipped - score below the bar |
+| UTLSOLAR | ▼ -6.49% | +0.20 | Skipped - score below the bar |
+| CUMMINSIND | ▼ -4.23% | +0.19 | Skipped - score below the bar |
+| E2E | ▼ -4.90% | +0.18 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **56,097** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **56,067** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **0.8** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 3124 past predictions, stocks above the bar averaged ▲ +0.76% next day vs ▼ -0.50% for the rest.
+- Prediction check: of 3240 past predictions, stocks above the bar averaged ▲ +0.76% next day vs ▼ -0.50% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
 | lookalike | Rs 97,290 | -Rs 2,710 | 20 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 96,158 | -Rs 3,842 | 21 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| shadow | Rs 97,632 | -Rs 2,368 | 23 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.
