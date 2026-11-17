@@ -628,3 +628,5 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-11-17 09:45:00 [shadow] SELL ASHAPURMIN 119 @ 418.81 (target) net +3.65% pnl +1749 | worked: target; entered on -3.0% day, close-in-range 0.04, pred +0.70
 2026-11-17 09:53:10 live: time budget used, handing over to a fresh run
+2026-11-17 09:53:47 live: session 2026-11-17, this run hands over at 17 Nov 14:40 if still busy
+2026-11-17 14:40:00 live: time budget used, handing over to a fresh run
