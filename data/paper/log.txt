@@ -688,3 +688,5 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-11-19 09:20:00 [lookalike] SELL STLTECH 50 @ 667.16 (target) net +3.65% pnl +1171 | worked: target; entered on -5.0% day, close-in-range 0.00, pred -1.26
 2026-11-19 09:42:16 live: time budget used, handing over to a fresh run
+2026-11-19 09:42:51 live: session 2026-11-19, this run hands over at 19 Nov 14:40 if still busy
+2026-11-19 14:40:00 live: time budget used, handing over to a fresh run
