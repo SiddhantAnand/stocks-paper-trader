@@ -38,189 +38,24 @@
    "eod"
   ],
   "2026-11-19": [
-   "premarket"
+   "premarket",
+   "entry",
+   "eod"
   ]
  },
  "finished": false,
  "books": {
   "main": {
-   "cash": 87658.20898399904,
-   "positions": [
-    {
-     "sym": "HFCL",
-     "entry_date": "2026-11-17",
-     "entry_time": "15:16",
-     "entry_px": 188.4,
-     "qty": 92,
-     "stop": 182.75,
-     "target": 195.94,
-     "hold": 1,
-     "min_hold": 2,
-     "sessions": 2,
-     "band": 5.0,
-     "series": "BE",
-     "industry": "Telecommunication",
-     "prev_close": 188.39999389648438,
-     "pred": 1.168,
-     "analog_avg": -0.113,
-     "size_mult": 0.5,
-     "note": "",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -3.484,
-      "gap": -3.176,
-      "oc": -0.317,
-      "clv": 0.327,
-      "r2": -8.308,
-      "r5": -8.752,
-      "r20": -26.409,
-      "d_sma20": -17.242,
-      "d_sma50": -18.94,
-      "trend": 0.0,
-      "rsi": 31.073,
-      "atr": 6.117,
-      "vr": 1.176,
-      "pos20": 0.031,
-      "d_hi52": -33.251,
-      "tv_log": 2.232,
-      "band": 5.0,
-      "is_be": 1.0,
-      "streak": -4.0,
-      "n_r1": 0.482,
-      "n_d50": 8.665,
-      "vix": 15.545,
-      "vix_ch5": -10.763,
-      "dow": 1.0
-     },
-     "fund": {
-      "pe": 32.842934,
-      "pb": 5.101106,
-      "mcap_cr": 28798,
-      "de": 33.675,
-      "roe": 0.18656,
-      "sector": "Technology"
-     }
-    }
-   ]
+   "cash": 105457.50463321779,
+   "positions": []
   },
   "lookalike": {
    "cash": 98461.07760109864,
    "positions": []
   },
   "shadow": {
-   "cash": 48425.04434454098,
-   "positions": [
-    {
-     "sym": "HFCL",
-     "entry_date": "2026-11-17",
-     "entry_time": "15:16",
-     "entry_px": 188.4,
-     "qty": 129,
-     "stop": 182.75,
-     "target": 195.94,
-     "hold": 1,
-     "min_hold": 2,
-     "sessions": 2,
-     "band": 5.0,
-     "series": "BE",
-     "industry": "Telecommunication",
-     "prev_close": 188.39999389648438,
-     "pred": 1.168,
-     "analog_avg": -0.113,
-     "size_mult": 0.5,
-     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -3.484,
-      "gap": -3.176,
-      "oc": -0.317,
-      "clv": 0.327,
-      "r2": -8.308,
-      "r5": -8.752,
-      "r20": -26.409,
-      "d_sma20": -17.242,
-      "d_sma50": -18.94,
-      "trend": 0.0,
-      "rsi": 31.073,
-      "atr": 6.117,
-      "vr": 1.176,
-      "pos20": 0.031,
-      "d_hi52": -33.251,
-      "tv_log": 2.232,
-      "band": 5.0,
-      "is_be": 1.0,
-      "streak": -4.0,
-      "n_r1": 0.482,
-      "n_d50": 8.665,
-      "vix": 15.545,
-      "vix_ch5": -10.763,
-      "dow": 1.0
-     },
-     "fund": {
-      "pe": 32.842934,
-      "pb": 5.101106,
-      "mcap_cr": 28798,
-      "de": 33.675,
-      "roe": 0.18656,
-      "sector": "Technology"
-     }
-    },
-    {
-     "sym": "ICIL",
-     "entry_date": "2026-11-18",
-     "entry_time": "15:16",
-     "entry_px": 578.8,
-     "qty": 41,
-     "stop": 561.44,
-     "target": 601.95,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Textiles",
-     "prev_close": 578.7999877929688,
-     "pred": 0.701,
-     "analog_avg": -0.067,
-     "size_mult": 0.5,
-     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": 5.189,
-      "gap": 0.682,
-      "oc": 4.477,
-      "clv": 0.995,
-      "r2": 6.017,
-      "r5": 6.632,
-      "r20": 36.574,
-      "d_sma20": 20.41,
-      "d_sma50": 25.711,
-      "trend": 1.0,
-      "rsi": 71.502,
-      "atr": 5.12,
-      "vr": 1.086,
-      "pos20": 0.999,
-      "d_hi52": -0.035,
-      "tv_log": 1.348,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": 2.0,
-      "n_r1": -0.658,
-      "n_d50": 7.72,
-      "vix": 15.64,
-      "vix_ch5": -10.934,
-      "dow": 2.0
-     },
-     "fund": {
-      "pe": 47.26044,
-      "pb": 4.4823594,
-      "mcap_cr": 11429,
-      "de": 51.527,
-      "roe": 0.10035,
-      "sector": "Consumer Cyclical"
-     }
-    }
-   ]
+   "cash": 96981.29357344723,
+   "positions": []
   }
  },
  "incidents": [
@@ -538,7 +373,18 @@
    "above_thr": 22,
    "above_thr_avg": 0.76,
    "below_thr_avg": -0.52
+  },
+  {
+   "date": "2026-11-19",
+   "train_rows": 55977,
+   "thr": 0.8,
+   "risk_mult": 1.0,
+   "labelled": 3397,
+   "corr": 0.121,
+   "above_thr": 23,
+   "above_thr_avg": 0.88,
+   "below_thr_avg": -0.51
   }
  ],
- "model_through": "2026-11-18"
+ "model_through": "2026-11-19"
 }

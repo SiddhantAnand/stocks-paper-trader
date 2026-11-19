@@ -1,75 +1,63 @@
-# Daily paper-trading report - Wed, 18 Nov 2026
+# Daily paper-trading report - Thu, 19 Nov 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**No new trades today.** 86 stocks moved 3% or more, and 0 scored above the model's bar of 0.8.
+**Bought 0 stock(s), sold 1 for +Rs 466.**
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,05,828** |
-| Today's change | +Rs 857 (▲ +0.82%) |
-| Total profit / loss since 2026-10-07 | **+Rs 5,828** (▲ +5.83%) |
-| Trades completed | 20 (13 wins, 7 losses) |
-| Win rate | 65% (expected about 55.6%) |
-| Average result per trade | ▲ +0.88% (expected about ▲ +0.85%) |
-| Profit factor | 1.82 (expected about 1.73) |
-| Stocks held now | 1 of 3 slots |
-| Cash available | Rs 87,658 |
-| Evidence so far | 20 of ~80 trades needed for a reliable verdict |
+| Portfolio value | **Rs 1,05,458** |
+| Today's change | -Rs 371 (▼ -0.35%) |
+| Total profit / loss since 2026-10-07 | **+Rs 5,458** (▲ +5.46%) |
+| Trades completed | 21 (14 wins, 7 losses) |
+| Win rate | 67% (expected about 55.6%) |
+| Average result per trade | ▲ +0.96% (expected about ▲ +0.85%) |
+| Profit factor | 1.94 (expected about 1.73) |
+| Stocks held now | 0 of 3 slots |
+| Cash available | Rs 1,05,458 |
+| Evidence so far | 21 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
 ### Sold
 | Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
 |---|---|---|---|---|---|---|
-| shadow | **EBGNG** | 526.95 | 516.20 | ▼ -2.39% | -Rs 1,159 | Holding period ended - sold at about 3:15 pm |
-
-### Bought
-| Book | Stock | Price | Amount | Why |
-|---|---|---|---|---|
-| shadow | **ICIL** | 578.80 | Rs 23,731 | moved +5.2% today and closed near the day's high; volume 1.1x normal; uptrend; RSI 72; model score +0.70 (bar 0.8); similar past setups averaged -0.07%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
-
-## Stocks we're holding
-| Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
-|---|---|---|---|---|---|---|---|
-| main | **HFCL** | 2026-11-17 | 188.40 | 197.50 | ▲ +4.83% | 195.94 (profit target) | 182.75 (stop-loss) |
-| lookalike | **STLTECH** | 2026-11-17 | 641.50 | 673.15 | ▲ +4.93% | 667.16 (profit target) | 622.25 (stop-loss) |
-| shadow | **HFCL** | 2026-11-17 | 188.40 | 197.50 | ▲ +4.83% | 195.94 (profit target) | 182.75 (stop-loss) |
-| shadow | **ICIL** | 2026-11-18 | 578.80 | 576.55 | ▼ -0.39% | 601.95 (profit target) | 561.44 (stop-loss) |
-
-_Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
+| lookalike | **STLTECH** | 641.50 | 667.16 | ▲ +3.65% | +Rs 1,171 | Hit the profit target |
+| main | **HFCL** | 188.40 | 194.13 | ▲ +2.69% | +Rs 466 | Holding period ended - sold at about 3:15 pm |
+| shadow | **HFCL** | 188.40 | 194.13 | ▲ +2.69% | +Rs 654 | Holding period ended - sold at about 3:15 pm |
+| shadow | **ICIL** | 578.80 | 577.60 | ▼ -0.56% | -Rs 132 | Holding period ended - sold at about 3:15 pm |
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 25,228 (▼ -0.63%) |
-| Market fear (India VIX) | 15.5 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,041 |
-| Moved 3% or more today | 86 |
+| Nifty 50 | 25,514 (▲ +1.14%) |
+| Market fear (India VIX) | 15.9 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,039 |
+| Moved 3% or more today | 94 |
 | Scored above the bar (0.8) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| ICIL | ▲ +5.19% | +0.70 | Skipped - score below the bar |
-| KALYANKJIL | ▼ -4.96% | +0.27 | Skipped - score below the bar |
-| MSTCLTD | ▼ -3.13% | +0.26 | Skipped - score below the bar |
-| SIGMAADV | ▲ +3.31% | +0.21 | Skipped - score below the bar |
-| KSCL | ▲ +3.71% | +0.06 | Skipped - score below the bar |
-| UTLSOLAR | ▼ -3.40% | +0.05 | Skipped - score below the bar |
-| VIJAYA | ▲ +4.54% | +0.04 | Skipped - score below the bar |
-| POLYCAB | ▼ -5.16% | -0.04 | Skipped - score below the bar |
+| KRN | ▲ +4.38% | -0.48 | Skipped - score below the bar |
+| LALITHAA | ▼ -3.27% | -0.50 | Skipped - score below the bar |
+| PGEL | ▲ +7.21% | -0.59 | Skipped - score below the bar |
+| BLUESTARCO | ▲ +9.19% | -0.66 | Skipped - score below the bar |
+| CREDITACC | ▼ -7.01% | -0.66 | Skipped - score below the bar |
+| IREDA | ▲ +8.89% | -0.67 | Skipped - score below the bar |
+| QUESS | ▲ +5.94% | -0.69 | Skipped - score below the bar |
+| TATATECH | ▲ +7.21% | -0.70 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **56,062** past setups, including every setup that finished today. Recent data counts more.
+- Retrained tonight on **55,977** past setups, including every setup that finished today. Recent data counts more.
 - The bar to buy is **0.8** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 3315 past predictions, stocks above the bar averaged ▲ +0.76% next day vs ▼ -0.52% for the rest.
+- Prediction check: of 3397 past predictions, stocks above the bar averaged ▲ +0.88% next day vs ▼ -0.51% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
-| lookalike | Rs 98,873 | -Rs 1,127 | 20 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 97,541 | -Rs 2,459 | 24 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| lookalike | Rs 98,461 | -Rs 1,539 | 21 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
+| shadow | Rs 96,981 | -Rs 3,019 | 26 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.
