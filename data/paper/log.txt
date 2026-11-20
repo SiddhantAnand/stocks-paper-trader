@@ -702,3 +702,13 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-20 09:46:02 live: time budget used, handing over to a fresh run
 2026-11-20 09:46:42 live: session 2026-11-20, this run hands over at 20 Nov 14:40 if still busy
 2026-11-20 14:40:00 live: time budget used, handing over to a fresh run
+2026-11-20 14:40:40 live: session 2026-11-20, this run hands over at 20 Nov 20:10 if still busy
+2026-11-20 15:16:19 [main] BUY EBGNG 74 @ 470.10 (Rs 34,787) pred +1.65 day -8.8% size x1.0  | PE 32.300274 mcap 5347Cr
+2026-11-20 15:16:19 [main] BUY TBZ 32 @ 547.00 (Rs 17,504) pred +0.87 day -5.0% size x0.5  | PE 18.580162 mcap 3650Cr
+2026-11-20 15:16:19 [shadow] BUY EBGNG 103 @ 470.10 (Rs 48,420) pred +1.65 day -8.8% size x1.0 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 32.300274 mcap 5347Cr
+2026-11-20 15:16:19 [shadow] BUY TBZ 44 @ 547.00 (Rs 24,068) pred +0.87 day -5.0% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 18.580162 mcap 3650Cr
+2026-11-20 15:16:20 [lookalike] BUY AVALON 19 @ 1727.00 (Rs 32,813) pred -0.07 day -3.1% size x1.0 lookalike of EBGNG (distance 3.10) | PE 78.00362 mcap 11553Cr
+2026-11-20 15:16:20 [lookalike] BUY HFCL 177 @ 184.72 (Rs 32,695) pred -1.15 day -5.0% size x1.0 lookalike of TBZ (distance 3.49) | PE 32.237347 mcap 28267Cr
+2026-11-20 15:16:20 entry: 77 movers scored, 2 above thr 0.80, bought ['EBGNG', 'TBZ']
+2026-11-20 15:35:00 catch-up: processing ['2026-11-20']
+2026-11-20 15:36:07 eod: model retrained on 55999 setups; thr 0.8 risk x1.0; accuracy {'labelled': 3486, 'corr': np.float64(0.122), 'above_thr': 23, 'above_thr_avg': np.float64(0.88), 'below_thr_avg': np.float64(-0.51)}
