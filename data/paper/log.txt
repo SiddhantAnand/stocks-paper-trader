@@ -700,3 +700,5 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-20 04:16:02 live: session 2026-11-20, this run hands over at 20 Nov 09:46 if still busy
 2026-11-20 09:10:00 premarket: trading day, positions aged 
 2026-11-20 09:46:02 live: time budget used, handing over to a fresh run
+2026-11-20 09:46:42 live: session 2026-11-20, this run hands over at 20 Nov 14:40 if still busy
+2026-11-20 14:40:00 live: time budget used, handing over to a fresh run
