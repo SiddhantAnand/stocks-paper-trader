@@ -712,3 +712,23 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-20 15:16:20 entry: 77 movers scored, 2 above thr 0.80, bought ['EBGNG', 'TBZ']
 2026-11-20 15:35:00 catch-up: processing ['2026-11-20']
 2026-11-20 15:36:07 eod: model retrained on 55999 setups; thr 0.8 risk x1.0; accuracy {'labelled': 3486, 'corr': np.float64(0.122), 'above_thr': 23, 'above_thr_avg': np.float64(0.88), 'below_thr_avg': np.float64(-0.51)}
+2026-11-23 05:20:39 live: session 2026-11-23, this run hands over at 23 Nov 10:50 if still busy
+2026-11-23 09:10:00 premarket: trading day, positions aged EBGNG(1), TBZ(1), AVALON(1), HFCL(1), EBGNG(1), TBZ(1)
+2026-11-23 09:15:00 2026-11-23 monitor FAILED:
+Traceback (most recent call last):
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 714, in run_phase
+    fn(st)
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 230, in phase_monitor
+    bars = intraday(sorted({p["sym"] for _, p in live}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 142, in intraday
+    d = d[d.index.tz_convert(IST).date == today()]
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py", line 395, in tz_convert
+    arr = self._data.tz_convert(tz)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/pandas/core/arrays/datetimes.py", line 931, in tz_convert
+    raise TypeError(
+TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
+
+2026-11-23 10:50:39 live: time budget used, handing over to a fresh run
