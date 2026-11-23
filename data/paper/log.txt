@@ -732,3 +732,15 @@ Traceback (most recent call last):
 TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-11-23 10:50:39 live: time budget used, handing over to a fresh run
+2026-11-23 10:51:17 live: session 2026-11-23, this run hands over at 23 Nov 16:21 if still busy
+2026-11-23 11:56:18 [main] SELL EBGNG 74 @ 488.90 (target) net +3.65% pnl +1269 | worked: target; entered on -8.8% day, close-in-range 0.01, pred +1.65
+2026-11-23 11:56:18 [shadow] SELL EBGNG 103 @ 488.90 (target) net +3.65% pnl +1767 | worked: target; entered on -8.8% day, close-in-range 0.01, pred +1.65
+2026-11-23 13:41:18 [lookalike] SELL AVALON 19 @ 1675.19 (stop) net -3.35% pnl -1099 | hit stop intraday
+2026-11-23 15:16:01 [main] BUY SKYGOLD 43 @ 818.25 (Rs 35,185) pred +1.32 day -6.5% size x1.0  | PE 32.030148 mcap 12669Cr
+2026-11-23 15:16:01 [main] BUY INOXWIND 331 @ 53.61 (Rs 17,745) pred +1.14 day -3.3% size x0.5  | PE 27.777203 mcap 9265Cr
+2026-11-23 15:16:02 [shadow] BUY SKYGOLD 60 @ 818.25 (Rs 49,095) pred +1.32 day -6.5% size x1.0 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 32.030148 mcap 12669Cr
+2026-11-23 15:16:02 [lookalike] BUY PFOCUS 137 @ 235.45 (Rs 32,257) pred +0.94 day -6.8% size x1.0 lookalike of SKYGOLD (distance 2.77) | PE 102.391304 mcap 18340Cr
+2026-11-23 15:16:02 [lookalike] BUY KAYNES 11 @ 2809.00 (Rs 30,899) pred +0.90 day -3.5% size x1.0 lookalike of INOXWIND (distance 1.82) | PE 72.490326 mcap 18883Cr
+2026-11-23 15:16:02 entry: 93 movers scored, 22 above thr 0.80, bought ['SKYGOLD', 'INOXWIND']
+2026-11-23 15:35:00 catch-up: processing ['2026-11-23']
+2026-11-23 15:35:53 eod: model retrained on 55940 setups; thr 0.8 risk x1.0; accuracy {'labelled': 3556, 'corr': np.float64(0.124), 'above_thr': 24, 'above_thr_avg': np.float64(1.0), 'below_thr_avg': np.float64(-0.53)}
