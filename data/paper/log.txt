@@ -744,3 +744,28 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-23 15:16:02 entry: 93 movers scored, 22 above thr 0.80, bought ['SKYGOLD', 'INOXWIND']
 2026-11-23 15:35:00 catch-up: processing ['2026-11-23']
 2026-11-23 15:35:53 eod: model retrained on 55940 setups; thr 0.8 risk x1.0; accuracy {'labelled': 3556, 'corr': np.float64(0.124), 'above_thr': 24, 'above_thr_avg': np.float64(1.0), 'below_thr_avg': np.float64(-0.53)}
+2026-11-25 04:30:45 live: session 2026-11-25, this run hands over at 25 Nov 10:00 if still busy
+2026-11-25 09:10:01 premarket: trading day, positions aged TBZ(2), SKYGOLD(1), INOXWIND(1), HFCL(2), PFOCUS(1), KAYNES(1), TBZ(2), SKYGOLD(1)
+2026-11-25 09:15:00 2026-11-25 monitor FAILED:
+Traceback (most recent call last):
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 714, in run_phase
+    fn(st)
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 230, in phase_monitor
+    bars = intraday(sorted({p["sym"] for _, p in live}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 142, in intraday
+    d = d[d.index.tz_convert(IST).date == today()]
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py", line 395, in tz_convert
+    arr = self._data.tz_convert(tz)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/pandas/core/arrays/datetimes.py", line 931, in tz_convert
+    raise TypeError(
+TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
+
+2026-11-25 09:20:00 [main] SELL TBZ 32 @ 530.59 (stop) net -3.35% pnl -586 | hit stop intraday; historical analogs were negative
+2026-11-25 09:20:00 [lookalike] SELL HFCL 177 @ 169.67 (gap_stop) net -8.50% pnl -2778 | gapped below stop overnight (overnight risk)
+2026-11-25 09:20:00 [shadow] SELL TBZ 44 @ 530.59 (stop) net -3.35% pnl -806 | hit stop intraday; historical analogs were negative
+2026-11-25 09:25:00 [main] SELL SKYGOLD 43 @ 793.70 (stop) net -3.35% pnl -1179 | hit stop intraday; weak market day at entry
+2026-11-25 09:25:00 [shadow] SELL SKYGOLD 60 @ 793.70 (stop) net -3.35% pnl -1645 | hit stop intraday; weak market day at entry
+2026-11-25 10:00:45 live: time budget used, handing over to a fresh run
