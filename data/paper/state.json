@@ -99,7 +99,7 @@
    ]
   },
   "lookalike": {
-   "cash": 31427.907939028337,
+   "cash": 61291.79143902834,
    "positions": [
     {
      "sym": "PFOCUS",
@@ -154,61 +154,6 @@
       "de": 230.543,
       "roe": 0.08467,
       "sector": "Communication Services"
-     }
-    },
-    {
-     "sym": "KAYNES",
-     "entry_date": "2026-11-23",
-     "entry_time": "15:16",
-     "entry_px": 2809.0,
-     "qty": 11,
-     "stop": 2724.73,
-     "target": 2921.36,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 20.0,
-     "series": "EQ",
-     "industry": "Capital Goods",
-     "prev_close": 2809.0,
-     "pred": 0.904,
-     "analog_avg": null,
-     "size_mult": 1.0,
-     "note": "lookalike of INOXWIND (distance 1.82)",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -3.471,
-      "gap": 0.172,
-      "oc": -3.636,
-      "clv": 0.051,
-      "r2": -2.803,
-      "r5": -5.738,
-      "r20": -11.886,
-      "d_sma20": -11.311,
-      "d_sma50": -15.113,
-      "trend": 0.0,
-      "rsi": 33.546,
-      "atr": 5.109,
-      "vr": 1.117,
-      "pos20": 0.08,
-      "d_hi52": -54.708,
-      "tv_log": 2.313,
-      "band": 20.0,
-      "is_be": 0.0,
-      "streak": -1.0,
-      "n_r1": -1.683,
-      "n_d50": 7.848,
-      "vix": 17.702,
-      "vix_ch5": 12.899,
-      "dow": 0.0
-     },
-     "fund": {
-      "pe": 72.490326,
-      "pb": 3.9655929,
-      "mcap_cr": 18883,
-      "de": 37.385,
-      "roe": 0.05559,
-      "sector": "Technology"
      }
     }
    ]

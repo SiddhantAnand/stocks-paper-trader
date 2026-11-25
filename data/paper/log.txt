@@ -769,3 +769,6 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-25 09:25:00 [main] SELL SKYGOLD 43 @ 793.70 (stop) net -3.35% pnl -1179 | hit stop intraday; weak market day at entry
 2026-11-25 09:25:00 [shadow] SELL SKYGOLD 60 @ 793.70 (stop) net -3.35% pnl -1645 | hit stop intraday; weak market day at entry
 2026-11-25 10:00:45 live: time budget used, handing over to a fresh run
+2026-11-25 10:01:23 live: session 2026-11-25, this run hands over at 25 Nov 14:40 if still busy
+2026-11-25 11:26:23 [lookalike] SELL KAYNES 11 @ 2724.73 (stop) net -3.35% pnl -1035 | hit stop intraday; weak market day at entry
+2026-11-25 14:40:00 live: time budget used, handing over to a fresh run
