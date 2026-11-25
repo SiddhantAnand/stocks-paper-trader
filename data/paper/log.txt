@@ -772,3 +772,17 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-25 10:01:23 live: session 2026-11-25, this run hands over at 25 Nov 14:40 if still busy
 2026-11-25 11:26:23 [lookalike] SELL KAYNES 11 @ 2724.73 (stop) net -3.35% pnl -1035 | hit stop intraday; weak market day at entry
 2026-11-25 14:40:00 live: time budget used, handing over to a fresh run
+2026-11-25 14:40:39 live: session 2026-11-25, this run hands over at 25 Nov 20:10 if still busy
+2026-11-25 15:15:00 [main] SELL INOXWIND 331 @ 52.56 (time) net -2.31% pnl -410 | weak market day at entry; historical analogs were negative
+2026-11-25 15:15:00 [lookalike] SELL PFOCUS 137 @ 238.80 (time) net +1.07% pnl +346 | worked: time; entered on -6.8% day, close-in-range 0.07, pred +0.94
+2026-11-25 15:15:43 [main] BUY APLAPOLLO 23 @ 1475.00 (Rs 33,925) pred +1.86 day -11.7% size x1.0  | PE 31.276506 mcap 40955Cr
+2026-11-25 15:15:44 [main] BUY UTLSOLAR 126 @ 276.45 (Rs 34,833) pred +1.60 day -6.4% size x1.0  | PE 33.861687 mcap 8502Cr
+2026-11-25 15:15:44 [main] BUY IONEXCHANG 128 @ 271.55 (Rs 34,758) pred +0.87 day -4.9% size x1.0  | PE None mcap 0Cr
+2026-11-25 15:15:44 [shadow] BUY APLAPOLLO 32 @ 1475.00 (Rs 47,200) pred +1.86 day -11.7% size x1.0 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 31.276506 mcap 40955Cr
+2026-11-25 15:15:44 [shadow] BUY UTLSOLAR 174 @ 276.45 (Rs 48,102) pred +1.60 day -6.4% size x1.0 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 33.861687 mcap 8502Cr
+2026-11-25 15:15:44 [lookalike] BUY SGMART 37 @ 829.45 (Rs 30,690) pred -1.73 day -20.0% size x1.0 lookalike of APLAPOLLO (distance 7.37) | PE 68.8912 mcap 10457Cr
+2026-11-25 15:15:44 [lookalike] BUY ATLANTAELE 22 @ 1387.20 (Rs 30,518) pred +0.32 day -3.3% size x1.0 lookalike of UTLSOLAR (distance 3.22) | PE 29.01739 mcap 10650Cr
+2026-11-25 15:15:44 [lookalike] BUY BLUESTONE 48 @ 640.95 (Rs 30,766) pred +0.58 day -3.6% size x1.0 lookalike of IONEXCHANG (distance 1.87) | PE 92.438675 mcap 9799Cr
+2026-11-25 15:15:44 entry: 105 movers scored, 4 above thr 0.80, bought ['APLAPOLLO', 'UTLSOLAR', 'IONEXCHANG']
+2026-11-25 15:35:00 catch-up: processing ['2026-11-25']
+2026-11-25 15:35:31 eod: model retrained on 55945 setups; thr 0.8 risk x1.0; accuracy {'labelled': 3646, 'corr': np.float64(0.121), 'above_thr': 46, 'above_thr_avg': np.float64(0.18), 'below_thr_avg': np.float64(-0.53)}
