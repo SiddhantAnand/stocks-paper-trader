@@ -44,7 +44,7 @@
  "finished": false,
  "books": {
   "main": {
-   "cash": 1036.010748504661,
+   "cash": 34702.25629850467,
    "positions": [
     {
      "sym": "APLAPOLLO",
@@ -99,61 +99,6 @@
       "de": 16.771,
       "roe": 0.25322,
       "sector": "Basic Materials"
-     }
-    },
-    {
-     "sym": "UTLSOLAR",
-     "entry_date": "2026-11-25",
-     "entry_time": "15:15",
-     "entry_px": 276.45,
-     "qty": 126,
-     "stop": 268.16,
-     "target": 287.51,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 10.0,
-     "series": "EQ",
-     "industry": "Capital Goods",
-     "prev_close": 276.45001220703125,
-     "pred": 1.603,
-     "analog_avg": 0.066,
-     "size_mult": 1.0,
-     "note": "",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -6.352,
-      "gap": -0.407,
-      "oc": -5.969,
-      "clv": 0.05,
-      "r2": -7.418,
-      "r5": -14.557,
-      "r20": -24.031,
-      "d_sma20": -20.221,
-      "d_sma50": -27.936,
-      "trend": 0.0,
-      "rsi": 23.562,
-      "atr": 7.799,
-      "vr": 1.298,
-      "pos20": 0.011,
-      "d_hi52": -44.067,
-      "tv_log": 0.927,
-      "band": 10.0,
-      "is_be": 0.0,
-      "streak": -3.0,
-      "n_r1": 1.742,
-      "n_d50": 9.437,
-      "vix": 17.735,
-      "vix_ch5": 14.272,
-      "dow": 2.0
-     },
-     "fund": {
-      "pe": 33.861687,
-      "pb": 5.79117,
-      "mcap_cr": 8502,
-      "de": 62.736,
-      "roe": 0.36551,
-      "sector": "Technology"
      }
     },
     {
@@ -218,7 +163,7 @@
    "positions": []
   },
   "shadow": {
-   "cash": 994.8092707616888,
+   "cash": 47486.29122076169,
    "positions": [
     {
      "sym": "APLAPOLLO",
@@ -273,61 +218,6 @@
       "de": 16.771,
       "roe": 0.25322,
       "sector": "Basic Materials"
-     }
-    },
-    {
-     "sym": "UTLSOLAR",
-     "entry_date": "2026-11-25",
-     "entry_time": "15:15",
-     "entry_px": 276.45,
-     "qty": 174,
-     "stop": 268.16,
-     "target": 287.51,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 1,
-     "band": 10.0,
-     "series": "EQ",
-     "industry": "Capital Goods",
-     "prev_close": 276.45001220703125,
-     "pred": 1.603,
-     "analog_avg": 0.066,
-     "size_mult": 1.0,
-     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -6.352,
-      "gap": -0.407,
-      "oc": -5.969,
-      "clv": 0.05,
-      "r2": -7.418,
-      "r5": -14.557,
-      "r20": -24.031,
-      "d_sma20": -20.221,
-      "d_sma50": -27.936,
-      "trend": 0.0,
-      "rsi": 23.562,
-      "atr": 7.799,
-      "vr": 1.298,
-      "pos20": 0.011,
-      "d_hi52": -44.067,
-      "tv_log": 0.927,
-      "band": 10.0,
-      "is_be": 0.0,
-      "streak": -3.0,
-      "n_r1": 1.742,
-      "n_d50": 9.437,
-      "vix": 17.735,
-      "vix_ch5": 14.272,
-      "dow": 2.0
-     },
-     "fund": {
-      "pe": 33.861687,
-      "pb": 5.79117,
-      "mcap_cr": 8502,
-      "de": 62.736,
-      "roe": 0.36551,
-      "sector": "Technology"
      }
     }
    ]

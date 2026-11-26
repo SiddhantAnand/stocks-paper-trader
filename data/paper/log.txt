@@ -809,3 +809,7 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-26 09:20:00 [lookalike] SELL ATLANTAELE 22 @ 1460.00 (gap_target) net +4.90% pnl +1495 | worked: gap_target; entered on -3.3% day, close-in-range 0.04, pred +0.32
 2026-11-26 09:30:00 [lookalike] SELL BLUESTONE 48 @ 666.59 (target) net +3.65% pnl +1123 | worked: target; entered on -3.6% day, close-in-range 0.01, pred +0.58
 2026-11-26 09:31:13 live: time budget used, handing over to a fresh run
+2026-11-26 09:31:56 live: session 2026-11-26, this run hands over at 26 Nov 14:40 if still busy
+2026-11-26 10:21:56 [main] SELL UTLSOLAR 126 @ 268.16 (stop) net -3.35% pnl -1166 | hit stop intraday
+2026-11-26 10:21:56 [shadow] SELL UTLSOLAR 174 @ 268.16 (stop) net -3.35% pnl -1611 | hit stop intraday
+2026-11-26 14:40:00 live: time budget used, handing over to a fresh run
