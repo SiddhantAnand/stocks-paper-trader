@@ -813,3 +813,10 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-26 10:21:56 [main] SELL UTLSOLAR 126 @ 268.16 (stop) net -3.35% pnl -1166 | hit stop intraday
 2026-11-26 10:21:56 [shadow] SELL UTLSOLAR 174 @ 268.16 (stop) net -3.35% pnl -1611 | hit stop intraday
 2026-11-26 14:40:00 live: time budget used, handing over to a fresh run
+2026-11-26 15:36:41 catch-up: processing ['2026-11-26']
+2026-11-26 15:36:41 [main] SELL IONEXCHANG 128 @ 263.40 (stop) net -3.35% pnl -1165 | hit stop intraday
+2026-11-26 15:36:42 [main] SELL APLAPOLLO 23 @ 1478.00 (time) net -0.15% pnl -50 | no follow-through, small time-exit loss (costs)
+2026-11-26 15:36:42 [shadow] SELL APLAPOLLO 32 @ 1478.00 (time) net -0.15% pnl -69 | no follow-through, small time-exit loss (costs)
+2026-11-26 15:38:14 [shadow] BUY SPECTRUM 6 @ 3878.60 (Rs 23,272) pred +0.60 day -3.8% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 90.855 mcap 6628Cr
+2026-11-26 15:38:14 entry: 99 movers scored, 0 above thr 0.80, bought []
+2026-11-26 15:39:33 eod: model retrained on 55951 setups; thr 1.0 risk x0.5; accuracy {'labelled': 3744, 'corr': np.float64(0.125), 'above_thr': 50, 'above_thr_avg': np.float64(0.03), 'below_thr_avg': np.float64(-0.52)}

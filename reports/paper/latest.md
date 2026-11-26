@@ -1,93 +1,79 @@
-# Daily paper-trading report - Wed, 25 Nov 2026
+# Daily paper-trading report - Thu, 26 Nov 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**Bought 3 stock(s), sold 3 for -Rs 2,175.**
+**Bought 0 stock(s), sold 3 for -Rs 2,381.**
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
-| Portfolio value | **Rs 1,04,678** |
-| Today's change | -Rs 1,743 (▼ -1.64%) |
-| Total profit / loss since 2026-10-07 | **+Rs 4,678** (▲ +4.68%) |
-| Trades completed | 25 (15 wins, 10 losses) |
-| Win rate | 60% (expected about 55.6%) |
-| Average result per trade | ▲ +0.59% (expected about ▲ +0.85%) |
-| Profit factor | 1.49 (expected about 1.73) |
-| Stocks held now | 3 of 3 slots |
-| Cash available | Rs 1,036 |
-| Evidence so far | 25 of ~80 trades needed for a reliable verdict |
+| Portfolio value | **Rs 1,02,171** |
+| Today's change | -Rs 2,507 (▼ -2.39%) |
+| Total profit / loss since 2026-10-07 | **+Rs 2,171** (▲ +2.17%) |
+| Trades completed | 28 (15 wins, 13 losses) |
+| Win rate | 54% (expected about 55.6%) |
+| Average result per trade | ▲ +0.29% (expected about ▲ +0.85%) |
+| Profit factor | 1.21 (expected about 1.73) |
+| Stocks held now | 0 of 3 slots |
+| Cash available | Rs 1,02,171 |
+| Evidence so far | 28 of ~80 trades needed for a reliable verdict |
 
 ## What happened today
 ### Sold
 | Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
 |---|---|---|---|---|---|---|
-| main | **TBZ** | 547.00 | 530.59 | ▼ -3.35% | -Rs 586 | Hit the stop-loss (limits the loss) |
-| lookalike | **HFCL** | 184.72 | 169.67 | ▼ -8.50% | -Rs 2,778 | Opened below the stop-loss - sold at the open |
-| shadow | **TBZ** | 547.00 | 530.59 | ▼ -3.35% | -Rs 806 | Hit the stop-loss (limits the loss) |
-| main | **SKYGOLD** | 818.25 | 793.70 | ▼ -3.35% | -Rs 1,179 | Hit the stop-loss (limits the loss) |
-| shadow | **SKYGOLD** | 818.25 | 793.70 | ▼ -3.35% | -Rs 1,645 | Hit the stop-loss (limits the loss) |
-| lookalike | **KAYNES** | 2,809.00 | 2,724.73 | ▼ -3.35% | -Rs 1,035 | Hit the stop-loss (limits the loss) |
-| main | **INOXWIND** | 53.61 | 52.56 | ▼ -2.31% | -Rs 410 | Holding period ended - sold at about 3:15 pm |
-| lookalike | **PFOCUS** | 235.45 | 238.80 | ▲ +1.07% | +Rs 346 | Holding period ended - sold at about 3:15 pm |
+| lookalike | **SGMART** | 829.45 | 745.00 | ▼ -10.53% | -Rs 3,232 | Opened below the stop-loss - sold at the open |
+| lookalike | **ATLANTAELE** | 1,387.20 | 1,460.00 | ▲ +4.90% | +Rs 1,495 | Opened above the profit target - sold at the open |
+| lookalike | **BLUESTONE** | 640.95 | 666.59 | ▲ +3.65% | +Rs 1,123 | Hit the profit target |
+| main | **UTLSOLAR** | 276.45 | 268.16 | ▼ -3.35% | -Rs 1,166 | Hit the stop-loss (limits the loss) |
+| shadow | **UTLSOLAR** | 276.45 | 268.16 | ▼ -3.35% | -Rs 1,611 | Hit the stop-loss (limits the loss) |
+| main | **IONEXCHANG** | 271.55 | 263.40 | ▼ -3.35% | -Rs 1,165 | Hit the stop-loss (limits the loss) |
+| main | **APLAPOLLO** | 1,475.00 | 1,478.00 | ▼ -0.15% | -Rs 50 | Holding period ended - sold at about 3:15 pm |
+| shadow | **APLAPOLLO** | 1,475.00 | 1,478.00 | ▼ -0.15% | -Rs 69 | Holding period ended - sold at about 3:15 pm |
 
 ### Bought
 | Book | Stock | Price | Amount | Why |
 |---|---|---|---|---|
-| main | **APLAPOLLO** | 1,475.00 | Rs 33,925 | moved -11.7% today and closed mid-range; volume 20.5x normal; downtrend; RSI 15; model score +1.86 (bar 0.8); similar past setups averaged +0.17% |
-| main | **UTLSOLAR** | 276.45 | Rs 34,833 | moved -6.4% today and closed near the day's low; volume 1.3x normal; downtrend; RSI 24; model score +1.60 (bar 0.8); similar past setups averaged +0.07% |
-| main | **IONEXCHANG** | 271.55 | Rs 34,758 | moved -4.9% today and closed near the day's low; volume 0.8x normal; downtrend; RSI 22; model score +0.87 (bar 0.8); similar past setups averaged +0.05% |
-| lookalike | **SGMART** | 829.45 | Rs 30,690 | moved -20.0% today and closed near the day's low; volume 1.2x normal; uptrend; RSI 43; model score -1.73 (bar 0.8); lookalike of APLAPOLLO (distance 7.37) |
-| lookalike | **ATLANTAELE** | 1,387.20 | Rs 30,518 | moved -3.3% today and closed near the day's low; volume 0.4x normal; downtrend; RSI 33; model score +0.32 (bar 0.8); lookalike of UTLSOLAR (distance 3.22) |
-| lookalike | **BLUESTONE** | 640.95 | Rs 30,766 | moved -3.6% today and closed near the day's low; volume 0.7x normal; downtrend; RSI 35; model score +0.58 (bar 0.8); lookalike of IONEXCHANG (distance 1.87) |
-| shadow | **APLAPOLLO** | 1,475.00 | Rs 47,200 | moved -11.7% today and closed mid-range; volume 20.5x normal; downtrend; RSI 15; model score +1.86 (bar 0.8); similar past setups averaged +0.17%; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
-| shadow | **UTLSOLAR** | 276.45 | Rs 48,102 | moved -6.4% today and closed near the day's low; volume 1.3x normal; downtrend; RSI 24; model score +1.60 (bar 0.8); similar past setups averaged +0.07%; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
+| shadow | **SPECTRUM** | 3,878.60 | Rs 23,272 | moved -3.8% today and closed mid-range; volume 1.0x normal; uptrend; RSI 40; model score +0.60 (bar 1.0); similar past setups averaged -1.46%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
 
 ## Stocks we're holding
 | Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
 |---|---|---|---|---|---|---|---|
-| main | **APLAPOLLO** | 2026-11-25 | 1,475.00 | 1,476.00 | ▲ +0.07% | 1,534.00 (profit target) | 1,430.75 (stop-loss) |
-| main | **UTLSOLAR** | 2026-11-25 | 276.45 | 276.35 | ▼ -0.04% | 287.51 (profit target) | 268.16 (stop-loss) |
-| main | **IONEXCHANG** | 2026-11-25 | 271.55 | 272.45 | ▲ +0.33% | 282.41 (profit target) | 263.40 (stop-loss) |
-| lookalike | **SGMART** | 2026-11-25 | 829.45 | 829.45 | +0.00% | 862.63 (profit target) | 804.57 (stop-loss) |
-| lookalike | **ATLANTAELE** | 2026-11-25 | 1,387.20 | 1,388.30 | ▲ +0.08% | 1,442.69 (profit target) | 1,345.58 (stop-loss) |
-| lookalike | **BLUESTONE** | 2026-11-25 | 640.95 | 642.45 | ▲ +0.23% | 666.59 (profit target) | 621.72 (stop-loss) |
-| shadow | **APLAPOLLO** | 2026-11-25 | 1,475.00 | 1,476.00 | ▲ +0.07% | 1,534.00 (profit target) | 1,430.75 (stop-loss) |
-| shadow | **UTLSOLAR** | 2026-11-25 | 276.45 | 276.35 | ▼ -0.04% | 287.51 (profit target) | 268.16 (stop-loss) |
+| shadow | **SPECTRUM** | 2026-11-26 | 3,878.60 | 3,878.60 | +0.00% | 4,033.74 (profit target) | 3,762.24 (stop-loss) |
 
 _Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 25,819 (▲ +1.85%) |
-| Market fear (India VIX) | 17.7 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,035 |
-| Moved 3% or more today | 105 |
-| Scored above the bar (0.8) | 4 |
+| Nifty 50 | 25,884 (▲ +0.25%) |
+| Market fear (India VIX) | 16.8 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,036 |
+| Moved 3% or more today | 99 |
+| Scored above the bar (1.0) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| APLAPOLLO | ▼ -11.68% | +1.86 | **Bought** |
-| UTLSOLAR | ▼ -6.35% | +1.60 | **Bought** |
-| IONEXCHANG | ▼ -4.89% | +0.87 | **Bought** |
-| KAYNES | ▼ -3.95% | +0.82 | Skipped - all slots full |
-| TBZ | ▼ -4.28% | +0.68 | Skipped - score below the bar |
-| LLOYDSME | ▼ -5.88% | +0.60 | Skipped - score below the bar |
-| BLUESTONE | ▼ -3.64% | +0.58 | Bought in look-alike experiment |
-| ECLERX | ▼ -3.08% | +0.54 | Skipped - score below the bar |
+| SPECTRUM | ▼ -3.82% | +0.60 | Skipped - score below the bar |
+| SGMART | ▲ +6.22% | +0.39 | Skipped - score below the bar |
+| HFCL | ▼ -3.34% | +0.33 | Skipped - score below the bar |
+| OMNI | ▲ +4.85% | -0.06 | Skipped - score below the bar |
+| TTML | ▼ -3.91% | -0.08 | Skipped - score below the bar |
+| TANLA | ▼ -3.82% | -0.18 | Skipped - score below the bar |
+| STLNETWORK | ▲ +4.29% | -0.19 | Skipped - score below the bar |
+| BSE | ▲ +5.70% | -0.21 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **55,945** past setups, including every setup that finished today. Recent data counts more.
-- The bar to buy is **0.8** and position size is **100%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 3646 past predictions, stocks above the bar averaged ▲ +0.18% next day vs ▼ -0.53% for the rest.
+- Retrained tonight on **55,951** past setups, including every setup that finished today. Recent data counts more.
+- The bar to buy is **1.0** and position size is **50%**. Both tighten automatically after a losing streak and relax after a winning one.
+- Prediction check: of 3744 past predictions, stocks above the bar averaged ▲ +0.03% next day vs ▼ -0.52% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
-| lookalike | Rs 93,991 | -Rs 6,009 | 25 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 96,312 | -Rs 3,688 | 29 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| lookalike | Rs 93,280 | -Rs 6,720 | 28 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
+| shadow | Rs 94,617 | -Rs 5,383 | 31 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.
