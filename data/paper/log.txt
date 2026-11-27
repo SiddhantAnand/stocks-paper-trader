@@ -820,3 +820,24 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 2026-11-26 15:38:14 [shadow] BUY SPECTRUM 6 @ 3878.60 (Rs 23,272) pred +0.60 day -3.8% size x0.5 shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% | PE 90.855 mcap 6628Cr
 2026-11-26 15:38:14 entry: 99 movers scored, 0 above thr 0.80, bought []
 2026-11-26 15:39:33 eod: model retrained on 55951 setups; thr 1.0 risk x0.5; accuracy {'labelled': 3744, 'corr': np.float64(0.125), 'above_thr': 50, 'above_thr_avg': np.float64(0.03), 'below_thr_avg': np.float64(-0.52)}
+2026-11-27 03:50:35 live: session 2026-11-27, this run hands over at 27 Nov 09:20 if still busy
+2026-11-27 09:10:01 premarket: trading day, positions aged SPECTRUM(1)
+2026-11-27 09:15:00 2026-11-27 monitor FAILED:
+Traceback (most recent call last):
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 714, in run_phase
+    fn(st)
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 230, in phase_monitor
+    bars = intraday(sorted({p["sym"] for _, p in live}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/stocks-paper-trader/stocks-paper-trader/papertrade.py", line 142, in intraday
+    d = d[d.index.tz_convert(IST).date == today()]
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py", line 395, in tz_convert
+    arr = self._data.tz_convert(tz)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/pandas/core/arrays/datetimes.py", line 931, in tz_convert
+    raise TypeError(
+TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
+
+2026-11-27 09:20:00 [shadow] SELL SPECTRUM 6 @ 3762.24 (stop) net -3.35% pnl -780 | hit stop intraday; historical analogs were negative
+2026-11-27 09:20:35 live: time budget used, handing over to a fresh run

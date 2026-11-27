@@ -36,6 +36,9 @@
    "premarket",
    "entry",
    "eod"
+  ],
+  "2026-11-27": [
+   "premarket"
   ]
  },
  "finished": false,
@@ -49,64 +52,8 @@
    "positions": []
   },
   "shadow": {
-   "cash": 71345.4906348242,
-   "positions": [
-    {
-     "sym": "SPECTRUM",
-     "entry_date": "2026-11-26",
-     "entry_time": "15:38",
-     "entry_px": 3878.6,
-     "qty": 6,
-     "stop": 3762.24,
-     "target": 4033.74,
-     "hold": 1,
-     "min_hold": 1,
-     "sessions": 0,
-     "band": 5.0,
-     "series": "EQ",
-     "industry": "",
-     "prev_close": 3878.60009765625,
-     "pred": 0.604,
-     "analog_avg": -1.455,
-     "size_mult": 0.5,
-     "note": "shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0%",
-     "cfg_ver": 1,
-     "feat": {
-      "r1": -3.819,
-      "gap": -4.999,
-      "oc": 1.242,
-      "clv": 0.282,
-      "r2": -8.627,
-      "r5": -15.541,
-      "r20": 4.621,
-      "d_sma20": -9.683,
-      "d_sma50": 0.454,
-      "trend": 1.0,
-      "rsi": 40.303,
-      "atr": 6.633,
-      "vr": 1.003,
-      "pos20": 0.153,
-      "d_hi52": -19.847,
-      "tv_log": 0.801,
-      "band": 5.0,
-      "is_be": 0.0,
-      "streak": -5.0,
-      "n_r1": 0.253,
-      "n_d50": 9.606,
-      "vix": 16.808,
-      "vix_ch5": 7.948,
-      "dow": 3.0
-     },
-     "fund": {
-      "pe": 90.855,
-      "pb": 10.905451,
-      "mcap_cr": 6628,
-      "de": 53.682,
-      "roe": 0.15961,
-      "sector": "Industrials"
-     }
-    }
-   ]
+   "cash": 93837.4800348242,
+   "positions": []
   }
  },
  "incidents": [
