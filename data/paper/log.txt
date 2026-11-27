@@ -841,3 +841,5 @@ TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize
 
 2026-11-27 09:20:00 [shadow] SELL SPECTRUM 6 @ 3762.24 (stop) net -3.35% pnl -780 | hit stop intraday; historical analogs were negative
 2026-11-27 09:20:35 live: time budget used, handing over to a fresh run
+2026-11-27 09:21:15 live: session 2026-11-27, this run hands over at 27 Nov 14:40 if still busy
+2026-11-27 14:40:00 live: time budget used, handing over to a fresh run
