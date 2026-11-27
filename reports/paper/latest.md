@@ -1,14 +1,14 @@
-# Daily paper-trading report - Thu, 26 Nov 2026
+# Daily paper-trading report - Fri, 27 Nov 2026
 > Practice trading with Rs 1,00,000 of virtual money. No real money is used. Run: 2026-10-07 to 2026-12-02.
 
 ## Today in one line
-**Bought 0 stock(s), sold 3 for -Rs 2,381.**
+**No new trades today.** 82 stocks moved 3% or more, and 0 scored above the model's bar of 1.2.
 
 ## Scoreboard (main strategy)
 | Measure | Value |
 |---|---|
 | Portfolio value | **Rs 1,02,171** |
-| Today's change | -Rs 2,507 (▼ -2.39%) |
+| Today's change | Rs 0 (+0.00%) |
 | Total profit / loss since 2026-10-07 | **+Rs 2,171** (▲ +2.17%) |
 | Trades completed | 28 (15 wins, 13 losses) |
 | Win rate | 54% (expected about 55.6%) |
@@ -22,58 +22,39 @@
 ### Sold
 | Book | Stock | Bought at | Sold at | Result | Profit / loss | Why it was sold |
 |---|---|---|---|---|---|---|
-| lookalike | **SGMART** | 829.45 | 745.00 | ▼ -10.53% | -Rs 3,232 | Opened below the stop-loss - sold at the open |
-| lookalike | **ATLANTAELE** | 1,387.20 | 1,460.00 | ▲ +4.90% | +Rs 1,495 | Opened above the profit target - sold at the open |
-| lookalike | **BLUESTONE** | 640.95 | 666.59 | ▲ +3.65% | +Rs 1,123 | Hit the profit target |
-| main | **UTLSOLAR** | 276.45 | 268.16 | ▼ -3.35% | -Rs 1,166 | Hit the stop-loss (limits the loss) |
-| shadow | **UTLSOLAR** | 276.45 | 268.16 | ▼ -3.35% | -Rs 1,611 | Hit the stop-loss (limits the loss) |
-| main | **IONEXCHANG** | 271.55 | 263.40 | ▼ -3.35% | -Rs 1,165 | Hit the stop-loss (limits the loss) |
-| main | **APLAPOLLO** | 1,475.00 | 1,478.00 | ▼ -0.15% | -Rs 50 | Holding period ended - sold at about 3:15 pm |
-| shadow | **APLAPOLLO** | 1,475.00 | 1,478.00 | ▼ -0.15% | -Rs 69 | Holding period ended - sold at about 3:15 pm |
-
-### Bought
-| Book | Stock | Price | Amount | Why |
-|---|---|---|---|---|
-| shadow | **SPECTRUM** | 3,878.60 | Rs 23,272 | moved -3.8% today and closed mid-range; volume 1.0x normal; uptrend; RSI 40; model score +0.60 (bar 1.0); similar past setups averaged -1.46%; bought at reduced size; shadow: score bar 0.4, up to 2 stocks, hold 1 day(s), target +4.0%, stop-loss -3.0% |
-
-## Stocks we're holding
-| Book | Stock | Bought on | Buy price | Latest | Change | Sell if it reaches | Sell if it falls to |
-|---|---|---|---|---|---|---|---|
-| shadow | **SPECTRUM** | 2026-11-26 | 3,878.60 | 3,878.60 | +0.00% | 4,033.74 (profit target) | 3,762.24 (stop-loss) |
-
-_Anything not sold by target or stop-loss is sold at about 3:15 pm on the next trading day (2 days for T2T stocks)._
+| shadow | **SPECTRUM** | 3,878.60 | 3,762.24 | ▼ -3.35% | -Rs 780 | Hit the stop-loss (limits the loss) |
 
 ## Today's market check
 | Measure | Value |
 |---|---|
-| Nifty 50 | 25,884 (▲ +0.25%) |
-| Market fear (India VIX) | 16.8 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
-| Stocks scanned | 1,036 |
-| Moved 3% or more today | 99 |
-| Scored above the bar (1.0) | 0 |
+| Nifty 50 | 25,607 (▼ -1.07%) |
+| Market fear (India VIX) | 16.6 - nervous (below 15 calm, 15-20 nervous, above 20 fearful) |
+| Stocks scanned | 1,037 |
+| Moved 3% or more today | 82 |
+| Scored above the bar (1.2) | 0 |
 
 ## Top candidates the model looked at
 | Stock | Today's move | Model score | Decision |
 |---|---|---|---|
-| SPECTRUM | ▼ -3.82% | +0.60 | Skipped - score below the bar |
-| SGMART | ▲ +6.22% | +0.39 | Skipped - score below the bar |
-| HFCL | ▼ -3.34% | +0.33 | Skipped - score below the bar |
-| OMNI | ▲ +4.85% | -0.06 | Skipped - score below the bar |
-| TTML | ▼ -3.91% | -0.08 | Skipped - score below the bar |
-| TANLA | ▼ -3.82% | -0.18 | Skipped - score below the bar |
-| STLNETWORK | ▲ +4.29% | -0.19 | Skipped - score below the bar |
-| BSE | ▲ +5.70% | -0.21 | Skipped - score below the bar |
+| THOMASCOOK | ▼ -5.53% | -0.26 | Skipped - score below the bar |
+| MBAPL | ▲ +3.14% | -0.48 | Skipped - score below the bar |
+| HAL | ▲ +3.37% | -0.56 | Skipped - score below the bar |
+| AEGISLOG | ▲ +6.96% | -0.59 | Skipped - score below the bar |
+| ANGELONE | ▲ +5.29% | -0.60 | Skipped - score below the bar |
+| TEXRAIL | ▲ +5.92% | -0.61 | Skipped - score below the bar |
+| HCLTECH | ▼ -3.17% | -0.62 | Skipped - score below the bar |
+| NEOGEN | ▲ +4.29% | -0.64 | Skipped - score below the bar |
 
 ## How the model is learning
-- Retrained tonight on **55,951** past setups, including every setup that finished today. Recent data counts more.
-- The bar to buy is **1.0** and position size is **50%**. Both tighten automatically after a losing streak and relax after a winning one.
-- Prediction check: of 3744 past predictions, stocks above the bar averaged ▲ +0.03% next day vs ▼ -0.52% for the rest.
+- Retrained tonight on **55,758** past setups, including every setup that finished today. Recent data counts more.
+- The bar to buy is **1.2** and position size is **50%**. Both tighten automatically after a losing streak and relax after a winning one.
+- Prediction check: of 3844 past predictions, stocks above the bar averaged ▲ +0.03% next day vs ▼ -0.51% for the rest.
 
 ## Experiments running alongside
 | Book | Value | Total profit / loss | Trades | What it tests |
 |---|---|---|---|---|
 | lookalike | Rs 93,280 | -Rs 6,720 | 28 | Experiment: buys the most similar-looking stock to each main pick, to test whether 'similar stocks' also work. |
-| shadow | Rs 94,617 | -Rs 5,383 | 31 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
+| shadow | Rs 93,837 | -Rs 6,163 | 32 | Practice account: settings found by the weekly self-tuning. They replace the main settings automatically if they make more money over 20 trades. |
 
 ## How this works
 1. **3:15 pm every trading day:** the system scans about 1,100 NSE stocks and keeps those that moved 3% or more today and trade at least Rs 5 crore a day.
